@@ -1,0 +1,4 @@
+# Vendored third-party research code and datasets (cloned in full for benchmarking).
+# Exclude these from GitHub's language detection / repo stats so they don't
+# overshadow this project's own Python code in experiments/.
+datasets/** linguist-vendored
