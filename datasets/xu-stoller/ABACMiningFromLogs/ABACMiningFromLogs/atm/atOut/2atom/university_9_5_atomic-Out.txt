@@ -1,0 +1,230 @@
+                            TOPIC 1	0.09213	
+
+                               read	0.99944	
+                        checkStatus	0.00007	
+                          readScore	0.00007	
+                        assignGrade	0.00007	
+                       readMyScores	0.00007	
+                              write	0.00007	
+                           addScore	0.00007	
+                          setStatus	0.00007	
+                        changeScore	0.00007	
+
+; crs in {cs601}; department=department	0.01190	
+position in {student}, department in {ee}; crs in {ee602}; crsTaken ] crs	0.00408	
+department in {cs}; department in {cs}; department=department	0.00306	
+position in {student}, department in {ee}; type in {gradebook}; crsTaken ] crs	0.00238	
+crsTaken supseteqln {{cs601}}; type in {roster}; crsTaken ] crs	0.00170	
+; department in {cs}, type in {gradebook}; department=department, crsTaught ] crs	0.00136	
+position in {applicant}; department in {ee}, type in {transcript}; 	0.00102	
+department in {cs}, crsTaught supseteqln {{cs601}}; student in {eeStu2}; 	0.00102	
+position in {faculty}, department in {ee}; crs in {ee601}, department in {ee}; department=department	0.00102	
+
+
+                            TOPIC 2	0.09047	
+
+                       readMyScores	0.89808	
+                        changeScore	0.10113	
+                        checkStatus	0.00011	
+                          readScore	0.00011	
+                        assignGrade	0.00011	
+                              write	0.00011	
+                           addScore	0.00011	
+                               read	0.00011	
+                          setStatus	0.00011	
+
+department in {ee}, crsTaught supseteqln {{ee101}}; department in {ee}; department=department	0.00139	
+position in {student}, department in {ee}; crs in {ee602}, department in {ee}; department=department, crsTaken ] crs	0.00139	
+department in {ee}, crsTaken supseteqln {{ee601}}; crs in {ee602}, department in {ee}; department=department	0.00139	
+department in {cs}, crsTaught supseteqln {{cs101}}; department in {ee}; 	0.00104	
+position in {faculty}, department in {ee}; ; 	0.00104	
+department in {cs}, crsTaught supseteqln {{cs601}}; type in {gradebook}; 	0.00104	
+department in {ee}; department in {ee}, type in {transcript}; 	0.00104	
+position in {student}, crsTaken supseteqln {{cs601}}; crs in {cs601}; crsTaken ] crs, department=department	0.00104	
+isChair in {true}; crs in {cs101}, department in {cs}; 	0.00104	
+
+
+                            TOPIC 3	0.09191	
+
+                               read	0.89577	
+                          setStatus	0.08890	
+                           addScore	0.01488	
+                        checkStatus	0.00007	
+                          readScore	0.00007	
+                        assignGrade	0.00007	
+                       readMyScores	0.00007	
+                              write	0.00007	
+                        changeScore	0.00007	
+
+position in {applicant}; crs in {ee602}; 	0.00648	
+position in {student}; type in {roster}; crsTaught ] crs	0.00477	
+position in {student}, department in {ee}; type in {gradebook}; crsTaken ] crs	0.00443	
+position in {student}, department in {ee}; crs in {ee602}; crsTaken ] crs	0.00273	
+; crs in {cs601}; department=department	0.00239	
+position in {applicant}; student in {csStu4}; 	0.00136	
+department in {cs}; type in {roster}; crsTaught ] crs	0.00136	
+position in {student}, crsTaken supseteqln {{cs601}}; crs in {ee601}; 	0.00136	
+department in {ee}, crsTaught supseteqln {{ee601}}; department in {ee}, type in {roster}; 	0.00136	
+
+
+                            TOPIC 4	0.09094	
+
+                               read	0.84552	
+                           addScore	0.15381	
+                        checkStatus	0.00010	
+                          readScore	0.00010	
+                        assignGrade	0.00010	
+                       readMyScores	0.00010	
+                              write	0.00010	
+                          setStatus	0.00010	
+                        changeScore	0.00010	
+
+isChair in {true}; crs in {ee602}; 	0.00310	
+crsTaken supseteqln {{cs601}}; crs in {cs602}; department=department	0.00276	
+position in {student}, crsTaken supseteqln {{cs602}}; type in {roster}; department=department, crsTaken ] crs	0.00207	
+department in {cs}; department in {cs}; department=department	0.00138	
+position in {student}, department in {ee}; type in {gradebook}; crsTaken ] crs	0.00138	
+crsTaught supseteqln {{ee601}}; crs in {ee101}, department in {ee}; department=department	0.00138	
+position in {student}; department in {ee}, type in {roster}; department=department, crsTaught ] crs	0.00138	
+position in {applicant}; crs in {ee602}; 	0.00103	
+department in {cs}, crsTaken supseteqln {{cs602}}; student in {csStu3}; 	0.00103	
+
+
+                            TOPIC 5	0.09019	
+
+                        checkStatus	0.99900	
+                          readScore	0.00012	
+                        assignGrade	0.00012	
+                       readMyScores	0.00012	
+                              write	0.00012	
+                           addScore	0.00012	
+                               read	0.00012	
+                          setStatus	0.00012	
+                        changeScore	0.00012	
+
+; department in {cs}; department=department, crsTaught ] crs	0.00521	
+; department in {cs}, type in {roster}; crsTaken ] crs	0.00486	
+department in {cs}, crsTaught supseteqln {{cs101}}; crs in {cs601}, department in {cs}; 	0.00208	
+position in {student}, department in {ee}; department in {ee}, type in {roster}; department=department, crsTaught ] crs	0.00174	
+position in {student}, crsTaken supseteqln {{ee601}}; ; 	0.00174	
+department in {ee}, crsTaught supseteqln {{ee601}}; student in {csStu5}; 	0.00139	
+crsTaught supseteqln {{ee601}}; crs in {ee602}; 	0.00104	
+position in {faculty}; department in {ee}, type in {gradebook}; crsTaught ] crs	0.00104	
+; type in {roster}; department=department, crsTaken ] crs	0.00104	
+
+
+                            TOPIC 6	0.09084	
+
+                               read	0.99921	
+                        checkStatus	0.00010	
+                          readScore	0.00010	
+                        assignGrade	0.00010	
+                       readMyScores	0.00010	
+                              write	0.00010	
+                           addScore	0.00010	
+                          setStatus	0.00010	
+                        changeScore	0.00010	
+
+isChair in {true}; crs in {ee602}; 	0.00241	
+position in {student}; type in {roster}; crsTaught ] crs	0.00241	
+position in {applicant}; crs in {ee602}; 	0.00241	
+position in {student}, department in {ee}; type in {gradebook}; crsTaken ] crs	0.00241	
+position in {student}, department in {ee}; crs in {ee602}; crsTaken ] crs	0.00207	
+position in {faculty}; crs in {cs101}, department in {cs}; 	0.00138	
+; crs in {cs601}; department=department	0.00138	
+department in {cs}; student in {csStu4}; department=department	0.00103	
+position in {faculty}; department in {cs}; department=department	0.00103	
+
+
+                            TOPIC 7	0.09059	
+
+                               read	0.49425	
+                          readScore	0.42980	
+                       readMyScores	0.07530	
+                        checkStatus	0.00011	
+                        assignGrade	0.00011	
+                              write	0.00011	
+                           addScore	0.00011	
+                          setStatus	0.00011	
+                        changeScore	0.00011	
+
+department in {cs}, crsTaught supseteqln {{cs601}}; type in {roster}; 	0.00138	
+position in {student}, department in {ee}; type in {gradebook}; crsTaken ] crs	0.00138	
+position in {student}, department in {ee}; crs in {ee602}; crsTaken ] crs	0.00138	
+; crs in {cs601}; department=department	0.00138	
+isChair in {true}; crs in {ee602}; 	0.00104	
+position in {student}, crsTaken supseteqln {{ee602}}; crs in {ee101}; 	0.00104	
+department in {cs}, crsTaught supseteqln {{cs601}}; crs in {ee101}, department in {ee}; 	0.00104	
+position in {student}, crsTaken supseteqln {{cs601}}; crs in {ee601}; 	0.00104	
+crsTaught supseteqln {{ee601}}; crs in {cs101}; 	0.00104	
+
+
+                            TOPIC 8	0.09062	
+
+                        changeScore	0.60591	
+                           addScore	0.39335	
+                        checkStatus	0.00011	
+                          readScore	0.00011	
+                        assignGrade	0.00011	
+                       readMyScores	0.00011	
+                              write	0.00011	
+                               read	0.00011	
+                          setStatus	0.00011	
+
+position in {student}, department in {ee}; crs in {ee602}, department in {ee}; department=department, crsTaken ] crs	0.00138	
+department in {cs}, crsTaken supseteqln {{cs602}}; student in {eeStu1}; 	0.00104	
+crsTaught supseteqln {{ee101}}; department in {ee}; crsTaught ] crs, department=department	0.00104	
+position in {student}, department in {ee}; ; department=department, crsTaught ] crs	0.00104	
+department in {cs}, crsTaken supseteqln {{cs601}}; crs in {ee601}, department in {ee}; 	0.00104	
+department in {ee}; department in {ee}, type in {gradebook}; crsTaught ] crs, department=department	0.00104	
+department in {cs}, crsTaught supseteqln {{cs601}}; crs in {cs101}; 	0.00104	
+crsTaught supseteqln {{cs601}}; type in {gradebook}; crsTaught ] crs, department=department	0.00104	
+position in {student}, crsTaken supseteqln {{cs601}}; type in {gradebook}; department=department, crsTaken ] crs	0.00104	
+
+
+                            TOPIC 9	0.09091	
+
+                               read	0.99922	
+                        checkStatus	0.00010	
+                          readScore	0.00010	
+                        assignGrade	0.00010	
+                       readMyScores	0.00010	
+                              write	0.00010	
+                           addScore	0.00010	
+                          setStatus	0.00010	
+                        changeScore	0.00010	
+
+department in {cs}; department in {cs}; department=department	0.00276	
+position in {student}; type in {roster}; crsTaught ] crs	0.00172	
+; crs in {cs601}; department=department	0.00172	
+isChair in {true}; crs in {ee602}; 	0.00138	
+position in {student}, department in {ee}; type in {gradebook}; crsTaken ] crs	0.00138	
+position in {student}, crsTaken supseteqln {{cs602}}; type in {roster}; department=department, crsTaken ] crs	0.00138	
+position in {student}, department in {ee}; crs in {ee602}; crsTaken ] crs	0.00138	
+crsTaken supseteqln {{cs601}}; crs in {cs602}; department=department	0.00103	
+position in {student}; ; crsTaken ] crs	0.00103	
+
+
+                           TOPIC 10	0.09056	
+
+                               read	0.95570	
+                              write	0.04354	
+                        checkStatus	0.00011	
+                          readScore	0.00011	
+                        assignGrade	0.00011	
+                       readMyScores	0.00011	
+                           addScore	0.00011	
+                          setStatus	0.00011	
+                        changeScore	0.00011	
+
+; crs in {cs601}; department=department	0.00208	
+crsTaken supseteqln {{cs601}}; crs in {cs602}; department=department	0.00138	
+department in {ee}; ; department=department	0.00138	
+department in {cs}, crsTaught supseteqln {{cs601}}; crs in {cs602}; department=department	0.00138	
+position in {student}; department in {ee}, type in {roster}; department=department, crsTaken ] crs	0.00138	
+isChair in {true}; crs in {ee602}; 	0.00104	
+position in {student}, crsTaken supseteqln {{cs601}}; department in {ee}; 	0.00104	
+department in {cs}, crsTaken supseteqln {{cs601}}; department in {cs}; crsTaken ] crs, department=department	0.00104	
+department in {ee}, crsTaught supseteqln {{ee101}}; department in {ee}, type in {roster}; 	0.00104	
+
+

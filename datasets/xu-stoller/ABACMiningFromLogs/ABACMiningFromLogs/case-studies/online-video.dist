@@ -1,0 +1,38 @@
+# rules are equally likely
+ruleDist(allG, .16)
+ruleDist(allPG, .16)
+ruleDist(allAdult, .17)
+ruleDist(oldG, .17)
+ruleDist(oldPG, .17)
+ruleDist(oldAdult, .17)
+
+# premium members are more active than regular members
+userDist(child1r, .05)
+userDist(child2r, .05)
+userDist(teen1r, .05)
+userDist(teen2r, .05)
+userDist(adult1r, .05)
+userDist(adult2r, .05)
+userDist(child1p, .11)
+userDist(child2p, .11)
+userDist(teen1p, .12)
+userDist(teen2p, .12)
+userDist(adult1p, .12)
+userDist(adult2p, .12)
+
+# use a Zipf-like popularity distribution for movies.
+resDist(the_lion_king, .32)
+resDist(toy_story, .16)
+resDist(star_wars, .10)
+resDist(jaws, .08)
+resDist(brave_heart, .06)
+resDist(my_cousin_vinny, .05)
+resDist(happy_feet, .05)
+resDist(happy_feet_2, .04)
+resDist(cars, .04)
+resDist(brave, .03)
+resDist(life_of_pi, .03)
+resDist(flight, .02)
+resDist(cloud_atlas, .02)
+
+opDist(view,1.0)

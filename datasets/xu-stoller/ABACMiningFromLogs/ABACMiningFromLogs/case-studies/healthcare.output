@@ -1,0 +1,675 @@
+UP tuples that are not in logUP: 20
+[(carPat1,addNote,carPat1HR), (doc2,read,carPat2carItem), (oncNurse2,read,oncPat2nursingItem), (carAgent2,addNote,carPat2HR), (oncDoc3,read,oncPat2oncItem), (oncDoc1,read,oncPat2oncItem), (oncDoc4,addItem,oncPat2HR), (oncAgent2,read,oncPat2noteItem), (carAgent1,addNote,carPat2HR), (carDoc2,read,carPat2carItem), (carNurse2,read,carPat1nursingItem), (oncDoc4,read,oncPat2oncItem), (carDoc2,read,carPat1carItem), (carAgent2,read,carPat2noteItem), (oncAgent2,addNote,oncPat2HR), (carPat2,read,carPat2noteItem), (oncDoc2,read,oncPat1oncItem), (oncAgent1,addNote,oncPat2HR), (carPat1,read,carPat1noteItem), (oncDoc3,addItem,oncPat2HR)]
+RuleQualityMetricType: Q_RELATIVE_TO_COVERED
+Fraction: 0.6
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {HRitem}; {read }; uid=author)
+WSC=3.0
+2.
+rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+WSC=3.0
+3.
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+WSC=4.0
+4.
+rule(; type in {HRitem HR}; {read addNote }; uid=patient)
+WSC=5.0
+5.
+rule(position in {nurse}; type in {HRitem HR}; {read addItem }; ward=ward)
+WSC=6.0
+
+total WSC=21
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; type in {HRitem HR}; {read addItem }; ward=ward), similarity: 0.75
+
+2. rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addItem }; teams ] treatingTeam), similarity: 1.00
+
+3. rule(; type in {HR}; {addNote }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem HR}; {read addNote }; uid=patient), similarity: 0.75
+
+4. rule(; type in {HR}; {addNote }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+
+5. rule(; type in {HRitem}; {read }; uid=author)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; uid=author), similarity: 1.00
+
+6. rule(position in {nurse}; type in {HRitem}, topics supseteqln {{nursing}}; {read }; ward=ward)
+SIMILAR OUTPUT RULES:
+
+7. rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam), similarity: 1.00
+
+8. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; uid=patient)
+SIMILAR OUTPUT RULES:
+
+9. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 15
+[(doc2,read,carPat2carItem), (oncDoc3,read,oncPat2oncItem), (oncDoc1,read,oncPat2oncItem), (carAgent1,addNote,carPat2HR), (carNurse2,addItem,carPat1HR), (oncDoc4,read,oncPat2oncItem), (carDoc2,read,carPat1carItem), (carAgent2,read,carPat2noteItem), (oncAgent2,addNote,oncPat2HR), (oncPat2,addNote,oncPat2HR), (carDoc1,read,carPat1carItem), (oncDoc2,read,oncPat1oncItem), (doc1,read,oncPat2oncItem), (oncAgent1,addNote,oncPat2HR), (oncDoc3,addItem,oncPat2HR)]
+RuleQualityMetricType: Q_RELATIVE_TO_COVERED
+Fraction: 0.7
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+WSC=3.0
+2.
+rule(; type in {HRitem}; {read }; uid=author)
+WSC=3.0
+3.
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+WSC=4.0
+4.
+rule(; type in {HRitem HR}; {read addNote }; uid=patient)
+WSC=5.0
+5.
+rule(; type in {HRitem HR}; {read addNote }; agentFor ] patient)
+WSC=5.0
+6.
+rule(position in {nurse}; type in {HRitem HR}; {read addItem }; ward=ward)
+WSC=6.0
+
+total WSC=26
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; type in {HRitem HR}; {read addItem }; ward=ward), similarity: 0.75
+
+2. rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addItem }; teams ] treatingTeam), similarity: 1.00
+
+3. rule(; type in {HR}; {addNote }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem HR}; {read addNote }; uid=patient), similarity: 0.75
+
+4. rule(; type in {HR}; {addNote }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem HR}; {read addNote }; agentFor ] patient), similarity: 0.75
+
+5. rule(; type in {HRitem}; {read }; uid=author)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; uid=author), similarity: 1.00
+
+6. rule(position in {nurse}; type in {HRitem}, topics supseteqln {{nursing}}; {read }; ward=ward)
+SIMILAR OUTPUT RULES:
+
+7. rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam), similarity: 1.00
+
+8. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; uid=patient)
+SIMILAR OUTPUT RULES:
+
+9. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 10
+[(doc2,read,carPat2carItem), (carAgent2,addNote,carPat2HR), (oncDoc3,read,oncPat2oncItem), (oncAgent2,read,oncPat2noteItem), (oncPat2,read,oncPat2noteItem), (carDoc2,read,carPat1carItem), (carAgent2,read,carPat2noteItem), (oncAgent2,addNote,oncPat2HR), (oncPat1,read,oncPat1noteItem), (oncDoc2,read,oncPat1oncItem)]
+RuleQualityMetricType: Q_RELATIVE_TO_COVERED
+Fraction: 0.7999999999999999
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+WSC=3.0
+2.
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+WSC=4.0
+3.
+rule(; type in {HRitem}; {read }; uid=author)
+WSC=3.0
+4.
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+WSC=5.0
+5.
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+WSC=4.0
+6.
+rule(; type in {HR}; {addNote }; agentFor ] patient)
+WSC=3.0
+7.
+rule(; type in {HRitem HR}; {read addNote }; uid=patient)
+WSC=5.0
+
+total WSC=27
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward), similarity: 1.00
+
+2. rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addItem }; teams ] treatingTeam), similarity: 1.00
+
+3. rule(; type in {HR}; {addNote }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem HR}; {read addNote }; uid=patient), similarity: 0.75
+
+4. rule(; type in {HR}; {addNote }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addNote }; agentFor ] patient), similarity: 1.00
+
+5. rule(; type in {HRitem}; {read }; uid=author)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; uid=author), similarity: 1.00
+
+6. rule(position in {nurse}; type in {HRitem}, topics supseteqln {{nursing}}; {read }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward), similarity: 1.00
+
+7. rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam), similarity: 1.00
+
+8. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; uid=patient)
+SIMILAR OUTPUT RULES:
+
+9. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 5
+[(doc2,read,carPat2carItem), (oncDoc1,read,oncPat2oncItem), (oncDoc4,read,oncPat2oncItem), (oncDoc2,read,oncPat1oncItem), (doc1,read,oncPat2oncItem)]
+RuleQualityMetricType: Q_RELATIVE_TO_COVERED
+Fraction: 0.8999999999999999
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+WSC=3.0
+2.
+rule(; type in {HRitem}; {read }; uid=author)
+WSC=3.0
+3.
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+WSC=4.0
+4.
+rule(; type in {HR}; {addNote }; agentFor ] patient)
+WSC=3.0
+5.
+rule(; type in {HR}; {addNote }; uid=patient)
+WSC=3.0
+6.
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+WSC=5.0
+7.
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient)
+WSC=4.0
+8.
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; agentFor ] patient)
+WSC=4.0
+9.
+rule(teams supseteqln {{carTeam2}}; type in {HRitem}; {read }; specialties > topics)
+WSC=4.0
+10.
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+WSC=4.0
+
+total WSC=37
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward), similarity: 1.00
+
+2. rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addItem }; teams ] treatingTeam), similarity: 1.00
+
+3. rule(; type in {HR}; {addNote }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addNote }; uid=patient), similarity: 1.00
+
+4. rule(; type in {HR}; {addNote }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addNote }; agentFor ] patient), similarity: 1.00
+
+5. rule(; type in {HRitem}; {read }; uid=author)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; uid=author), similarity: 1.00
+
+6. rule(position in {nurse}; type in {HRitem}, topics supseteqln {{nursing}}; {read }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward), similarity: 1.00
+
+7. rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(teams supseteqln {{carTeam2}}; type in {HRitem}; {read }; specialties > topics), similarity: 0.67
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam), similarity: 1.00
+
+8. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient), similarity: 1.00
+
+9. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; agentFor ] patient), similarity: 1.00
+
+UP tuples that are not in logUP: 0
+[]
+RuleQualityMetricType: Q_RELATIVE_TO_COVERED
+Fraction: 0.9999999999999999
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {HRitem}; {read }; uid=author)
+WSC=3.0
+2.
+rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+WSC=3.0
+3.
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+WSC=4.0
+4.
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+WSC=4.0
+5.
+rule(; type in {HR}; {addNote }; agentFor ] patient)
+WSC=3.0
+6.
+rule(; type in {HR}; {addNote }; uid=patient)
+WSC=3.0
+7.
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+WSC=5.0
+8.
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient)
+WSC=4.0
+9.
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; agentFor ] patient)
+WSC=4.0
+
+total WSC=33
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward), similarity: 1.00
+
+2. rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addItem }; teams ] treatingTeam), similarity: 1.00
+
+3. rule(; type in {HR}; {addNote }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addNote }; uid=patient), similarity: 1.00
+
+4. rule(; type in {HR}; {addNote }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addNote }; agentFor ] patient), similarity: 1.00
+
+5. rule(; type in {HRitem}; {read }; uid=author)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; uid=author), similarity: 1.00
+
+6. rule(position in {nurse}; type in {HRitem}, topics supseteqln {{nursing}}; {read }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward), similarity: 1.00
+
+7. rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam), similarity: 1.00
+
+8. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient), similarity: 1.00
+
+9. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; agentFor ] patient), similarity: 1.00
+
+UP tuples that are not in logUP: 20
+[(doc2,read,carPat2carItem), (oncDoc1,read,oncPat1oncItem), (carAgent2,addNote,carPat2HR), (oncDoc3,read,oncPat2oncItem), (oncDoc4,addItem,oncPat2HR), (oncAgent2,read,oncPat2noteItem), (carNurse2,addItem,carPat1HR), (carDoc2,read,carPat2carItem), (carNurse2,addItem,carPat2HR), (oncDoc4,read,oncPat2oncItem), (oncPat1,addNote,oncPat1HR), (oncAgent2,addNote,oncPat2HR), (oncDoc2,addItem,oncPat1HR), (carPat2,read,carPat2noteItem), (carDoc1,read,carPat1carItem), (oncNurse1,read,oncPat2nursingItem), (oncDoc2,read,oncPat1oncItem), (doc1,read,oncPat2oncItem), (oncAgent1,addNote,oncPat2HR), (carPat1,read,carPat1noteItem)]
+RuleQualityMetricType: Q_RELATIVE_TO_MEANING
+Fraction: 0.6
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+WSC=3.0
+2.
+rule(; type in {HRitem}; {read }; uid=author)
+WSC=3.0
+3.
+rule(teams supseteqln {{oncTeam2 oncTeam1} {carTeam2}}; type in {HRitem}; {read }; specialties > topics)
+WSC=6.0
+4.
+rule(; type in {HRitem HR}; {read addNote }; uid=patient)
+WSC=5.0
+5.
+rule(; type in {HRitem HR}; {read addNote }; agentFor ] patient)
+WSC=5.0
+6.
+rule(position in {nurse}; type in {HRitem HR}; {read addItem }; ward=ward)
+WSC=6.0
+
+total WSC=28
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; type in {HRitem HR}; {read addItem }; ward=ward), similarity: 0.75
+
+2. rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addItem }; teams ] treatingTeam), similarity: 1.00
+
+3. rule(; type in {HR}; {addNote }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem HR}; {read addNote }; uid=patient), similarity: 0.75
+
+4. rule(; type in {HR}; {addNote }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem HR}; {read addNote }; agentFor ] patient), similarity: 0.75
+
+5. rule(; type in {HRitem}; {read }; uid=author)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; uid=author), similarity: 1.00
+
+6. rule(position in {nurse}; type in {HRitem}, topics supseteqln {{nursing}}; {read }; ward=ward)
+SIMILAR OUTPUT RULES:
+
+7. rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(teams supseteqln {{oncTeam2 oncTeam1} {carTeam2}}; type in {HRitem}; {read }; specialties > topics), similarity: 0.71
+
+8. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; uid=patient)
+SIMILAR OUTPUT RULES:
+
+9. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 15
+[(doc2,read,carPat2carItem), (carAgent2,addNote,carPat2HR), (oncDoc3,read,oncPat2oncItem), (oncDoc1,read,oncPat2oncItem), (oncAgent2,read,oncPat2noteItem), (carDoc2,read,carPat2carItem), (oncDoc4,read,oncPat2oncItem), (carDoc2,read,carPat1carItem), (oncAgent2,addNote,oncPat2HR), (oncDoc2,addItem,oncPat1HR), (carPat2,read,carPat2noteItem), (carDoc1,read,carPat1carItem), (oncDoc2,read,oncPat1oncItem), (doc1,read,oncPat2oncItem), (carPat1,read,carPat1noteItem)]
+RuleQualityMetricType: Q_RELATIVE_TO_MEANING
+Fraction: 0.7
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+WSC=3.0
+2.
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+WSC=4.0
+3.
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+WSC=5.0
+4.
+rule(; type in {HRitem}; {read }; uid=author)
+WSC=3.0
+5.
+rule(; type in {HRitem HR}; {read addNote }; uid=patient)
+WSC=5.0
+6.
+rule(; type in {HRitem HR}; {read addNote }; agentFor ] patient)
+WSC=5.0
+
+total WSC=25
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward), similarity: 1.00
+
+2. rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addItem }; teams ] treatingTeam), similarity: 1.00
+
+3. rule(; type in {HR}; {addNote }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem HR}; {read addNote }; uid=patient), similarity: 0.75
+
+4. rule(; type in {HR}; {addNote }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem HR}; {read addNote }; agentFor ] patient), similarity: 0.75
+
+5. rule(; type in {HRitem}; {read }; uid=author)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; uid=author), similarity: 1.00
+
+6. rule(position in {nurse}; type in {HRitem}, topics supseteqln {{nursing}}; {read }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward), similarity: 1.00
+
+7. rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+
+8. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; uid=patient)
+SIMILAR OUTPUT RULES:
+
+9. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 10
+[(doc2,read,carPat2carItem), (oncDoc1,read,oncPat1oncItem), (oncDoc3,read,oncPat2oncItem), (oncDoc1,read,oncPat2oncItem), (carAgent1,addNote,carPat2HR), (oncDoc4,read,oncPat2oncItem), (carDoc2,read,carPat1carItem), (oncAgent2,addNote,oncPat2HR), (carPat2,read,carPat2noteItem), (oncDoc2,read,oncPat1oncItem)]
+RuleQualityMetricType: Q_RELATIVE_TO_MEANING
+Fraction: 0.7999999999999999
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+WSC=3.0
+2.
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+WSC=4.0
+3.
+rule(; type in {HRitem}; {read }; uid=author)
+WSC=3.0
+4.
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+WSC=5.0
+5.
+rule(; type in {HRitem}, ward in {carWard}; {read }; specialties > topics, teams ] treatingTeam)
+WSC=5.0
+6.
+rule(; type in {HRitem HR}; {read addNote }; uid=patient)
+WSC=5.0
+7.
+rule(; type in {HRitem HR}; {read addNote }; agentFor ] patient)
+WSC=5.0
+
+total WSC=30
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward), similarity: 1.00
+
+2. rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addItem }; teams ] treatingTeam), similarity: 1.00
+
+3. rule(; type in {HR}; {addNote }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem HR}; {read addNote }; uid=patient), similarity: 0.75
+
+4. rule(; type in {HR}; {addNote }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem HR}; {read addNote }; agentFor ] patient), similarity: 0.75
+
+5. rule(; type in {HRitem}; {read }; uid=author)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; uid=author), similarity: 1.00
+
+6. rule(position in {nurse}; type in {HRitem}, topics supseteqln {{nursing}}; {read }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward), similarity: 1.00
+
+7. rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}, ward in {carWard}; {read }; specialties > topics, teams ] treatingTeam), similarity: 0.94
+
+8. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; uid=patient)
+SIMILAR OUTPUT RULES:
+
+9. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 5
+[(oncDoc1,read,oncPat1oncItem), (carAgent2,addNote,carPat2HR), (oncAgent2,read,oncPat2noteItem), (oncDoc4,read,oncPat2oncItem), (oncDoc2,read,oncPat1oncItem)]
+RuleQualityMetricType: Q_RELATIVE_TO_MEANING
+Fraction: 0.8999999999999999
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {HRitem}; {read }; uid=author)
+WSC=3.0
+2.
+rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+WSC=3.0
+3.
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+WSC=4.0
+4.
+rule(; type in {HR}; {addNote }; uid=patient)
+WSC=3.0
+5.
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+WSC=5.0
+6.
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient)
+WSC=4.0
+7.
+rule(teams supseteqln {{carTeam2}}; type in {HRitem}; {read }; specialties > topics)
+WSC=4.0
+8.
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+WSC=4.0
+9.
+rule(; type in {HRitem HR}; {read addNote }; agentFor ] patient)
+WSC=5.0
+
+total WSC=35
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward), similarity: 1.00
+
+2. rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addItem }; teams ] treatingTeam), similarity: 1.00
+
+3. rule(; type in {HR}; {addNote }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addNote }; uid=patient), similarity: 1.00
+
+4. rule(; type in {HR}; {addNote }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem HR}; {read addNote }; agentFor ] patient), similarity: 0.75
+
+5. rule(; type in {HRitem}; {read }; uid=author)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; uid=author), similarity: 1.00
+
+6. rule(position in {nurse}; type in {HRitem}, topics supseteqln {{nursing}}; {read }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward), similarity: 1.00
+
+7. rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(teams supseteqln {{carTeam2}}; type in {HRitem}; {read }; specialties > topics), similarity: 0.67
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam), similarity: 1.00
+
+8. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient), similarity: 1.00
+
+9. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 0
+[]
+RuleQualityMetricType: Q_RELATIVE_TO_MEANING
+Fraction: 0.9999999999999999
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {HRitem}; {read }; uid=author)
+WSC=3.0
+2.
+rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+WSC=3.0
+3.
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+WSC=4.0
+4.
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+WSC=4.0
+5.
+rule(; type in {HR}; {addNote }; agentFor ] patient)
+WSC=3.0
+6.
+rule(; type in {HR}; {addNote }; uid=patient)
+WSC=3.0
+7.
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+WSC=5.0
+8.
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient)
+WSC=4.0
+9.
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; agentFor ] patient)
+WSC=4.0
+
+total WSC=33
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(position in {nurse}; type in {HR}; {addItem }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; type in {HR}; {addItem }; ward=ward), similarity: 1.00
+
+2. rule(; type in {HR}; {addItem }; teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addItem }; teams ] treatingTeam), similarity: 1.00
+
+3. rule(; type in {HR}; {addNote }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addNote }; uid=patient), similarity: 1.00
+
+4. rule(; type in {HR}; {addNote }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+rule(; type in {HR}; {addNote }; agentFor ] patient), similarity: 1.00
+
+5. rule(; type in {HRitem}; {read }; uid=author)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; uid=author), similarity: 1.00
+
+6. rule(position in {nurse}; type in {HRitem}, topics supseteqln {{nursing}}; {read }; ward=ward)
+SIMILAR OUTPUT RULES:
+rule(position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward), similarity: 1.00
+
+7. rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+SIMILAR OUTPUT RULES:
+rule(; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam), similarity: 1.00
+
+8. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; uid=patient)
+SIMILAR OUTPUT RULES:
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient), similarity: 1.00
+
+9. rule(; type in {HRitem}, topics supseteqln {{note}}; {read }; agentFor ] patient)
+SIMILAR OUTPUT RULES:
+rule(; topics supseteqln {{note}}, type in {HRitem}; {read }; agentFor ] patient), similarity: 1.00

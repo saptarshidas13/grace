@@ -1,0 +1,106 @@
+# rules for tasks are more likely than rules for projects, because there
+# are more tasks than projects.  rules for read operations are more
+# likely than rules for write operations.
+ruleDist(managerBudget, .05)
+ruleDist(leaderScheduleBudget, .05)
+ruleDist(workerSchedule, .05)
+ruleDist(workerTaskStatus, .14)
+ruleDist(workerTaskRequest, .14)
+ruleDist(employeeTaskRequest, .14)
+ruleDist(auditorBudget, .05)
+ruleDist(accountantBudget, .05)
+ruleDist(accountantTask, .14)
+ruleDist(plannerProjectSchedule, .05)
+ruleDist(plannerTaskSchedule, .14)
+
+# accountants, auditors, planners, managers, and leaders are equally likely.
+# some workers are more likely than others, by a factor of up to 3.
+# accountants
+userDist(acc1, .05)
+userDist(acc2, .05)
+# auditors
+userDist(aud1, .05)
+userDist(aud2, .05)
+# planners
+userDist(plan1, .05)
+userDist(plan2, .05)
+# managers
+userDist(mgr1, .05)
+userDist(mgr2, .05)
+# project leaders
+userDist(ldr11, .05)
+userDist(ldr12, .05)
+userDist(ldr2, .05)
+# technical workers - designers
+userDist(des11, .08)
+userDist(des12, .05)
+userDist(des21, .04)
+userDist(des22, .03)
+# technical workers - coders
+userDist(code11, .08)
+userDist(code12, .05)
+userDist(code21, .04)
+userDist(code22, .03)
+
+# resources are approximately equally likely
+# proj11
+resDist(proj11budget, .025)
+resDist(proj11sched, .025)
+# un-proprietary tasks
+resDist(proj11task1a, .025)
+resDist(proj11task2a, .025)
+resDist(proj11task1, .025)
+resDist(proj11task2, .025)
+# proprietary tasks
+resDist(proj11task1propa, .025)
+resDist(proj11task2propa, .025)
+resDist(proj11task1prop, .025)
+resDist(proj11task2prop, .025)
+# proj12
+resDist(proj12budget, .025)
+resDist(proj12sched, .025)
+# un-proprietary tasks
+resDist(proj12task1a, .025)
+resDist(proj12task2a, .025)
+resDist(proj12task1, .025)
+resDist(proj12task2, .025)
+# proprietary tasks
+resDist(proj12task1propa, .025)
+resDist(proj12task2propa, .025)
+resDist(proj12task1prop, .025)
+resDist(proj12task2prop, .025)
+# proj21
+resDist(proj21budget, .025)
+resDist(proj21sched, .025)
+# un-proprietary tasks
+resDist(proj21task1a, .025)
+resDist(proj21task2a, .025)
+resDist(proj21task1, .025)
+resDist(proj21task2, .025)
+# proprietary tasks
+resDist(proj21task1propa, .025)
+resDist(proj21task2propa, .025)
+resDist(proj21task1prop, .025)
+resDist(proj21task2prop, .025)
+# proj22
+resDist(proj22budget, .025)
+resDist(proj22sched, .025)
+# un-proprietary tasks
+resDist(proj22task1a, .025)
+resDist(proj22task2a, .025)
+resDist(proj22task1, .025)
+resDist(proj22task2, .025)
+# proprietary tasks
+resDist(proj22task1propa, .025)
+resDist(proj22task2propa, .025)
+resDist(proj22task1prop, .025)
+resDist(proj22task2prop, .025)
+
+# operations are equally likely, except read, which is more likely. 
+opDist(read, .4)
+opDist(approve, .1)
+opDist(write, .1)
+opDist(setStatus, .1)
+opDist(request, .1)
+opDist(setCost, .1)
+opDist(setSchedule, .1)

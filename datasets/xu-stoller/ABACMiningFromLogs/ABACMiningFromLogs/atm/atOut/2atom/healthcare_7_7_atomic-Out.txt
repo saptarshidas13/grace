@@ -1,0 +1,99 @@
+                            TOPIC 1	0.10090	
+
+                            addItem	0.99982	
+                               read	0.00009	
+                            addNote	0.00009	
+
+teams supseteqln {{oncTeam1}}, specialties supseteqln {{oncology}}; patient in {oncPat1}, ward in {oncWard}; specialties > topics	0.00239	
+agentFor supseteqln {{oncPat2}}; topics supseteqln {{cardiology}}, ward in {carWard}; 	0.00159	
+position in {doctor}, teams supseteqln {{oncTeam1}}; treatingTeam in {carTeam2}, patient in {carPat2}; 	0.00159	
+
+
+                            TOPIC 2	0.10094	
+
+                               read	0.97375	
+                            addItem	0.02617	
+                            addNote	0.00009	
+
+position in {doctor}; ward in {carWard}; teams ] treatingTeam	0.00279	
+ward in {oncWard}; topics supseteqln {{nursing}}, ward in {oncWard}; 	0.00239	
+position in {doctor}; ward in {oncWard}, type in {HRitem}; specialties > topics, teams ] treatingTeam	0.00159	
+
+
+                            TOPIC 3	0.09990	
+
+                            addItem	0.60665	
+                               read	0.39324	
+                            addNote	0.00011	
+
+position in {doctor}; treatingTeam in {carTeam2}, ward in {carWard}; specialties > topics	0.00121	
+position in {doctor}, teams supseteqln {{oncTeam2}}; topics supseteqln {{oncology}}, type in {HRitem}; teams ] treatingTeam, specialties > topics	0.00121	
+teams supseteqln {{carTeam1}}; type in {HRitem}; 	0.00121	
+
+
+                            TOPIC 4	0.09994	
+
+                               read	0.76652	
+                            addItem	0.23337	
+                            addNote	0.00011	
+
+position in {doctor}, teams supseteqln {{oncTeam2}}; ward in {oncWard}, type in {HRitem}; teams ] treatingTeam, specialties > topics	0.00161	
+specialties supseteqln {{cardiology}}; patient in {carPat1}; specialties > topics	0.00161	
+position in {nurse}; treatingTeam in {carTeam2}; ward=ward	0.00121	
+
+
+                            TOPIC 5	0.09921	
+
+                            addItem	0.97196	
+                               read	0.02791	
+                            addNote	0.00014	
+
+teams supseteqln {{carTeam1}}; ward in {carWard}, type in {HR}; 	0.00243	
+ward in {carWard}; patient in {carPat1}; 	0.00162	
+position in {doctor}, teams supseteqln {{oncTeam1}}; patient in {oncPat1}, type in {HRitem}; specialties > topics, teams ] treatingTeam	0.00122	
+
+
+                            TOPIC 6	0.09969	
+
+                            addItem	0.55944	
+                            addNote	0.42854	
+                               read	0.01202	
+
+specialties supseteqln {{oncology}}; type in {HRitem}; specialties > topics	0.00242	
+; treatingTeam in {carTeam2}, type in {HRitem}; specialties > topics	0.00242	
+; ward in {oncWard}, type in {HRitem}; specialties > topics	0.00202	
+
+
+                            TOPIC 7	0.09913	
+
+                            addItem	0.82836	
+                               read	0.17150	
+                            addNote	0.00014	
+
+position in {nurse}, ward in {oncWard}; topics supseteqln {{oncology}}; 	0.00122	
+teams supseteqln {{oncTeam2}}, specialties supseteqln {{oncology}}; patient in {oncPat2}, type in {HRitem}; teams ] treatingTeam, specialties > topics	0.00122	
+position in {nurse}; topics supseteqln {{cardiology}}, type in {HRitem}; 	0.00122	
+
+
+                            TOPIC 8	0.10002	
+
+                               read	0.99978	
+                            addItem	0.00011	
+                            addNote	0.00011	
+
+specialties supseteqln {{cardiology}}; treatingTeam in {carTeam2}, type in {HRitem}; 	0.00241	
+position in {doctor}; ward in {oncWard}, type in {HRitem}; specialties > topics, teams ] treatingTeam	0.00201	
+position in {doctor}, specialties supseteqln {{cardiology}}; ward in {carWard}, type in {HRitem}; specialties > topics, teams ] treatingTeam	0.00201	
+
+
+                            TOPIC 9	0.10006	
+
+                               read	0.60206	
+                            addItem	0.39783	
+                            addNote	0.00011	
+
+position in {doctor}, teams supseteqln {{oncTeam1}}; patient in {oncPat1}, ward in {oncWard}; 	0.00161	
+; topics supseteqln {{note}}, ward in {carWard}; agentFor ] patient	0.00161	
+teams supseteqln {{oncTeam2}}, specialties supseteqln {{oncology}}; topics supseteqln {{oncology}}, ward in {oncWard}; specialties > topics	0.00121	
+
+

@@ -1,0 +1,76 @@
+ 
+userAttrib(acc1, adminRoles={accountant}, projects={proj11 proj12})
+userAttrib(acc2, adminRoles={accountant}, projects={proj21 proj22})
+userAttrib(aud1, adminRoles={auditor}, projects={proj11 proj12})
+userAttrib(aud2, adminRoles={auditor}, projects={proj21 proj22})
+userAttrib(plan1, adminRoles={planner}, projects={proj11 proj12})
+userAttrib(plan2, adminRoles={planner}, projects={proj21 proj22})
+userAttrib(mgr1, adminRoles={manager}, department=dept1)
+userAttrib(mgr2, adminRoles={manager}, department=dept2)
+userAttrib(ldr11, projects={proj11 proj12}, projectsLed={proj11}, department=dept1)
+userAttrib(ldr12, projects={proj12}, projectsLed={proj12}, department=dept1)
+userAttrib(ldr2, projects={proj21 proj22}, projectsLed={proj21 proj22}, department=dept2)
+userAttrib(des11, expertise={design}, projects={proj11}, isEmployee=True_, tasks={proj11task1a proj11task1propa})
+userAttrib(des12, expertise={design}, projects={proj12}, isEmployee=False_, tasks={proj12task1a proj12task1propa})
+userAttrib(des21, expertise={design}, projects={proj21}, isEmployee=True_, tasks={proj21task1a proj21task1propa})
+userAttrib(des22, expertise={design}, projects={proj22}, isEmployee=False_, tasks={proj22task1a proj22task1propa})
+userAttrib(code11, expertise={coding}, projects={proj11}, isEmployee=True_, tasks={proj11task2a proj11task2propa})
+userAttrib(code12, expertise={coding}, projects={proj12}, isEmployee=False_, tasks={proj12task2a proj12task2propa})
+userAttrib(code21, expertise={coding}, projects={proj21}, isEmployee=True_, tasks={proj21task2a proj21task2propa})
+userAttrib(code22, expertise={coding}, projects={proj22}, isEmployee=False_, tasks={proj22task2a proj22task2propa})
+resourceAttrib(proj11budget,type=budget, project=proj11, department=dept1)
+resourceAttrib(proj11sched, type=schedule, project=proj11, department=dept1)
+resourceAttrib(proj11task1a, type=task, project=proj11, department=dept1, expertise={design}, proprietary=false)
+resourceAttrib(proj11task2a, type=task, project=proj11, department=dept1, expertise={coding}, proprietary=false)
+resourceAttrib(proj11task1, type=task, project=proj11, department=dept1, expertise={design}, proprietary=false)
+resourceAttrib(proj11task2, type=task, project=proj11, department=dept1, expertise={coding}, proprietary=false)
+resourceAttrib(proj11task1propa, type=task, project=proj11, department=dept1, expertise={design}, proprietary=true)
+resourceAttrib(proj11task2propa, type=task, project=proj11, department=dept1, expertise={coding}, proprietary=true)
+resourceAttrib(proj11task1prop, type=task, project=proj11, department=dept1, expertise={design}, proprietary=true)
+resourceAttrib(proj11task2prop, type=task, project=proj11, department=dept1, expertise={coding}, proprietary=true)
+resourceAttrib(proj12budget,type=budget, project=proj12, department=dept1)
+resourceAttrib(proj12sched, type=schedule, project=proj12, department=dept1)
+resourceAttrib(proj12task1a, type=task, project=proj12, department=dept1, expertise={design}, proprietary=false)
+resourceAttrib(proj12task2a, type=task, project=proj12, department=dept1, expertise={coding}, proprietary=false)
+resourceAttrib(proj12task1, type=task, project=proj12, department=dept1, expertise={design}, proprietary=false)
+resourceAttrib(proj12task2, type=task, project=proj12, department=dept1, expertise={coding}, proprietary=false)
+resourceAttrib(proj12task1propa, type=task, project=proj12, department=dept1, expertise={design}, proprietary=true)
+resourceAttrib(proj12task2propa, type=task, project=proj12, department=dept1, expertise={coding}, proprietary=true)
+resourceAttrib(proj12task1prop, type=task, project=proj12, department=dept1, expertise={design}, proprietary=true)
+resourceAttrib(proj12task2prop, type=task, project=proj12, department=dept1, expertise={coding}, proprietary=true)
+resourceAttrib(proj21budget,type=budget, project=proj21, department=dept2)
+resourceAttrib(proj21sched, type=schedule, project=proj21, department=dept2)
+resourceAttrib(proj21task1a, type=task, project=proj21, department=dept2, expertise={design}, proprietary=false)
+resourceAttrib(proj21task2a, type=task, project=proj21, department=dept2, expertise={coding}, proprietary=false)
+resourceAttrib(proj21task1, type=task, project=proj21, department=dept2, expertise={design}, proprietary=false)
+resourceAttrib(proj21task2, type=task, project=proj21, department=dept2, expertise={coding}, proprietary=false)
+resourceAttrib(proj21task1propa, type=task, project=proj21, department=dept2, expertise={design}, proprietary=true)
+resourceAttrib(proj21task2propa, type=task, project=proj21, department=dept2, expertise={coding}, proprietary=true)
+resourceAttrib(proj21task1prop, type=task, project=proj21, department=dept2, expertise={design}, proprietary=true)
+resourceAttrib(proj21task2prop, type=task, project=proj21, department=dept2, expertise={coding}, proprietary=true)
+resourceAttrib(proj22budget,type=budget, project=proj22, department=dept2)
+resourceAttrib(proj22sched, type=schedule, project=proj22, department=dept2)
+resourceAttrib(proj22task1a, type=task, project=proj22, department=dept2, expertise={design}, proprietary=false)
+resourceAttrib(proj22task2a, type=task, project=proj22, department=dept2, expertise={coding}, proprietary=false)
+resourceAttrib(proj22task1, type=task, project=proj22, department=dept2, expertise={design}, proprietary=false)
+resourceAttrib(proj22task2, type=task, project=proj22, department=dept2, expertise={coding}, proprietary=false)
+resourceAttrib(proj22task1propa, type=task, project=proj22, department=dept2, expertise={design}, proprietary=true)
+resourceAttrib(proj22task2propa, type=task, project=proj22, department=dept2, expertise={coding}, proprietary=true)
+resourceAttrib(proj22task1prop, type=task, project=proj22, department=dept2, expertise={design}, proprietary=true)
+resourceAttrib(proj22task2prop, type=task, project=proj22, department=dept2, expertise={coding}, proprietary=true)
+unremovableResourceAttribs(type)
+up(A,B,setCost) :- adminRolesU(A,accountant), proprietaryR(B,true), projectsU_contains_projectR(A,B).
+up(A,B,read) :- expertiseU_superset_expertiseR(A,B), projectsU_contains_projectR(A,B).
+up(A,B,setStatus) :- expertiseU(A,design), tasksU_contains_ridR(A,B).
+up(A,B,write) :- typeR(B,budget), projectsU_contains_projectR(A,B).
+up(A,B,setStatus) :- expertiseU(A,coding), tasksU_contains_ridR(A,B).
+up(A,B,request) :- expertiseU_superset_expertiseR(A,B), projectsU_contains_projectR(A,B).
+up(A,B,read) :- typeR(B,budget), departmentU_equals_departmentR(A,B).
+up(A,B,setSchedule) :- adminRolesU(A,planner), typeR(B,task),projectsU_contains_projectR(A,B).
+up(A,B,read) :- adminRolesU(A,auditor), typeR(B,schedule).
+up(A,B,setCost) :- adminRolesU(A,accountant), proprietaryR(B,false), projectsU_contains_projectR(A,B).
+up(A,B,read) :- typeR(B,schedule), projectsU_contains_projectR(A,B).
+up(A,B,read) :- adminRolesU(A,auditor), typeR(B,budget).
+up(A,B,write) :- typeR(B,schedule), projectsU_contains_projectR(A,B).
+up(A,B,read) :- adminRolesU(A,accountant), typeR(B,budget), projectsU_contains_projectR(A,B).
+up(A,B,approve) :- adminRolesU(A,manager).

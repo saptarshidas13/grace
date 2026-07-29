@@ -1,0 +1,670 @@
+OverAssignments
+---------------------
+Log Completeness: 0.6
+Rule Quality Metric: Q_RELATIVE_TO_COVERED
+1.
+rule(null;position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+0
+-----------
+2.
+rule(null;; type in {HR}, ward in {oncWard}; {addItem }; teams ] treatingTeam)
+0
+-----------
+3.
+rule(null;position in {nurse}; type in {HR}; {addItem }; ward=ward)
+0
+-----------
+4.
+rule(null;; author in {carAgent1}, type in {HRitem}; {read }; agentFor ] patient)
+0
+-----------
+5.
+rule(null;; patient in {oncPat1 carPat2}, type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+0
+-----------
+6.
+rule(null;; author in {carAgent1 oncAgent1}, type in {HRitem}; {read }; uid=patient)
+0
+-----------
+7.
+rule(null;uid in {oncAgent1}; type in {HR}; {addNote }; agentFor ] patient)
+0
+-----------
+8.
+rule(null;; treatingTeam in {oncTeam1}, type in {HR}; {addNote }; uid=patient)
+0
+-----------
+9.
+rule(null;uid in {oncDoc4}; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+0
+-----------
+10.
+rule(null;; type in {HRitem}; {read }; uid=author)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<carPat1,carPat1HR,addNote>
+<carPat2,carPat2HR,addNote>
+<carAgent2,carPat2HR,addNote>
+<oncDoc3,oncPat2oncItem,read>
+<oncDoc1,oncPat2oncItem,read>
+<oncAgent2,oncPat2noteItem,read>
+<carAgent1,carPat2HR,addNote>
+<anesDoc1,carPat1HR,addItem>
+<oncAgent2,oncPat2HR,addNote>
+<oncPat2,oncPat2HR,addNote>
+<carDoc2,carPat2HR,addItem>
+<carDoc1,carPat1HR,addItem>
+<carDoc1,carPat1carItem,read>
+
+OverAssignments
+---------------------
+Log Completeness: 0.6
+Rule Quality Metric: Q_RELATIVE_TO_MEANING
+1.
+rule(null;position in {doctor}; author in {doc1}, patient in {oncPat2}, treatingTeam in {oncTeam2}, type in {HRitem}, ward in {oncWard}; {read }; specialties > topics)
+1
+<oncDoc2,oncPat2oncItem,read>
+-----------
+2.
+rule(null;; type in {HRitem}; {read }; uid=author)
+0
+-----------
+3.
+rule(null;; type in {HR}, ward in {oncWard}; {addItem }; teams ] treatingTeam)
+0
+-----------
+4.
+rule(null;position in {nurse}; type in {HR}; {addItem }; ward=ward)
+0
+-----------
+5.
+rule(null;position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+0
+-----------
+6.
+rule(null;; patient in {oncPat1 carPat2}, type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+0
+-----------
+7.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient)
+0
+-----------
+8.
+rule(null;; author in {carAgent1}, type in {HRitem}; {read }; agentFor ] patient)
+0
+-----------
+9.
+rule(null;uid in {oncAgent1}; type in {HR}; {addNote }; agentFor ] patient)
+0
+-----------
+10.
+rule(null;; treatingTeam in {oncTeam1}, type in {HR}; {addNote }; uid=patient)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<carPat1,carPat1HR,addNote>
+<carPat2,carPat2HR,addNote>
+<carAgent2,carPat2HR,addNote>
+<oncAgent2,oncPat2noteItem,read>
+<carAgent1,carPat2HR,addNote>
+<anesDoc1,carPat1HR,addItem>
+<oncAgent2,oncPat2HR,addNote>
+<oncPat2,oncPat2HR,addNote>
+<carDoc2,carPat2HR,addItem>
+<carDoc1,carPat1HR,addItem>
+<carDoc1,carPat1carItem,read>
+
+OverAssignments
+---------------------
+Log Completeness: 0.6
+Rule Quality Metric: Q_RELATIVE_TO_UP0
+1.
+rule(null;; type in {HRitem}; {read }; uid=author)
+0
+-----------
+2.
+rule(null;position in {nurse}; type in {HR}; {addItem }; ward=ward)
+0
+-----------
+3.
+rule(null;; type in {HR}; {addItem }; teams ] treatingTeam)
+0
+-----------
+4.
+rule(null;position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+0
+-----------
+5.
+rule(null;; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+0
+-----------
+6.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient)
+0
+-----------
+7.
+rule(null;; type in {HR}; {addNote }; agentFor ] patient)
+0
+-----------
+8.
+rule(null;; type in {HR}; {addNote }; uid=patient)
+0
+-----------
+9.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; agentFor ] patient)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+
+OverAssignments
+---------------------
+Log Completeness: 0.6
+Rule Quality Metric: Q_RELATIVE_TO_PERMISSIONS
+1.
+rule(null;; type in {HRitem}; {read }; uid=author)
+0
+-----------
+2.
+rule(null;position in {nurse}; type in {HR}; {addItem }; ward=ward)
+0
+-----------
+3.
+rule(null;; type in {HR}, ward in {oncWard}; {addItem }; teams ] treatingTeam)
+0
+-----------
+4.
+rule(null;position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+0
+-----------
+5.
+rule(null;; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+0
+-----------
+6.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient)
+0
+-----------
+7.
+rule(null;uid in {oncAgent1}; type in {HR}; {addNote }; agentFor ] patient)
+0
+-----------
+8.
+rule(null;; treatingTeam in {oncTeam1}, type in {HR}; {addNote }; uid=patient)
+0
+-----------
+9.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; agentFor ] patient)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<carPat1,carPat1HR,addNote>
+<carPat2,carPat2HR,addNote>
+<carAgent2,carPat2HR,addNote>
+<carAgent1,carPat2HR,addNote>
+<anesDoc1,carPat1HR,addItem>
+<oncAgent2,oncPat2HR,addNote>
+<oncPat2,oncPat2HR,addNote>
+<carDoc2,carPat2HR,addItem>
+<carDoc1,carPat1HR,addItem>
+
+OverAssignments
+---------------------
+Log Completeness: 0.6
+Rule Quality Metric: Q_RELATIVE_TO_SIZE_AND_PERMISSIONS
+1.
+rule(null;uid in {oncAgent1}; treatingTeam in {oncTeam2}, type in {HR}; {addNote }; )
+0
+-----------
+2.
+rule(null;; treatingTeam in {oncTeam1}, type in {HR}; {addNote }; uid=patient)
+0
+-----------
+3.
+rule(null;; patient in {oncPat2}, type in {HR}; {addItem }; teams ] treatingTeam)
+0
+-----------
+4.
+rule(null;position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+0
+-----------
+5.
+rule(null;; author in {carAgent1}, type in {HRitem}; {read }; agentFor ] patient)
+0
+-----------
+6.
+rule(null;position in {nurse}; patient in {carPat1 carPat2}, type in {HR}; {addItem }; ward=ward)
+0
+-----------
+7.
+rule(null;; author in {oncDoc1 doc2}, type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+0
+-----------
+8.
+rule(null;uid in {oncDoc4}; author in {doc1}, type in {HRitem}; {read }; )
+0
+-----------
+9.
+rule(null;teams supseteqln {{oncTeam1 carTeam1} {oncTeam2 oncTeam1}}; patient in {oncPat1}, type in {HR}; {addItem }; )
+0
+-----------
+10.
+rule(null;uid in {oncNurse1}; patient in {oncPat1}, type in {HR}; {addItem }; )
+0
+-----------
+11.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient)
+0
+-----------
+12.
+rule(null;uid in {oncNurse2}; patient in {oncPat2}, type in {HR}; {addItem }; )
+0
+-----------
+13.
+rule(null;; topics supseteqln {{oncology} {note}}, type in {HRitem}; {read }; uid=author)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<carPat1,carPat1HR,addNote>
+<doc2,carPat2carItem,read>
+<carPat2,carPat2HR,addNote>
+<carAgent2,carPat2HR,addNote>
+<oncDoc3,oncPat2oncItem,read>
+<oncDoc1,oncPat2oncItem,read>
+<oncAgent2,oncPat2noteItem,read>
+<carAgent1,carPat2HR,addNote>
+<carDoc2,carPat1carItem,read>
+<anesDoc1,carPat1HR,addItem>
+<oncAgent2,oncPat2HR,addNote>
+<oncPat2,oncPat2HR,addNote>
+<carDoc2,carPat2HR,addItem>
+<oncNurse2,oncPat1HR,addItem>
+<oncDoc2,oncPat1HR,addItem>
+<carDoc1,carPat1HR,addItem>
+<oncNurse1,oncPat2HR,addItem>
+<carDoc1,carPat1carItem,read>
+
+OverAssignments
+---------------------
+Log Completeness: 0.6
+Rule Quality Metric: Q_PROGOL
+1.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; ward=ward)
+12
+<oncPat1,oncPat2noteItem,read>
+<carNurse1,carPat1noteItem,read>
+<carNurse2,carPat1noteItem,read>
+<oncPat2,oncPat1noteItem,read>
+<carNurse2,carPat2noteItem,read>
+<carNurse1,carPat2noteItem,read>
+<carPat2,carPat1noteItem,read>
+<oncNurse1,oncPat1noteItem,read>
+<carPat1,carPat2noteItem,read>
+<oncNurse2,oncPat2noteItem,read>
+<oncNurse2,oncPat1noteItem,read>
+<oncNurse1,oncPat2noteItem,read>
+-----------
+2.
+rule(null;; type in {HR}; {addNote }; ward=ward)
+12
+<carPat2,carPat1HR,addNote>
+<carNurse2,carPat2HR,addNote>
+<oncNurse2,oncPat1HR,addNote>
+<oncNurse1,oncPat1HR,addNote>
+<oncPat1,oncPat2HR,addNote>
+<oncNurse1,oncPat2HR,addNote>
+<carNurse1,carPat2HR,addNote>
+<carNurse1,carPat1HR,addNote>
+<carNurse2,carPat1HR,addNote>
+<oncPat2,oncPat1HR,addNote>
+<oncNurse2,oncPat2HR,addNote>
+<carPat1,carPat2HR,addNote>
+-----------
+3.
+rule(null;position in {nurse}; type in {HR}; {addItem }; )
+8
+<carNurse2,oncPat1HR,addItem>
+<carNurse1,oncPat2HR,addItem>
+<carNurse2,oncPat2HR,addItem>
+<carNurse1,oncPat1HR,addItem>
+<oncNurse2,carPat1HR,addItem>
+<oncNurse1,carPat2HR,addItem>
+<oncNurse2,carPat2HR,addItem>
+<oncNurse1,carPat1HR,addItem>
+-----------
+4.
+rule(null;position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; )
+8
+<carNurse2,oncPat2nursingItem,read>
+<oncNurse2,carPat2nursingItem,read>
+<oncNurse1,carPat2nursingItem,read>
+<carNurse1,oncPat2nursingItem,read>
+<oncNurse1,carPat1nursingItem,read>
+<carNurse1,oncPat1nursingItem,read>
+<carNurse2,oncPat1nursingItem,read>
+<oncNurse2,carPat1nursingItem,read>
+-----------
+5.
+rule(null;; type in {HRitem}; {read }; specialties > topics)
+6
+<doc1,oncPat1oncItem,read>
+<carDoc1,carPat2carItem,read>
+<doc2,carPat1carItem,read>
+<oncDoc4,oncPat1oncItem,read>
+<oncDoc3,oncPat1oncItem,read>
+<oncDoc2,oncPat2oncItem,read>
+-----------
+6.
+rule(null;; type in {HRitem}; {read }; uid=author)
+0
+-----------
+7.
+rule(null;; type in {HR}; {addItem }; teams ] treatingTeam)
+0
+-----------
+8.
+rule(null;; type in {HR}; {addNote }; agentFor ] patient)
+0
+-----------
+9.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; agentFor ] patient)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+
+OverAssignments
+---------------------
+Log Completeness: 0.6
+Rule Quality Metric: Q_RELATIVE_TO_COVERED_FREQ
+1.
+rule(null;uid in {oncNurse1 carNurse1 carNurse2}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+0
+-----------
+2.
+rule(null;position in {nurse}; patient in {carPat1 carPat2}, type in {HR}; {addItem }; ward=ward)
+0
+-----------
+3.
+rule(null;; patient in {oncPat2}, type in {HR}; {addItem }; teams ] treatingTeam)
+0
+-----------
+4.
+rule(null;uid in {oncNurse1}; patient in {oncPat1}, type in {HR}; {addItem }; )
+0
+-----------
+5.
+rule(null;teams supseteqln {{oncTeam1 carTeam1} {oncTeam2 oncTeam1}}; patient in {oncPat1}, type in {HR}; {addItem }; )
+0
+-----------
+6.
+rule(null;; type in {HRitem}; {read }; agentFor ] patient, uid=author)
+0
+-----------
+7.
+rule(null;uid in {oncNurse2}; patient in {oncPat2}, type in {HR}; {addItem }; )
+0
+-----------
+8.
+rule(null;position in {nurse}; author in {oncNurse1}, type in {HRitem}; {read }; ward=ward)
+0
+-----------
+9.
+rule(null;; author in {carAgent1 oncAgent1}, type in {HRitem}; {read }; uid=patient)
+0
+-----------
+10.
+rule(null;; treatingTeam in {oncTeam1}, type in {HR}; {addNote }; uid=patient)
+0
+-----------
+11.
+rule(null;; type in {HRitem}, ward in {oncWard}; {read }; specialties > topics, uid=author)
+0
+-----------
+12.
+rule(null;; patient in {oncPat2 carPat1 carPat2}, type in {HRitem}; {read }; uid=author, ward=ward)
+0
+-----------
+13.
+rule(null;uid in {oncAgent1}; type in {HR}; {addNote }; agentFor ] patient)
+0
+-----------
+14.
+rule(null;; patient in {oncPat1 carPat2}, type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+0
+-----------
+15.
+rule(null;; author in {carAgent1}, type in {HRitem}; {read }; agentFor ] patient)
+0
+-----------
+16.
+rule(null;uid in {oncDoc4}; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<carPat1,carPat1HR,addNote>
+<doc2,carPat2carItem,read>
+<carPat2,carPat2HR,addNote>
+<carAgent2,carPat2HR,addNote>
+<oncDoc3,oncPat2oncItem,read>
+<oncDoc1,oncPat2oncItem,read>
+<oncAgent2,oncPat2noteItem,read>
+<carAgent1,carPat2HR,addNote>
+<carDoc2,carPat1carItem,read>
+<anesDoc1,carPat1HR,addItem>
+<oncAgent2,oncPat2HR,addNote>
+<oncPat1,oncPat1noteItem,read>
+<oncPat2,oncPat2HR,addNote>
+<carDoc2,carPat2HR,addItem>
+<oncNurse2,oncPat1HR,addItem>
+<oncDoc2,oncPat1HR,addItem>
+<carDoc1,carPat1HR,addItem>
+<oncNurse2,oncPat1nursingItem,read>
+<oncNurse1,oncPat2HR,addItem>
+<carDoc1,carPat1carItem,read>
+
+OverAssignments
+---------------------
+Log Completeness: 0.6
+Rule Quality Metric: Q_RELATIVE_TO_MEANING_FREQ
+1.
+rule(null;position in {doctor}; author in {doc1}, patient in {oncPat2}, treatingTeam in {oncTeam2}, type in {HRitem}, ward in {oncWard}; {read }; specialties > topics)
+1
+<oncDoc2,oncPat2oncItem,read>
+-----------
+2.
+rule(null;position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+0
+-----------
+3.
+rule(null;position in {nurse}; type in {HR}; {addItem }; ward=ward)
+0
+-----------
+4.
+rule(null;; type in {HR}, ward in {oncWard}; {addItem }; teams ] treatingTeam)
+0
+-----------
+5.
+rule(null;; type in {HRitem}; {read }; uid=author)
+0
+-----------
+6.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient)
+0
+-----------
+7.
+rule(null;; treatingTeam in {oncTeam1}, type in {HR}; {addNote }; uid=patient)
+0
+-----------
+8.
+rule(null;uid in {oncAgent1}; type in {HR}; {addNote }; agentFor ] patient)
+0
+-----------
+9.
+rule(null;; patient in {oncPat1 carPat2}, type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+0
+-----------
+10.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; agentFor ] patient)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<carPat1,carPat1HR,addNote>
+<carPat2,carPat2HR,addNote>
+<carAgent2,carPat2HR,addNote>
+<carAgent1,carPat2HR,addNote>
+<anesDoc1,carPat1HR,addItem>
+<oncAgent2,oncPat2HR,addNote>
+<oncPat2,oncPat2HR,addNote>
+<carDoc2,carPat2HR,addItem>
+<carDoc1,carPat1HR,addItem>
+<carDoc1,carPat1carItem,read>
+
+OverAssignments
+---------------------
+Log Completeness: 0.6
+Rule Quality Metric: Q_RELATIVE_TO_UP0_FREQ
+1.
+rule(null;position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+0
+-----------
+2.
+rule(null;position in {nurse}; type in {HR}; {addItem }; ward=ward)
+0
+-----------
+3.
+rule(null;; type in {HR}; {addItem }; teams ] treatingTeam)
+0
+-----------
+4.
+rule(null;; type in {HRitem}; {read }; uid=author)
+0
+-----------
+5.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient)
+0
+-----------
+6.
+rule(null;; type in {HR}; {addNote }; uid=patient)
+0
+-----------
+7.
+rule(null;; type in {HR}; {addNote }; agentFor ] patient)
+0
+-----------
+8.
+rule(null;; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+0
+-----------
+9.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; agentFor ] patient)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+
+OverAssignments
+---------------------
+Log Completeness: 0.6
+Rule Quality Metric: Q_RELATIVE_TO_PERMISSIONS_FREQ
+1.
+rule(null;position in {nurse}; topics supseteqln {{nursing}}, type in {HRitem}; {read }; ward=ward)
+0
+-----------
+2.
+rule(null;position in {nurse}; type in {HR}; {addItem }; ward=ward)
+0
+-----------
+3.
+rule(null;; type in {HR}, ward in {oncWard}; {addItem }; teams ] treatingTeam)
+0
+-----------
+4.
+rule(null;; type in {HRitem}; {read }; uid=author)
+0
+-----------
+5.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; uid=patient)
+0
+-----------
+6.
+rule(null;; treatingTeam in {oncTeam1}, type in {HR}; {addNote }; uid=patient)
+0
+-----------
+7.
+rule(null;uid in {oncAgent1}; type in {HR}; {addNote }; agentFor ] patient)
+0
+-----------
+8.
+rule(null;; type in {HRitem}; {read }; specialties > topics, teams ] treatingTeam)
+0
+-----------
+9.
+rule(null;; topics supseteqln {{note}}, type in {HRitem}; {read }; agentFor ] patient)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<carPat1,carPat1HR,addNote>
+<carPat2,carPat2HR,addNote>
+<carAgent2,carPat2HR,addNote>
+<carAgent1,carPat2HR,addNote>
+<anesDoc1,carPat1HR,addItem>
+<oncAgent2,oncPat2HR,addNote>
+<oncPat2,oncPat2HR,addNote>
+<carDoc2,carPat2HR,addItem>
+<carDoc1,carPat1HR,addItem>
+
+
+OverAssignments Summary Report
+-------------------------
+Q_RELATIVE_TO_COVERED: 0
+Q_RELATIVE_TO_MEANING: 1
+Q_RELATIVE_TO_UP0: 0
+Q_RELATIVE_TO_PERMISSIONS: 0
+Q_RELATIVE_TO_SIZE_AND_PERMISSIONS: 0
+Q_PROGOL: 46
+Q_RELATIVE_TO_COVERED_FREQ: 0
+Q_RELATIVE_TO_MEANING_FREQ: 1
+Q_RELATIVE_TO_UP0_FREQ: 0
+Q_RELATIVE_TO_PERMISSIONS_FREQ: 0
+
+UnderAssignments Summary Report
+-------------------------
+Q_RELATIVE_TO_COVERED: 13
+Q_RELATIVE_TO_MEANING: 11
+Q_RELATIVE_TO_UP0: 0
+Q_RELATIVE_TO_PERMISSIONS: 9
+Q_RELATIVE_TO_SIZE_AND_PERMISSIONS: 18
+Q_PROGOL: 0
+Q_RELATIVE_TO_COVERED_FREQ: 20
+Q_RELATIVE_TO_MEANING_FREQ: 10
+Q_RELATIVE_TO_UP0_FREQ: 0
+Q_RELATIVE_TO_PERMISSIONS_FREQ: 9

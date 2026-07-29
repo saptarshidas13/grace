@@ -1,0 +1,75 @@
+userAttrib(applicant1, position=applicant)
+userAttrib(applicant2, position=applicant)
+userAttrib(csStu1, position=student, department=cs, crsTaken={cs101})
+userAttrib(csStu2, position=student, department=cs, crsTaken={cs601}, crsTaught={cs101 cs602})
+userAttrib(csStu3, position=student, department=cs, crsTaken={cs602}, crsTaught={cs601})
+userAttrib(csStu4, position=student, department=cs, crsTaken={cs601})
+userAttrib(csStu5, position=student, department=cs, crsTaken={cs601 cs602})
+userAttrib(eeStu1, position=student, department=ee, crsTaken={ee101})
+userAttrib(eeStu2, position=student, department=ee, crsTaken={ee601}, crsTaught={ee101 ee602})
+userAttrib(eeStu3, position=student, department=ee, crsTaken={ee602}, crsTaught={ee601})
+userAttrib(eeStu4, position=student, department=ee, crsTaken={ee601})
+userAttrib(eeStu5, position=student, department=ee, crsTaken={ee601 ee602})
+userAttrib(csFac1, position=faculty, department=cs, crsTaught={cs101})
+userAttrib(csFac2, position=faculty, department=cs, crsTaught={cs601})
+userAttrib(csChair, isChair=true, department=cs)
+userAttrib(eeFac1, position=faculty, department=ee, crsTaught={ee101})
+userAttrib(eeFac2, position=faculty, department=ee, crsTaught={ee601})
+userAttrib(eeChair, isChair=true, department=ee)
+userAttrib(registrar1, position=staff, department=registrar)
+userAttrib(registrar2, position=staff, department=registrar)
+userAttrib(admissions1, position=staff, department=admissions)
+userAttrib(admissions2, position=staff, department=admissions)
+resourceAttrib(application1, type=application, student=applicant1)
+resourceAttrib(application2, type=application, student=applicant2)
+resourceAttrib(csStu1application, type=application, student=csStu1)
+resourceAttrib(csStu2application, type=application, student=csStu2)
+resourceAttrib(csStu3application, type=application, student=csStu3)
+resourceAttrib(csStu4application, type=application, student=csStu4)
+resourceAttrib(csStu5application, type=application, student=csStu5)
+resourceAttrib(eeStu1application, type=application, student=eeStu1)
+resourceAttrib(eeStu2application, type=application, student=eeStu2)
+resourceAttrib(eeStu3application, type=application, student=eeStu3)
+resourceAttrib(eeStu4application, type=application, student=eeStu4)
+resourceAttrib(eeStu5application, type=application, student=eeStu5)
+resourceAttrib(cs101gradebook, department=cs, crs=cs101, type=gradebook)
+resourceAttrib(cs601gradebook, department=cs, crs=cs601, type=gradebook)
+resourceAttrib(cs602gradebook, department=cs, crs=cs602, type=gradebook)
+resourceAttrib(ee101gradebook, department=ee, crs=ee101, type=gradebook)
+resourceAttrib(ee601gradebook, department=ee, crs=ee601, type=gradebook)
+resourceAttrib(ee602gradebook, department=ee, crs=ee602, type=gradebook)
+resourceAttrib(cs101roster, department=cs, crs=cs101, type=roster)
+resourceAttrib(cs601roster, department=cs, crs=cs601, type=roster)
+resourceAttrib(cs602roster, department=cs, crs=cs602, type=roster)
+resourceAttrib(ee101roster, department=ee, crs=ee101, type=roster)
+resourceAttrib(ee601roster, department=ee, crs=ee601, type=roster)
+resourceAttrib(ee602roster, department=ee, crs=ee602, type=roster)
+resourceAttrib(csStu1trans, student=csStu1, department=cs, type=transcript)
+resourceAttrib(csStu2trans, student=csStu2, department=cs, type=transcript)
+resourceAttrib(csStu3trans, student=csStu3, department=cs, type=transcript)
+resourceAttrib(csStu4trans, student=csStu4, department=cs, type=transcript)
+resourceAttrib(csStu5trans, student=csStu5, department=cs, type=transcript)
+resourceAttrib(eeStu1trans, student=eeStu1, department=ee, type=transcript)
+resourceAttrib(eeStu2trans, student=eeStu2, department=ee, type=transcript)
+resourceAttrib(eeStu3trans, student=eeStu3, department=ee, type=transcript)
+resourceAttrib(eeStu4trans, student=eeStu4, department=ee, type=transcript)
+resourceAttrib(eeStu5trans, student=eeStu5, department=ee, type=transcript)
+unremovableResourceAttribs(type)
+up(A,B,write) :- departmentU(A,registrar), typeR(B,roster).
+up(A,B,setStatus) :- departmentU(A,admissions), typeR(B,application).
+up(A,B,read) :- uidU(A,registrar2), typeR(B,transcript).
+up(A,B,readMyScores) :- crsTakenU_contains_crsR(A,B).
+up(A,B,read) :- uidU(A,registrar2), typeR(B,roster).
+up(A,B,read) :- uidU(A,registrar1), typeR(B,transcript).
+up(A,B,checkStatus) :- uidU_equals_studentR(A,B).
+up(A,B,read) :- uidU(A,admissions2), typeR(B,application).
+up(A,B,read) :- uidU(A,registrar1), typeR(B,roster).
+up(A,B,read) :- isChairU(A,true), typeR(B,transcript), departmentU_equals_departmentR(A,B).
+up(A,B,read) :- departmentR(B,cs), uidU_equals_studentR(A,B).
+up(A,B,read) :- typeR(B,transcript), uidU_equals_studentR(A,B).
+up(A,B,readScore) :- crsTaughtU_contains_crsR(A,B).
+up(A,B,addScore) :- crsTaughtU_contains_crsR(A,B).
+up(A,B,read) :- uidU(A,admissions1), typeR(B,application).
+up(A,B,changeScore) :- crsTaughtU_contains_crsR(A,B).
+up(A,B,read) :- positionU(A,faculty), typeR(B,roster), crsTaughtU_contains_crsR(A,B).
+up(A,B,assignGrade) :- positionU(A,faculty), typeR(B,gradebook).

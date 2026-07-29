@@ -1,0 +1,42 @@
+                            TOPIC 1	0.14010	
+
+                               view	1.00000	
+
+        memberType in {premium}; ; 	0.03670	
+
+
+                            TOPIC 2	0.14910	
+
+                               view	1.00000	
+
+memberType in {premium}, ageGroup in {teen}; rating in {R}, videoType in {new}; 	0.05603	
+
+
+                            TOPIC 3	0.13560	
+
+                               view	1.00000	
+
+; rating in {G}, videoType in {old}; 	0.04265	
+
+
+                            TOPIC 4	0.14332	
+
+                               view	1.00000	
+
+memberType in {premium}; rating in {R}, videoType in {new}; 	0.04933	
+
+
+                            TOPIC 5	0.14332	
+
+                               view	1.00000	
+
+memberType in {regular}, ageGroup in {child}; rating in {G}; 	0.03587	
+
+
+                            TOPIC 6	0.13946	
+
+                               view	1.00000	
+
+memberType in {regular}, ageGroup in {adult}; rating in {PG}, videoType in {new}; 	0.04147	
+
+

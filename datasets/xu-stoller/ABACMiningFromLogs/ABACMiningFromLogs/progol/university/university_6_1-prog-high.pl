@@ -1,0 +1,646 @@
+%Settings
+:- set(nodes,10771)?
+:- set(h,100)?
+:- set(posonly)?
+%Mode Declarations
+:- modeh(1,up(+user,+resource,#operation))?
+:- modeb(1,positionU(+user,#positionUType))?
+:- modeb(1,uidU(+user,#uidUType))?
+:- modeb(1,departmentU(+user,#departmentUType))?
+:- modeb(*,crsTakenU(+user,#crsTakenUType))?
+:- modeb(1,isChairU(+user,#isChairUType))?
+:- modeb(*,crsTaughtU(+user,#crsTaughtUType))?
+:- modeb(1,crsR(+resource,#crsRType))?
+:- modeb(1,studentR(+resource,#studentRType))?
+:- modeb(1,ridR(+resource,#ridRType))?
+:- modeb(1,departmentR(+resource,#departmentRType))?
+:- modeb(1,typeR(+resource,#typeRType))?
+:- modeb(1,crsTakenU_contains_crsR(+user,+resource))?
+:- modeb(1,crsTakenU_contains_studentR(+user,+resource))?
+:- modeb(1,crsTakenU_contains_ridR(+user,+resource))?
+:- modeb(1,crsTakenU_contains_departmentR(+user,+resource))?
+:- modeb(1,crsTakenU_contains_typeR(+user,+resource))?
+:- modeb(1,crsTaughtU_contains_crsR(+user,+resource))?
+:- modeb(1,crsTaughtU_contains_studentR(+user,+resource))?
+:- modeb(1,crsTaughtU_contains_ridR(+user,+resource))?
+:- modeb(1,crsTaughtU_contains_departmentR(+user,+resource))?
+:- modeb(1,crsTaughtU_contains_typeR(+user,+resource))?
+:- modeb(1,positionU_equals_crsR(+user,+resource))?
+:- modeb(1,positionU_equals_studentR(+user,+resource))?
+:- modeb(1,positionU_equals_ridR(+user,+resource))?
+:- modeb(1,positionU_equals_departmentR(+user,+resource))?
+:- modeb(1,positionU_equals_typeR(+user,+resource))?
+:- modeb(1,uidU_equals_crsR(+user,+resource))?
+:- modeb(1,uidU_equals_studentR(+user,+resource))?
+:- modeb(1,uidU_equals_ridR(+user,+resource))?
+:- modeb(1,uidU_equals_departmentR(+user,+resource))?
+:- modeb(1,uidU_equals_typeR(+user,+resource))?
+:- modeb(1,departmentU_equals_crsR(+user,+resource))?
+:- modeb(1,departmentU_equals_studentR(+user,+resource))?
+:- modeb(1,departmentU_equals_ridR(+user,+resource))?
+:- modeb(1,departmentU_equals_departmentR(+user,+resource))?
+:- modeb(1,departmentU_equals_typeR(+user,+resource))?
+:- modeb(1,isChairU_equals_crsR(+user,+resource))?
+:- modeb(1,isChairU_equals_studentR(+user,+resource))?
+:- modeb(1,isChairU_equals_ridR(+user,+resource))?
+:- modeb(1,isChairU_equals_departmentR(+user,+resource))?
+:- modeb(1,isChairU_equals_typeR(+user,+resource))?
+:- modeb(1,superset(+attribValSet,+attribValSet))?
+:- modeb(1,element(+attribValAtomic,+attribValSet))?
+:- modeb(1,element(+attribValAtomic,#attribValSet))?
+:- modeb(1,element(#attribValAtomic,+attribValSet))?
+%Types
+user(eeChair).
+user(eeFac1).
+user(eeFac2).
+user(csStu1).
+user(eeStu1).
+user(csStu3).
+user(eeStu3).
+user(csStu2).
+user(eeStu2).
+user(applicant2).
+user(csChair).
+user(csFac2).
+user(eeStu4).
+user(admissions1).
+user(csFac1).
+user(applicant1).
+user(eeStu5).
+user(csStu4).
+user(csStu5).
+user(admissions2).
+user(registrar1).
+user(registrar2).
+resource(eeStu3application).
+resource(csStu2application).
+resource(application2).
+resource(csStu5trans).
+resource(application1).
+resource(eeStu5application).
+resource(eeStu4trans).
+resource(eeStu1trans).
+resource(ee602roster).
+resource(eeStu1application).
+resource(csStu1application).
+resource(csStu5application).
+resource(csStu3application).
+resource(cs101roster).
+resource(ee101roster).
+resource(eeStu3trans).
+resource(csStu4trans).
+resource(cs602roster).
+resource(eeStu4application).
+resource(cs601roster).
+resource(eeStu2application).
+resource(csStu4application).
+resource(ee602gradebook).
+resource(csStu3trans).
+resource(eeStu2trans).
+resource(cs602gradebook).
+resource(ee101gradebook).
+resource(ee601gradebook).
+resource(ee601roster).
+resource(csStu1trans).
+resource(cs101gradebook).
+resource(cs601gradebook).
+resource(eeStu5trans).
+resource(csStu2trans).
+operation(checkStatus).
+operation(readScore).
+operation(assignGrade).
+operation(readMyScores).
+operation(write).
+operation(addScore).
+operation(read).
+operation(setStatus).
+operation(changeScore).
+attribValAtomic(transcript).
+attribValAtomic(csStu2application).
+attribValAtomic(csStu5trans).
+attribValAtomic(eeStu1).
+attribValAtomic(roster).
+attribValAtomic(eeStu3).
+attribValAtomic(eeStu5application).
+attribValAtomic(eeStu2).
+attribValAtomic(eeStu1application).
+attribValAtomic(student).
+attribValAtomic(csStu4trans).
+attribValAtomic(ee601).
+attribValAtomic(admissions).
+attribValAtomic(cs601roster).
+attribValAtomic(eeStu4application).
+attribValAtomic(applicant2).
+attribValAtomic(gradebook).
+attribValAtomic(ee602).
+attribValAtomic(cs).
+attribValAtomic(cs602).
+attribValAtomic(ee602gradebook).
+attribValAtomic(csStu3trans).
+attribValAtomic(applicant1).
+attribValAtomic(admissions1).
+attribValAtomic(cs602gradebook).
+attribValAtomic(ee101gradebook).
+attribValAtomic(applicant).
+attribValAtomic(cs101gradebook).
+attribValAtomic(eeStu5trans).
+attribValAtomic(admissions2).
+attribValAtomic(faculty).
+attribValAtomic(cs601).
+attribValAtomic(eeStu3application).
+attribValAtomic(application2).
+attribValAtomic(application1).
+attribValAtomic(csStu1).
+attribValAtomic(csStu3).
+attribValAtomic(csStu2).
+attribValAtomic(eeStu4trans).
+attribValAtomic(eeStu1trans).
+attribValAtomic(cs101).
+attribValAtomic(ee602roster).
+attribValAtomic(staff).
+attribValAtomic(csStu1application).
+attribValAtomic(csStu4).
+attribValAtomic(csStu5).
+attribValAtomic(ee101).
+attribValAtomic(csStu3application).
+attribValAtomic(csStu5application).
+attribValAtomic(cs101roster).
+attribValAtomic(ee101roster).
+attribValAtomic(eeStu3trans).
+attribValAtomic(application).
+attribValAtomic(eeChair).
+attribValAtomic(cs602roster).
+attribValAtomic(eeFac1).
+attribValAtomic(registrar).
+attribValAtomic(eeFac2).
+attribValAtomic(true).
+attribValAtomic(eeStu2application).
+attribValAtomic(csChair).
+attribValAtomic(csStu4application).
+attribValAtomic(csFac2).
+attribValAtomic(eeStu4).
+attribValAtomic(eeStu5).
+attribValAtomic(csFac1).
+attribValAtomic(ee).
+attribValAtomic(eeStu2trans).
+attribValAtomic(ee601gradebook).
+attribValAtomic(ee601roster).
+attribValAtomic(cs601gradebook).
+attribValAtomic(csStu1trans).
+attribValAtomic(csStu2trans).
+attribValAtomic(registrar1).
+attribValAtomic(registrar2).
+attribValSet([]).
+attribValSet([V|Vs]) :- attribValAtomic(V), attribValSet(Vs).
+positionUType(staff).
+positionUType(student).
+positionUType(applicant).
+positionUType(faculty).
+uidUType(eeChair).
+uidUType(eeFac1).
+uidUType(eeFac2).
+uidUType(csStu1).
+uidUType(eeStu1).
+uidUType(csStu3).
+uidUType(eeStu3).
+uidUType(csStu2).
+uidUType(eeStu2).
+uidUType(applicant2).
+uidUType(csChair).
+uidUType(csFac2).
+uidUType(eeStu4).
+uidUType(admissions1).
+uidUType(csFac1).
+uidUType(applicant1).
+uidUType(eeStu5).
+uidUType(csStu4).
+uidUType(csStu5).
+uidUType(admissions2).
+uidUType(registrar1).
+uidUType(registrar2).
+departmentUType(ee).
+departmentUType(admissions).
+departmentUType(registrar).
+departmentUType(cs).
+crsTakenUType(cs602).
+crsTakenUType(ee601).
+crsTakenUType(ee601).
+crsTakenUType(ee602).
+crsTakenUType(ee101).
+crsTakenUType(ee602).
+crsTakenUType(cs602).
+crsTakenUType(cs601).
+crsTakenUType(cs101).
+crsTakenUType(cs601).
+isChairUType(true).
+crsTaughtUType(ee601).
+crsTaughtUType(ee101).
+crsTaughtUType(ee602).
+crsTaughtUType(cs602).
+crsTaughtUType(cs101).
+crsTaughtUType(ee101).
+crsTaughtUType(cs101).
+crsTaughtUType(cs601).
+crsRType(cs602).
+crsRType(ee601).
+crsRType(ee101).
+crsRType(ee602).
+crsRType(cs101).
+crsRType(cs601).
+studentRType(eeStu4).
+studentRType(eeStu5).
+studentRType(applicant1).
+studentRType(csStu4).
+studentRType(csStu5).
+studentRType(eeStu1).
+studentRType(csStu1).
+studentRType(eeStu3).
+studentRType(csStu3).
+studentRType(eeStu2).
+studentRType(csStu2).
+studentRType(applicant2).
+ridRType(eeStu3application).
+ridRType(csStu2application).
+ridRType(application2).
+ridRType(csStu5trans).
+ridRType(application1).
+ridRType(eeStu5application).
+ridRType(eeStu4trans).
+ridRType(eeStu1trans).
+ridRType(ee602roster).
+ridRType(eeStu1application).
+ridRType(csStu1application).
+ridRType(csStu5application).
+ridRType(csStu3application).
+ridRType(cs101roster).
+ridRType(ee101roster).
+ridRType(eeStu3trans).
+ridRType(csStu4trans).
+ridRType(cs602roster).
+ridRType(eeStu4application).
+ridRType(cs601roster).
+ridRType(eeStu2application).
+ridRType(csStu4application).
+ridRType(ee602gradebook).
+ridRType(csStu3trans).
+ridRType(eeStu2trans).
+ridRType(cs602gradebook).
+ridRType(ee101gradebook).
+ridRType(ee601gradebook).
+ridRType(ee601roster).
+ridRType(csStu1trans).
+ridRType(cs101gradebook).
+ridRType(cs601gradebook).
+ridRType(eeStu5trans).
+ridRType(csStu2trans).
+departmentRType(ee).
+departmentRType(cs).
+typeRType(transcript).
+typeRType(application).
+typeRType(roster).
+typeRType(gradebook).
+%Background Knowledge
+uidU(eeChair,eeChair).
+departmentU(eeChair,ee).
+isChairU(eeChair,true).
+positionU(eeFac1,faculty).
+uidU(eeFac1,eeFac1).
+departmentU(eeFac1,ee).
+crsTaughtU(eeFac1,ee101).
+positionU(eeFac2,faculty).
+uidU(eeFac2,eeFac2).
+departmentU(eeFac2,ee).
+crsTaughtU(eeFac2,ee601).
+positionU(csStu1,student).
+uidU(csStu1,csStu1).
+departmentU(csStu1,cs).
+crsTakenU(csStu1,cs101).
+positionU(eeStu1,student).
+uidU(eeStu1,eeStu1).
+departmentU(eeStu1,ee).
+crsTakenU(eeStu1,ee101).
+positionU(csStu3,student).
+uidU(csStu3,csStu3).
+departmentU(csStu3,cs).
+crsTakenU(csStu3,cs602).
+crsTaughtU(csStu3,cs601).
+positionU(eeStu3,student).
+uidU(eeStu3,eeStu3).
+departmentU(eeStu3,ee).
+crsTakenU(eeStu3,ee602).
+crsTaughtU(eeStu3,ee601).
+positionU(csStu2,student).
+uidU(csStu2,csStu2).
+departmentU(csStu2,cs).
+crsTakenU(csStu2,cs601).
+crsTaughtU(csStu2,cs602).
+crsTaughtU(csStu2,cs101).
+positionU(eeStu2,student).
+uidU(eeStu2,eeStu2).
+departmentU(eeStu2,ee).
+crsTakenU(eeStu2,ee601).
+crsTaughtU(eeStu2,ee101).
+crsTaughtU(eeStu2,ee602).
+positionU(applicant2,applicant).
+uidU(applicant2,applicant2).
+uidU(csChair,csChair).
+departmentU(csChair,cs).
+isChairU(csChair,true).
+positionU(csFac2,faculty).
+uidU(csFac2,csFac2).
+departmentU(csFac2,cs).
+crsTaughtU(csFac2,cs601).
+positionU(eeStu4,student).
+uidU(eeStu4,eeStu4).
+departmentU(eeStu4,ee).
+crsTakenU(eeStu4,ee601).
+positionU(admissions1,staff).
+uidU(admissions1,admissions1).
+departmentU(admissions1,admissions).
+positionU(csFac1,faculty).
+uidU(csFac1,csFac1).
+departmentU(csFac1,cs).
+crsTaughtU(csFac1,cs101).
+positionU(applicant1,applicant).
+uidU(applicant1,applicant1).
+positionU(eeStu5,student).
+uidU(eeStu5,eeStu5).
+departmentU(eeStu5,ee).
+crsTakenU(eeStu5,ee601).
+crsTakenU(eeStu5,ee602).
+positionU(csStu4,student).
+uidU(csStu4,csStu4).
+departmentU(csStu4,cs).
+crsTakenU(csStu4,cs601).
+positionU(csStu5,student).
+uidU(csStu5,csStu5).
+departmentU(csStu5,cs).
+crsTakenU(csStu5,cs602).
+crsTakenU(csStu5,cs601).
+positionU(admissions2,staff).
+uidU(admissions2,admissions2).
+departmentU(admissions2,admissions).
+positionU(registrar1,staff).
+uidU(registrar1,registrar1).
+departmentU(registrar1,registrar).
+positionU(registrar2,staff).
+uidU(registrar2,registrar2).
+departmentU(registrar2,registrar).
+studentR(eeStu3application,eeStu3).
+ridR(eeStu3application,eeStu3application).
+typeR(eeStu3application,application).
+studentR(csStu2application,csStu2).
+ridR(csStu2application,csStu2application).
+typeR(csStu2application,application).
+studentR(application2,applicant2).
+ridR(application2,application2).
+typeR(application2,application).
+studentR(csStu5trans,csStu5).
+ridR(csStu5trans,csStu5trans).
+departmentR(csStu5trans,cs).
+typeR(csStu5trans,transcript).
+studentR(application1,applicant1).
+ridR(application1,application1).
+typeR(application1,application).
+studentR(eeStu5application,eeStu5).
+ridR(eeStu5application,eeStu5application).
+typeR(eeStu5application,application).
+studentR(eeStu4trans,eeStu4).
+ridR(eeStu4trans,eeStu4trans).
+departmentR(eeStu4trans,ee).
+typeR(eeStu4trans,transcript).
+studentR(eeStu1trans,eeStu1).
+ridR(eeStu1trans,eeStu1trans).
+departmentR(eeStu1trans,ee).
+typeR(eeStu1trans,transcript).
+crsR(ee602roster,ee602).
+ridR(ee602roster,ee602roster).
+departmentR(ee602roster,ee).
+typeR(ee602roster,roster).
+studentR(eeStu1application,eeStu1).
+ridR(eeStu1application,eeStu1application).
+typeR(eeStu1application,application).
+studentR(csStu1application,csStu1).
+ridR(csStu1application,csStu1application).
+typeR(csStu1application,application).
+studentR(csStu5application,csStu5).
+ridR(csStu5application,csStu5application).
+typeR(csStu5application,application).
+studentR(csStu3application,csStu3).
+ridR(csStu3application,csStu3application).
+typeR(csStu3application,application).
+crsR(cs101roster,cs101).
+ridR(cs101roster,cs101roster).
+departmentR(cs101roster,cs).
+typeR(cs101roster,roster).
+crsR(ee101roster,ee101).
+ridR(ee101roster,ee101roster).
+departmentR(ee101roster,ee).
+typeR(ee101roster,roster).
+studentR(eeStu3trans,eeStu3).
+ridR(eeStu3trans,eeStu3trans).
+departmentR(eeStu3trans,ee).
+typeR(eeStu3trans,transcript).
+studentR(csStu4trans,csStu4).
+ridR(csStu4trans,csStu4trans).
+departmentR(csStu4trans,cs).
+typeR(csStu4trans,transcript).
+crsR(cs602roster,cs602).
+ridR(cs602roster,cs602roster).
+departmentR(cs602roster,cs).
+typeR(cs602roster,roster).
+studentR(eeStu4application,eeStu4).
+ridR(eeStu4application,eeStu4application).
+typeR(eeStu4application,application).
+crsR(cs601roster,cs601).
+ridR(cs601roster,cs601roster).
+departmentR(cs601roster,cs).
+typeR(cs601roster,roster).
+studentR(eeStu2application,eeStu2).
+ridR(eeStu2application,eeStu2application).
+typeR(eeStu2application,application).
+studentR(csStu4application,csStu4).
+ridR(csStu4application,csStu4application).
+typeR(csStu4application,application).
+crsR(ee602gradebook,ee602).
+ridR(ee602gradebook,ee602gradebook).
+departmentR(ee602gradebook,ee).
+typeR(ee602gradebook,gradebook).
+studentR(csStu3trans,csStu3).
+ridR(csStu3trans,csStu3trans).
+departmentR(csStu3trans,cs).
+typeR(csStu3trans,transcript).
+studentR(eeStu2trans,eeStu2).
+ridR(eeStu2trans,eeStu2trans).
+departmentR(eeStu2trans,ee).
+typeR(eeStu2trans,transcript).
+crsR(cs602gradebook,cs602).
+ridR(cs602gradebook,cs602gradebook).
+departmentR(cs602gradebook,cs).
+typeR(cs602gradebook,gradebook).
+crsR(ee101gradebook,ee101).
+ridR(ee101gradebook,ee101gradebook).
+departmentR(ee101gradebook,ee).
+typeR(ee101gradebook,gradebook).
+crsR(ee601gradebook,ee601).
+ridR(ee601gradebook,ee601gradebook).
+departmentR(ee601gradebook,ee).
+typeR(ee601gradebook,gradebook).
+crsR(ee601roster,ee601).
+ridR(ee601roster,ee601roster).
+departmentR(ee601roster,ee).
+typeR(ee601roster,roster).
+studentR(csStu1trans,csStu1).
+ridR(csStu1trans,csStu1trans).
+departmentR(csStu1trans,cs).
+typeR(csStu1trans,transcript).
+crsR(cs101gradebook,cs101).
+ridR(cs101gradebook,cs101gradebook).
+departmentR(cs101gradebook,cs).
+typeR(cs101gradebook,gradebook).
+crsR(cs601gradebook,cs601).
+ridR(cs601gradebook,cs601gradebook).
+departmentR(cs601gradebook,cs).
+typeR(cs601gradebook,gradebook).
+studentR(eeStu5trans,eeStu5).
+ridR(eeStu5trans,eeStu5trans).
+departmentR(eeStu5trans,ee).
+typeR(eeStu5trans,transcript).
+studentR(csStu2trans,csStu2).
+ridR(csStu2trans,csStu2trans).
+departmentR(csStu2trans,cs).
+typeR(csStu2trans,transcript).
+crsTakenU_contains_crsR(U,R) :-crsTakenU(U,X),crsR(R,X).
+crsTakenU_contains_studentR(U,R) :-crsTakenU(U,X),studentR(R,X).
+crsTakenU_contains_ridR(U,R) :-crsTakenU(U,X),ridR(R,X).
+crsTakenU_contains_departmentR(U,R) :-crsTakenU(U,X),departmentR(R,X).
+crsTakenU_contains_typeR(U,R) :-crsTakenU(U,X),typeR(R,X).
+crsTaughtU_contains_crsR(U,R) :-crsTaughtU(U,X),crsR(R,X).
+crsTaughtU_contains_studentR(U,R) :-crsTaughtU(U,X),studentR(R,X).
+crsTaughtU_contains_ridR(U,R) :-crsTaughtU(U,X),ridR(R,X).
+crsTaughtU_contains_departmentR(U,R) :-crsTaughtU(U,X),departmentR(R,X).
+crsTaughtU_contains_typeR(U,R) :-crsTaughtU(U,X),typeR(R,X).
+positionU_equals_crsR(U,R) :-positionU(U,X),crsR(R,X).
+positionU_equals_studentR(U,R) :-positionU(U,X),studentR(R,X).
+positionU_equals_ridR(U,R) :-positionU(U,X),ridR(R,X).
+positionU_equals_departmentR(U,R) :-positionU(U,X),departmentR(R,X).
+positionU_equals_typeR(U,R) :-positionU(U,X),typeR(R,X).
+uidU_equals_crsR(U,R) :-uidU(U,X),crsR(R,X).
+uidU_equals_studentR(U,R) :-uidU(U,X),studentR(R,X).
+uidU_equals_ridR(U,R) :-uidU(U,X),ridR(R,X).
+uidU_equals_departmentR(U,R) :-uidU(U,X),departmentR(R,X).
+uidU_equals_typeR(U,R) :-uidU(U,X),typeR(R,X).
+departmentU_equals_crsR(U,R) :-departmentU(U,X),crsR(R,X).
+departmentU_equals_studentR(U,R) :-departmentU(U,X),studentR(R,X).
+departmentU_equals_ridR(U,R) :-departmentU(U,X),ridR(R,X).
+departmentU_equals_departmentR(U,R) :-departmentU(U,X),departmentR(R,X).
+departmentU_equals_typeR(U,R) :-departmentU(U,X),typeR(R,X).
+isChairU_equals_crsR(U,R) :-isChairU(U,X),crsR(R,X).
+isChairU_equals_studentR(U,R) :-isChairU(U,X),studentR(R,X).
+isChairU_equals_ridR(U,R) :-isChairU(U,X),ridR(R,X).
+isChairU_equals_departmentR(U,R) :-isChairU(U,X),departmentR(R,X).
+isChairU_equals_typeR(U,R) :-isChairU(U,X),typeR(R,X).
+superset(Y,[A|X]) :- element(A,Y), superset(Y,X).
+superset(Y,[]).
+% Positive examples
+up(csFac2,cs601gradebook,assignGrade).
+up(eeStu2,ee602gradebook,addScore).
+up(eeFac1,ee101roster,read).
+up(eeFac2,ee601gradebook,changeScore).
+up(eeFac1,ee101gradebook,assignGrade).
+up(eeFac2,ee601gradebook,assignGrade).
+up(csFac1,cs101roster,read).
+up(csFac1,cs101gradebook,assignGrade).
+up(eeFac2,ee601roster,read).
+up(csStu2,cs602gradebook,addScore).
+up(eeStu2,ee602gradebook,readScore).
+up(csFac2,cs601gradebook,changeScore).
+up(csFac1,cs101gradebook,changeScore).
+up(csFac2,cs601roster,read).
+up(csStu2,cs602gradebook,readScore).
+up(csFac1,cs101gradebook,addScore).
+up(csFac1,cs101gradebook,readScore).
+up(csStu3,cs601gradebook,addScore).
+up(csStu3,cs601gradebook,readScore).
+up(admissions1,eeStu5application,read).
+up(admissions1,csStu4application,read).
+up(admissions1,csStu1application,read).
+up(admissions1,eeStu3application,read).
+up(admissions1,csStu5application,read).
+up(admissions1,csStu3application,read).
+up(admissions1,application2,read).
+up(admissions1,eeStu2application,read).
+up(eeFac2,ee601gradebook,addScore).
+up(eeFac2,ee601gradebook,readScore).
+up(csStu1,cs101gradebook,readMyScores).
+up(eeFac1,ee101gradebook,addScore).
+up(eeStu1,ee101gradebook,readMyScores).
+up(eeStu2,ee101gradebook,addScore).
+up(eeStu3,ee601gradebook,readScore).
+up(eeChair,eeStu5trans,read).
+up(eeStu5,eeStu5trans,read).
+up(csFac2,cs601gradebook,addScore).
+up(csFac2,cs601gradebook,readScore).
+up(csStu2,cs101gradebook,addScore).
+up(csStu2,cs101gradebook,readScore).
+up(eeStu2,eeStu2trans,read).
+up(csChair,csStu1trans,read).
+up(csChair,csStu2trans,read).
+up(eeChair,eeStu1trans,read).
+up(eeChair,eeStu2trans,read).
+up(eeChair,eeStu3trans,read).
+up(eeChair,eeStu4trans,read).
+up(csChair,csStu3trans,read).
+up(csChair,csStu5trans,read).
+up(eeStu4,eeStu4trans,read).
+up(csStu5,cs601gradebook,readMyScores).
+up(registrar1,cs601roster,read).
+up(admissions2,csStu1application,read).
+up(admissions2,application1,read).
+up(admissions2,csStu2application,read).
+up(admissions2,eeStu5application,read).
+up(admissions2,eeStu4application,read).
+up(admissions2,eeStu3application,read).
+up(admissions2,eeStu2application,read).
+up(admissions2,csStu4application,read).
+up(registrar1,eeStu5trans,read).
+up(eeStu1,eeStu1application,checkStatus).
+up(eeStu4,eeStu4application,checkStatus).
+up(eeStu5,eeStu5application,checkStatus).
+up(eeStu3,eeStu3application,checkStatus).
+up(csStu1,csStu1application,checkStatus).
+up(csStu3,cs602gradebook,readMyScores).
+up(registrar1,eeStu1trans,read).
+up(registrar1,csStu3trans,read).
+up(registrar1,csStu2trans,read).
+up(eeStu2,ee601gradebook,readMyScores).
+up(registrar2,cs601roster,read).
+up(registrar2,ee101roster,read).
+up(registrar2,cs101roster,read).
+up(registrar2,eeStu5trans,read).
+up(admissions1,csStu3application,setStatus).
+up(admissions1,csStu1application,setStatus).
+up(admissions1,eeStu3application,setStatus).
+up(admissions1,eeStu5application,setStatus).
+up(admissions1,eeStu4application,setStatus).
+up(admissions1,csStu4application,setStatus).
+up(admissions1,eeStu2application,setStatus).
+up(admissions1,csStu5application,setStatus).
+up(admissions1,eeStu1application,setStatus).
+up(registrar2,csStu1trans,read).
+up(registrar2,csStu5trans,read).
+up(registrar2,eeStu1trans,read).
+up(registrar1,ee602roster,write).
+up(registrar1,ee101roster,write).
+up(registrar1,cs602roster,write).
+up(registrar1,cs601roster,write).
+up(registrar1,cs101roster,write).
+up(admissions2,csStu2application,setStatus).
+up(admissions2,eeStu1application,setStatus).
+up(admissions2,csStu1application,setStatus).
+up(admissions2,csStu3application,setStatus).
+up(admissions2,eeStu5application,setStatus).
+up(admissions2,csStu5application,setStatus).
+up(admissions2,eeStu4application,setStatus).
+up(admissions2,eeStu3application,setStatus).
+up(registrar2,ee602roster,write).

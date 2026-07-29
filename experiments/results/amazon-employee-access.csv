@@ -1,0 +1,13 @@
+dataset,n_resources_total,n_policies_total,n_users_total,shared_fraction,shared_count,trial_seed,phase1_time_s,phase1_policy_count,phase1_undeliverable_count,naive_policy_count,naive_undeliverable_count,naive_leaked_resource_count,exact_cover_size,exact_cover_skipped_reason,greedy_optimality_gap,phase2_conf_allow,phase2_conf_deny,phase2_integ_grant,phase2_integ_compensatory_read,sod_pairs_tested,sod_violations,bod_pairs_tested,bod_unsatisfied
+amazon-employee-access,7226,6282,-1,0.01,72,0,5.941366599989124,9,63,71,0,1029,9,,0,19,44,63,0,0,0,0,0
+amazon-employee-access,7226,6282,-1,0.01,72,1,1.8150041999761015,6,66,70,0,766,6,,0,34,32,66,0,0,0,0,0
+amazon-employee-access,7226,6282,-1,0.01,72,2,2.5990226000430994,6,66,70,0,968,6,,0,29,37,66,0,0,0,0,0
+amazon-employee-access,7226,6282,-1,0.05,361,0,13.283770499983802,45,313,306,0,2438,,">100 candidate sets, skipped for tractability",,126,187,313,0,0,0,0,0
+amazon-employee-access,7226,6282,-1,0.05,361,1,9.303153199958615,38,321,307,0,2477,38,,0,150,171,321,0,0,0,0,0
+amazon-employee-access,7226,6282,-1,0.05,361,2,12.164080000016838,40,320,303,0,2341,40,,0,152,168,320,0,0,0,0,0
+amazon-employee-access,7226,6282,-1,0.1,723,0,22.297248799994122,84,630,536,0,3210,,">100 candidate sets, skipped for tractability",,276,354,630,0,0,0,0,0
+amazon-employee-access,7226,6282,-1,0.1,723,1,16.858021199994255,84,628,551,0,3202,,">100 candidate sets, skipped for tractability",,284,344,628,0,0,0,0,0
+amazon-employee-access,7226,6282,-1,0.1,723,2,20.529301500006113,82,629,553,0,3146,,">100 candidate sets, skipped for tractability",,300,329,629,0,0,0,0,0
+amazon-employee-access,7226,6282,-1,0.15,1084,0,31.845517900015693,139,923,749,0,3461,,">100 candidate sets, skipped for tractability",,436,487,923,0,0,0,0,0
+amazon-employee-access,7226,6282,-1,0.15,1084,1,25.862571500008926,129,938,773,0,3566,,">100 candidate sets, skipped for tractability",,455,483,938,0,0,0,0,0
+amazon-employee-access,7226,6282,-1,0.15,1084,2,28.48451160005061,129,931,767,0,3507,,">100 candidate sets, skipped for tractability",,447,484,931,0,0,0,0,0

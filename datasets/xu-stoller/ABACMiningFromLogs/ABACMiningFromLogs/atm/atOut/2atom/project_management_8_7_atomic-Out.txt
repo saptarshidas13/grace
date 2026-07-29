@@ -1,0 +1,209 @@
+                            TOPIC 1	0.08325	
+
+                               read	0.56548	
+                        setSchedule	0.39589	
+                            setCost	0.03787	
+                            approve	0.00019	
+                            request	0.00019	
+                              write	0.00019	
+                          setStatus	0.00019	
+
+isEmployee in {True_}; expertise supseteqln {{coding}}, type in {task}; tasks ] rid	0.00066	
+adminRoles supseteqln {{accountant}}; project in {proj11}, proprietary in {false}; 	0.00066	
+expertise supseteqln {{design}}, isEmployee in {True_}; project in {proj11}; expertise > expertise	0.00044	
+isEmployee in {False_}; expertise supseteqln {{coding}}, department in {dept1}; expertise > expertise	0.00044	
+projects supseteqln {{proj12}}; ; expertise > expertise, projects ] project	0.00044	
+adminRoles supseteqln {{planner}}; project in {proj11}, type in {task}; 	0.00044	
+adminRoles supseteqln {{planner}}; expertise supseteqln {{coding}}, department in {dept2}; 	0.00044	
+
+
+                            TOPIC 2	0.08358	
+
+                               read	0.94287	
+                            request	0.05642	
+                            approve	0.00014	
+                        setSchedule	0.00014	
+                            setCost	0.00014	
+                              write	0.00014	
+                          setStatus	0.00014	
+
+isEmployee in {True_}; department in {dept2}; projects ] project	0.00109	
+; expertise supseteqln {{coding}}, proprietary in {false}; projectsLed ] project, department=department	0.00088	
+isEmployee in {False_}; project in {proj22}, proprietary in {true}; expertise > expertise, projects ] project	0.00066	
+adminRoles supseteqln {{planner}}; project in {proj11}, type in {task}; 	0.00066	
+isEmployee in {False_}; expertise supseteqln {{coding}}, proprietary in {true}; tasks ] rid	0.00066	
+projects supseteqln {{proj22}}, isEmployee in {False_}; department in {dept2}; projects ] project	0.00066	
+adminRoles supseteqln {{manager}}; project in {proj12}, proprietary in {false}; 	0.00066	
+
+
+                            TOPIC 3	0.08342	
+
+                               read	0.88626	
+                          setStatus	0.11294	
+                            approve	0.00016	
+                        setSchedule	0.00016	
+                            setCost	0.00016	
+                            request	0.00016	
+                              write	0.00016	
+
+projects supseteqln {{proj11}}, isEmployee in {True_}; proprietary in {false}, type in {task}; tasks ] rid	0.00088	
+isEmployee in {False_}; department in {dept2}; tasks ] rid	0.00066	
+projects supseteqln {{proj11}}, isEmployee in {True_}; project in {proj12}; expertise > expertise	0.00066	
+projects supseteqln {{proj12}}, isEmployee in {False_}; proprietary in {false}; tasks ] rid	0.00066	
+isEmployee in {True_}; project in {proj22}, department in {dept2}; 	0.00044	
+; department in {dept2}, proprietary in {false}; department=department	0.00044	
+department in {dept1}; expertise supseteqln {{design}}, proprietary in {false}; projects ] project, department=department	0.00044	
+
+
+                            TOPIC 4	0.08342	
+
+                            setCost	0.61237	
+                               read	0.38682	
+                            approve	0.00016	
+                        setSchedule	0.00016	
+                            request	0.00016	
+                              write	0.00016	
+                          setStatus	0.00016	
+
+projects supseteqln {{proj12}}, department in {dept1}; project in {proj12}, type in {task}; department=department, projects ] project	0.00066	
+expertise supseteqln {{coding}}, isEmployee in {False_}; project in {proj11}, proprietary in {true}; expertise > expertise	0.00066	
+expertise supseteqln {{design}}, isEmployee in {True_}; expertise supseteqln {{design}}, proprietary in {true}; expertise > expertise	0.00066	
+          ; proprietary in {true}; 	0.00066	
+; ; department=department, projects ] project	0.00066	
+projects supseteqln {{proj11}}, isEmployee in {True_}; expertise supseteqln {{design}}; 	0.00066	
+projects supseteqln {{proj11}}, isEmployee in {True_}; type in {task}; projects ] project	0.00066	
+
+
+                            TOPIC 5	0.08344	
+
+                        setSchedule	0.82464	
+                               read	0.17457	
+                            approve	0.00016	
+                            setCost	0.00016	
+                            request	0.00016	
+                              write	0.00016	
+                          setStatus	0.00016	
+
+projects supseteqln {{proj22}}; department in {dept2}; 	0.00110	
+adminRoles supseteqln {{manager}}; type in {budget}; department=department	0.00066	
+expertise supseteqln {{coding}}, isEmployee in {False_}; department in {dept1}, proprietary in {true}; expertise > expertise	0.00066	
+isEmployee in {False_}; type in {budget}; projects ] project	0.00066	
+projects supseteqln {{proj12}}; expertise supseteqln {{design}}; projectsLed ] project	0.00044	
+isEmployee in {False_}; department in {dept1}; expertise > expertise	0.00044	
+; project in {proj21}, expertise supseteqln {{design}}; 	0.00044	
+
+
+                            TOPIC 6	0.08344	
+
+                              write	0.55510	
+                               read	0.44411	
+                            approve	0.00016	
+                        setSchedule	0.00016	
+                            setCost	0.00016	
+                            request	0.00016	
+                          setStatus	0.00016	
+
+expertise supseteqln {{coding}}, isEmployee in {False_}; department in {dept1}, proprietary in {false}; 	0.00088	
+expertise supseteqln {{design}}, isEmployee in {True_}; project in {proj22}, expertise supseteqln {{design}}; expertise > expertise	0.00066	
+department in {dept1}; expertise supseteqln {{design}}, type in {task}; projectsLed ] project	0.00066	
+adminRoles supseteqln {{manager}}; project in {proj22}, expertise supseteqln {{coding}}; 	0.00066	
+; project in {proj22}, proprietary in {false}; department=department	0.00066	
+; proprietary in {true}, type in {task}; department=department, projectsLed ] project	0.00066	
+projects supseteqln {{proj12}}; department in {dept1}, type in {schedule}; 	0.00066	
+
+
+                            TOPIC 7	0.08311	
+
+                               read	0.99867	
+                            approve	0.00022	
+                        setSchedule	0.00022	
+                            setCost	0.00022	
+                            request	0.00022	
+                              write	0.00022	
+                          setStatus	0.00022	
+
+projects supseteqln {{proj12}}; expertise supseteqln {{coding}}, type in {task}; projects ] project, department=department	0.00066	
+projects supseteqln {{proj21}}; project in {proj21}, proprietary in {false}; expertise > expertise	0.00044	
+projects supseteqln {{proj11}}, isEmployee in {True_}; proprietary in {false}; expertise > expertise	0.00044	
+isEmployee in {False_}; project in {proj12}, expertise supseteqln {{coding}}; expertise > expertise	0.00044	
+projects supseteqln {{proj21}}; proprietary in {true}; tasks ] rid	0.00044	
+adminRoles supseteqln {{auditor}}; department in {dept2}, type in {schedule}; 	0.00044	
+department in {dept1}; expertise supseteqln {{design}}, proprietary in {false}; department=department	0.00044	
+
+
+                            TOPIC 8	0.08340	
+
+                               read	0.99902	
+                            approve	0.00016	
+                        setSchedule	0.00016	
+                            setCost	0.00016	
+                            request	0.00016	
+                              write	0.00016	
+                          setStatus	0.00016	
+
+projects supseteqln {{proj12}}; expertise supseteqln {{design}}, type in {task}; 	0.00066	
+department in {dept1}; project in {proj11}, department in {dept1}; department=department	0.00066	
+expertise supseteqln {{design}}; expertise supseteqln {{design}}, type in {task}; tasks ] rid	0.00066	
+projects supseteqln {{proj21}}, isEmployee in {True_}; department in {dept2}, type in {task}; tasks ] rid	0.00044	
+adminRoles supseteqln {{manager}}; proprietary in {true}; department=department	0.00044	
+department in {dept1}; department in {dept1}; projectsLed ] project, department=department	0.00044	
+projects supseteqln {{proj11}}; department in {dept2}, proprietary in {true}; 	0.00044	
+
+
+                            TOPIC 9	0.08334	
+
+                          setStatus	0.43069	
+                               read	0.37903	
+                            setCost	0.18960	
+                            approve	0.00017	
+                        setSchedule	0.00017	
+                            request	0.00017	
+                              write	0.00017	
+
+; project in {proj22}, expertise supseteqln {{design}}; projects ] project	0.00088	
+expertise supseteqln {{coding}}; expertise supseteqln {{design}}, proprietary in {true}; 	0.00066	
+adminRoles supseteqln {{accountant}}; project in {proj11}, proprietary in {false}; 	0.00066	
+expertise supseteqln {{design}}, isEmployee in {False_}; expertise supseteqln {{design}}, type in {task}; projects ] project	0.00044	
+; project in {proj22}, type in {task}; projects ] project	0.00044	
+expertise supseteqln {{coding}}; project in {proj22}, expertise supseteqln {{coding}}; 	0.00044	
+expertise supseteqln {{coding}}; ; projects ] project	0.00044	
+
+
+                           TOPIC 10	0.08322	
+
+                            setCost	0.86176	
+                        setSchedule	0.07852	
+                          setStatus	0.05894	
+                            approve	0.00020	
+                            request	0.00020	
+                              write	0.00020	
+                               read	0.00020	
+
+projects supseteqln {{proj12}}, isEmployee in {False_}; project in {proj11}, proprietary in {true}; expertise > expertise	0.00088	
+department in {dept1}; expertise supseteqln {{coding}}, department in {dept1}; projects ] project, department=department	0.00066	
+expertise supseteqln {{design}}; department in {dept2}, proprietary in {true}; tasks ] rid	0.00066	
+projects supseteqln {{proj22}}; project in {proj21}, expertise supseteqln {{design}}; projects ] project	0.00066	
+projects supseteqln {{proj22}}, isEmployee in {False_}; project in {proj21}, department in {dept2}; expertise > expertise	0.00066	
+; proprietary in {true}, type in {task}; expertise > expertise, projects ] project	0.00044	
+projects supseteqln {{proj12}}, department in {dept1}; department in {dept2}, proprietary in {false}; 	0.00044	
+
+
+                           TOPIC 11	0.08327	
+
+                            setCost	0.83244	
+                        setSchedule	0.16664	
+                            approve	0.00018	
+                            request	0.00018	
+                              write	0.00018	
+                               read	0.00018	
+                          setStatus	0.00018	
+
+projects supseteqln {{proj22}}; project in {proj22}, proprietary in {true}; projects ] project	0.00066	
+department in {dept1}; ; projects ] project	0.00066	
+isEmployee in {True_}; project in {proj22}, proprietary in {false}; expertise > expertise	0.00066	
+isEmployee in {False_}; project in {proj12}, department in {dept1}; expertise > expertise, projects ] project	0.00044	
+adminRoles supseteqln {{planner}}; expertise supseteqln {{coding}}, department in {dept2}; 	0.00044	
+isEmployee in {False_}; type in {budget}; 	0.00044	
+projects supseteqln {{proj21}}; project in {proj21}, type in {task}; expertise > expertise, projects ] project	0.00044	
+
+

@@ -1,0 +1,15 @@
+Loading Amazon Employee Access dataset...
+users(role-classes)=6282 resources=7226 policies=6282
+  amazon-employee-access frac=0.01 trial=0 phase1_time=5.9414s policies=9 undeliverable=63 gap=0
+  amazon-employee-access frac=0.01 trial=1 phase1_time=1.8150s policies=6 undeliverable=66 gap=0
+  amazon-employee-access frac=0.01 trial=2 phase1_time=2.5990s policies=6 undeliverable=66 gap=0
+  amazon-employee-access frac=0.05 trial=0 phase1_time=13.2838s policies=45 undeliverable=313 gap=None
+  amazon-employee-access frac=0.05 trial=1 phase1_time=9.3032s policies=38 undeliverable=321 gap=0
+  amazon-employee-access frac=0.05 trial=2 phase1_time=12.1641s policies=40 undeliverable=320 gap=0
+  amazon-employee-access frac=0.10 trial=0 phase1_time=22.2972s policies=84 undeliverable=630 gap=None
+  amazon-employee-access frac=0.10 trial=1 phase1_time=16.8580s policies=84 undeliverable=628 gap=None
+  amazon-employee-access frac=0.10 trial=2 phase1_time=20.5293s policies=82 undeliverable=629 gap=None
+  amazon-employee-access frac=0.15 trial=0 phase1_time=31.8455s policies=139 undeliverable=923 gap=None
+  amazon-employee-access frac=0.15 trial=1 phase1_time=25.8626s policies=129 undeliverable=938 gap=None
+  amazon-employee-access frac=0.15 trial=2 phase1_time=28.4845s policies=129 undeliverable=931 gap=None
+-> results/amazon-employee-access.csv (12 rows)

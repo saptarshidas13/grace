@@ -1,0 +1,1381 @@
+OverAssignments
+---------------------
+Log Completeness: 0.9
+Rule Quality Metric: Q_RELATIVE_TO_COVERED
+1.
+rule(null;adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+0
+-----------
+2.
+rule(null;adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+0
+-----------
+3.
+rule(null;; type in {schedule}; {read }; projects ] project)
+0
+-----------
+4.
+rule(null;; proprietary in {false}, type in {task}; {request read }; expertise > expertise, projects ] project)
+0
+-----------
+5.
+rule(null;; type in {task}; {setStatus }; tasks ] rid)
+0
+-----------
+6.
+rule(null;; type in {budget}; {write read }; projectsLed ] project)
+0
+-----------
+7.
+rule(null;adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+0
+-----------
+8.
+rule(null;; type in {schedule}; {write read }; projectsLed ] project)
+0
+-----------
+9.
+rule(null;adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+0
+-----------
+10.
+rule(null;adminRoles supseteqln {{planner}}; type in {schedule}; {write read }; projects ] project)
+0
+-----------
+11.
+rule(null;adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+0
+-----------
+12.
+rule(null;isEmployee in {True_}; type in {task}; {request read setStatus }; tasks ] rid)
+0
+-----------
+13.
+rule(null;; rid in {proj21task2prop}, type in {task}; {request read }; expertise > expertise, projects ] project)
+0
+-----------
+14.
+rule(null;; rid in {proj11task1prop}, type in {task}; {read }; expertise > expertise, projects ] project)
+0
+-----------
+15.
+rule(null;; rid in {proj21task1prop}, type in {task}; {request }; expertise > expertise, projects ] project)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<des11,proj11task1prop,request>
+<code11,proj11task2prop,read>
+<des21,proj21task1prop,read>
+<code11,proj11task2prop,request>
+
+OverAssignments
+---------------------
+Log Completeness: 0.9
+Rule Quality Metric: Q_RELATIVE_TO_MEANING
+1.
+rule(null;adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+0
+-----------
+2.
+rule(null;adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+0
+-----------
+3.
+rule(null;; type in {schedule}; {read }; projects ] project)
+0
+-----------
+4.
+rule(null;; proprietary in {false}, type in {task}; {request read }; expertise > expertise, projects ] project)
+0
+-----------
+5.
+rule(null;; type in {task}; {setStatus }; tasks ] rid)
+0
+-----------
+6.
+rule(null;; type in {budget}; {write read }; projectsLed ] project)
+0
+-----------
+7.
+rule(null;adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+0
+-----------
+8.
+rule(null;isEmployee in {True_}; type in {task}; {request read setStatus }; tasks ] rid)
+0
+-----------
+9.
+rule(null;; type in {schedule}; {write read }; projectsLed ] project)
+0
+-----------
+10.
+rule(null;adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+0
+-----------
+11.
+rule(null;adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+0
+-----------
+12.
+rule(null;adminRoles supseteqln {{planner}}; type in {schedule}; {write read }; projects ] project)
+0
+-----------
+13.
+rule(null;; rid in {proj21task2prop}, type in {task}; {request read }; expertise > expertise, projects ] project)
+0
+-----------
+14.
+rule(null;; rid in {proj11task1prop}, type in {task}; {read }; expertise > expertise, projects ] project)
+0
+-----------
+15.
+rule(null;; rid in {proj21task1prop}, type in {task}; {request }; expertise > expertise, projects ] project)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<des11,proj11task1prop,request>
+<code11,proj11task2prop,read>
+<des21,proj21task1prop,read>
+<code11,proj11task2prop,request>
+
+OverAssignments
+---------------------
+Log Completeness: 0.9
+Rule Quality Metric: Q_RELATIVE_TO_UP0
+1.
+rule(null;; type in {schedule}; {write read }; projects ] project)
+17
+<ldr11,proj12sched,write>
+<aud1,proj11sched,write>
+<des12,proj12sched,write>
+<acc2,proj21sched,write>
+<des11,proj11sched,write>
+<des22,proj22sched,write>
+<code12,proj12sched,write>
+<aud2,proj21sched,write>
+<aud2,proj22sched,write>
+<code21,proj21sched,write>
+<code22,proj22sched,write>
+<acc1,proj11sched,write>
+<acc2,proj22sched,write>
+<acc1,proj12sched,write>
+<code11,proj11sched,write>
+<des21,proj21sched,write>
+<aud1,proj12sched,write>
+-----------
+2.
+rule(null;; department in {dept2 dept1}, type in {budget}; {read }; projects ] project)
+13
+<plan1,proj12budget,read>
+<des12,proj12budget,read>
+<plan1,proj11budget,read>
+<code21,proj21budget,read>
+<code11,proj11budget,read>
+<plan2,proj21budget,read>
+<ldr11,proj12budget,read>
+<plan2,proj22budget,read>
+<des21,proj21budget,read>
+<code12,proj12budget,read>
+<code22,proj22budget,read>
+<des11,proj11budget,read>
+<des22,proj22budget,read>
+-----------
+3.
+rule(null;; type in {budget}; {write read }; department=department)
+8
+<ldr12,proj11budget,read>
+<mgr2,proj22budget,write>
+<ldr12,proj11budget,write>
+<mgr2,proj21budget,write>
+<mgr1,proj11budget,write>
+<ldr11,proj12budget,write>
+<mgr1,proj12budget,write>
+<ldr11,proj12budget,read>
+-----------
+4.
+rule(null;isEmployee in {False_ True_}; department in {dept2 dept1}, proprietary in {true false}, type in {task}; {request read setStatus }; tasks ] rid)
+8
+<code12,proj12task2propa,request>
+<code12,proj12task2propa,read>
+<des12,proj12task1propa,read>
+<des12,proj12task1propa,request>
+<des22,proj22task1propa,request>
+<code22,proj22task2propa,read>
+<code22,proj22task2propa,request>
+<des22,proj22task1propa,read>
+-----------
+5.
+rule(null;adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; )
+8
+<acc2,proj12budget,read>
+<acc1,proj22budget,read>
+<acc1,proj22budget,write>
+<acc1,proj21budget,write>
+<acc2,proj11budget,write>
+<acc1,proj21budget,read>
+<acc2,proj12budget,write>
+<acc2,proj11budget,read>
+-----------
+6.
+rule(null;adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; )
+8
+<mgr2,proj12budget,read>
+<mgr1,proj22budget,approve>
+<mgr1,proj22budget,read>
+<mgr2,proj12budget,approve>
+<mgr1,proj21budget,read>
+<mgr1,proj21budget,approve>
+<mgr2,proj11budget,approve>
+<mgr2,proj11budget,read>
+-----------
+7.
+rule(null;; rid in {proj21task2prop}, type in {task}; {request read }; expertise > expertise)
+6
+<code11,proj21task2prop,read>
+<code22,proj21task2prop,request>
+<code12,proj21task2prop,read>
+<code22,proj21task2prop,read>
+<code11,proj21task2prop,request>
+<code12,proj21task2prop,request>
+-----------
+8.
+rule(null;; rid in {proj11task1prop}, type in {task}; {read }; expertise > expertise)
+3
+<des22,proj11task1prop,read>
+<des21,proj11task1prop,read>
+<des12,proj11task1prop,read>
+-----------
+9.
+rule(null;; rid in {proj21task1prop}, type in {task}; {request }; expertise > expertise)
+3
+<des11,proj21task1prop,request>
+<des22,proj21task1prop,request>
+<des12,proj21task1prop,request>
+-----------
+10.
+rule(null;adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+0
+-----------
+11.
+rule(null;adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+0
+-----------
+12.
+rule(null;; proprietary in {false}, type in {task}; {request read }; expertise > expertise, projects ] project)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<des11,proj11task1prop,request>
+<code11,proj11task2prop,read>
+<des21,proj21task1prop,read>
+<code11,proj11task2prop,request>
+
+OverAssignments
+---------------------
+Log Completeness: 0.9
+Rule Quality Metric: Q_RELATIVE_TO_PERMISSIONS
+1.
+rule(null;; department in {dept2 dept1}, type in {budget schedule}; {read }; projects ] project)
+13
+<plan1,proj12budget,read>
+<plan1,proj11budget,read>
+<code21,proj21budget,read>
+<code12,proj12budget,read>
+<code22,proj22budget,read>
+<des12,proj12budget,read>
+<code11,proj11budget,read>
+<plan2,proj21budget,read>
+<ldr11,proj12budget,read>
+<plan2,proj22budget,read>
+<des21,proj21budget,read>
+<des11,proj11budget,read>
+<des22,proj22budget,read>
+-----------
+2.
+rule(null;isEmployee in {False_ True_}; department in {dept2 dept1}, proprietary in {true false}, type in {task}; {request read setStatus }; tasks ] rid)
+8
+<code12,proj12task2propa,request>
+<code12,proj12task2propa,read>
+<des12,proj12task1propa,read>
+<des12,proj12task1propa,request>
+<des22,proj22task1propa,request>
+<code22,proj22task2propa,read>
+<code22,proj22task2propa,request>
+<des22,proj22task1propa,read>
+-----------
+3.
+rule(null;adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+0
+-----------
+4.
+rule(null;adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+0
+-----------
+5.
+rule(null;; proprietary in {false}, type in {task}; {request read }; expertise > expertise, projects ] project)
+0
+-----------
+6.
+rule(null;; type in {schedule}; {write read }; projectsLed ] project)
+0
+-----------
+7.
+rule(null;; type in {budget}; {write read }; projectsLed ] project)
+0
+-----------
+8.
+rule(null;adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+0
+-----------
+9.
+rule(null;adminRoles supseteqln {{planner}}; type in {schedule}; {write read }; projects ] project)
+0
+-----------
+10.
+rule(null;adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+0
+-----------
+11.
+rule(null;; rid in {proj21task2prop}, type in {task}; {request read }; expertise > expertise, projects ] project)
+0
+-----------
+12.
+rule(null;; rid in {proj11task1prop}, type in {task}; {read }; expertise > expertise, projects ] project)
+0
+-----------
+13.
+rule(null;; rid in {proj21task1prop}, type in {task}; {request }; expertise > expertise, projects ] project)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<des11,proj11task1prop,request>
+<code11,proj11task2prop,read>
+<des21,proj21task1prop,read>
+<code11,proj11task2prop,request>
+
+OverAssignments
+---------------------
+Log Completeness: 0.9
+Rule Quality Metric: Q_RELATIVE_TO_SIZE_AND_PERMISSIONS
+1.
+rule(null;; type in {schedule}; {write read }; projects ] project)
+17
+<ldr11,proj12sched,write>
+<aud1,proj11sched,write>
+<des12,proj12sched,write>
+<acc2,proj21sched,write>
+<des11,proj11sched,write>
+<des22,proj22sched,write>
+<code12,proj12sched,write>
+<aud2,proj21sched,write>
+<aud2,proj22sched,write>
+<code21,proj21sched,write>
+<code22,proj22sched,write>
+<acc1,proj11sched,write>
+<acc2,proj22sched,write>
+<acc1,proj12sched,write>
+<code11,proj11sched,write>
+<des21,proj21sched,write>
+<aud1,proj12sched,write>
+-----------
+2.
+rule(null;; type in {task}; {request read setStatus }; tasks ] rid)
+8
+<code12,proj12task2propa,request>
+<code12,proj12task2propa,read>
+<des12,proj12task1propa,read>
+<des12,proj12task1propa,request>
+<des22,proj22task1propa,request>
+<code22,proj22task2propa,read>
+<code22,proj22task2propa,request>
+<des22,proj22task1propa,read>
+-----------
+3.
+rule(null;adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+0
+-----------
+4.
+rule(null;adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+0
+-----------
+5.
+rule(null;; proprietary in {false}, type in {task}; {read }; expertise > expertise, projects ] project)
+0
+-----------
+6.
+rule(null;adminRoles supseteqln {{accountant}}; department in {dept2}, type in {budget}; {write }; projects ] project)
+0
+-----------
+7.
+rule(null;adminRoles supseteqln {{auditor} {accountant}}; type in {budget}; {read }; projects ] project)
+0
+-----------
+8.
+rule(null;; type in {budget}; {write read }; projectsLed ] project)
+0
+-----------
+9.
+rule(null;; rid in {proj22task2}, type in {task}; {request read }; expertise > expertise, projects ] project)
+0
+-----------
+10.
+rule(null;; rid in {proj12task2}, type in {task}; {request read }; expertise > expertise, projects ] project)
+0
+-----------
+11.
+rule(null;; rid in {proj22task1}, type in {task}; {request read }; expertise > expertise, projects ] project)
+0
+-----------
+12.
+rule(null;adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+0
+-----------
+13.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; project in {proj12}, type in {budget}; {write read }; )
+0
+-----------
+14.
+rule(null;isEmployee in {True_}; type in {task}; {request read }; expertise > expertise, projects ] project)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<des12,proj12task1,request>
+<acc1,proj11budget,write>
+
+OverAssignments
+---------------------
+Log Completeness: 0.9
+Rule Quality Metric: Q_PROGOL
+1.
+rule(null;; department in {dept2 dept1}, type in {budget schedule}; {read }; projects ] project)
+13
+<plan1,proj12budget,read>
+<plan1,proj11budget,read>
+<code21,proj21budget,read>
+<code12,proj12budget,read>
+<code22,proj22budget,read>
+<des12,proj12budget,read>
+<code11,proj11budget,read>
+<plan2,proj21budget,read>
+<ldr11,proj12budget,read>
+<plan2,proj22budget,read>
+<des21,proj21budget,read>
+<des11,proj11budget,read>
+<des22,proj22budget,read>
+-----------
+2.
+rule(null;adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; )
+8
+<mgr2,proj12budget,read>
+<mgr1,proj22budget,approve>
+<mgr1,proj22budget,read>
+<mgr2,proj12budget,approve>
+<mgr1,proj21budget,read>
+<mgr1,proj21budget,approve>
+<mgr2,proj11budget,approve>
+<mgr2,proj11budget,read>
+-----------
+3.
+rule(null;adminRoles supseteqln {{planner}}; type in {schedule}; {write read }; )
+8
+<plan1,proj21sched,write>
+<plan2,proj11sched,write>
+<plan2,proj12sched,read>
+<plan2,proj12sched,write>
+<plan1,proj22sched,write>
+<plan1,proj22sched,read>
+<plan1,proj21sched,read>
+<plan2,proj11sched,read>
+-----------
+4.
+rule(null;adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; )
+8
+<acc2,proj12budget,read>
+<acc1,proj22budget,read>
+<acc1,proj22budget,write>
+<acc1,proj21budget,write>
+<acc2,proj11budget,write>
+<acc1,proj21budget,read>
+<acc2,proj12budget,write>
+<acc2,proj11budget,read>
+-----------
+5.
+rule(null;isEmployee in {False_ True_}; department in {dept2 dept1}, proprietary in {true false}, type in {task}; {request read setStatus }; expertise > expertise, projects ] project, tasks ] rid)
+8
+<code12,proj12task2propa,request>
+<code12,proj12task2propa,read>
+<des12,proj12task1propa,read>
+<des12,proj12task1propa,request>
+<des22,proj22task1propa,request>
+<code22,proj22task2propa,read>
+<code22,proj22task2propa,request>
+<des22,proj22task1propa,read>
+-----------
+6.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, type in {task}; {setCost }; )
+0
+-----------
+7.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, type in {task}; {setSchedule }; )
+0
+-----------
+8.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, type in {task}; {setSchedule }; )
+0
+-----------
+9.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, type in {task}; {setCost }; )
+0
+-----------
+10.
+rule(null;; type in {schedule}; {write read }; projectsLed ] project)
+0
+-----------
+11.
+rule(null;; type in {budget}; {write read }; projectsLed ] project)
+0
+-----------
+12.
+rule(null;tasks supseteqln {{proj21task2a proj21task2propa}}; expertise supseteqln {{coding}}, project in {proj21}, type in {task}; {request read }; )
+0
+-----------
+13.
+rule(null;tasks supseteqln {{proj11task1a proj11task1propa}}; expertise supseteqln {{design}}, project in {proj11}, type in {task}; {request read }; )
+0
+-----------
+14.
+rule(null;tasks supseteqln {{proj11task2a proj11task2propa}}; expertise supseteqln {{coding}}, project in {proj11}, type in {task}; {request read }; )
+0
+-----------
+15.
+rule(null;tasks supseteqln {{proj22task2a proj22task2propa}}; expertise supseteqln {{coding}}, project in {proj22}, proprietary in {false}, type in {task}; {request read }; )
+0
+-----------
+16.
+rule(null;tasks supseteqln {{proj12task2propa proj12task2a}}; expertise supseteqln {{coding}}, project in {proj12}, proprietary in {false}, type in {task}; {request read }; )
+0
+-----------
+17.
+rule(null;tasks supseteqln {{proj21task1a proj21task1propa}}; expertise supseteqln {{design}}, project in {proj21}, type in {task}; {read }; )
+0
+-----------
+18.
+rule(null;tasks supseteqln {{proj21task1a proj21task1propa}}; expertise supseteqln {{design}}, project in {proj21}, type in {task}; {request }; )
+0
+-----------
+19.
+rule(null;tasks supseteqln {{proj22task1a proj22task1propa}}; expertise supseteqln {{design}}, project in {proj22}, proprietary in {false}, type in {task}; {request read }; )
+0
+-----------
+20.
+rule(null;tasks supseteqln {{proj12task1a proj12task1propa}}; expertise supseteqln {{design}}, project in {proj12}, proprietary in {false}, type in {task}; {read }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<des12,proj12task1,request>
+
+OverAssignments
+---------------------
+Log Completeness: 0.9
+Rule Quality Metric: Q_RELATIVE_TO_COVERED_FREQ
+1.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {true}, rid in {proj21task2propa}, type in {task}; {setSchedule }; )
+0
+-----------
+2.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {False_}, projects supseteqln {{proj22}}, tasks supseteqln {{proj22task2a proj22task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj22}, proprietary in {false}, rid in {proj22task2}, type in {task}; {request read }; )
+0
+-----------
+3.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task2a proj21task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {true}, rid in {proj21task2propa}, type in {task}; {request read setStatus }; )
+0
+-----------
+4.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj21}, type in {budget}; {write read }; )
+0
+-----------
+5.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj22}, proprietary in {false}, rid in {proj22task2}, type in {task}; {setCost }; )
+0
+-----------
+6.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {false}, rid in {proj21task2}, type in {task}; {setCost }; )
+0
+-----------
+7.
+rule(null;expertise supseteqln {{design}}, isEmployee in {True_}, projects supseteqln {{proj11}}, tasks supseteqln {{proj11task1a proj11task1propa}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj11}, proprietary in {true}, rid in {proj11task1prop}, type in {task}; {read }; )
+0
+-----------
+8.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj22}}, tasks supseteqln {{proj22task1a proj22task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj22}, proprietary in {true}, rid in {proj22task1propa}, type in {task}; {setStatus }; )
+0
+-----------
+9.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj12}}, tasks supseteqln {{proj12task1a proj12task1propa}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj12}, proprietary in {false}, rid in {proj12task1a}, type in {task}; {read setStatus }; )
+0
+-----------
+10.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {true}, rid in {proj21task2prop}, type in {task}; {setSchedule }; )
+0
+-----------
+11.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{coding}}, project in {proj12}, proprietary in {true}, rid in {proj12task2prop}, type in {task}; {setSchedule }; )
+0
+-----------
+12.
+rule(null;projects supseteqln {{proj11}}, uid in {acc1 code11 des11 plan1 aud1}; department in {dept1}, project in {proj11}, type in {schedule}; {read }; )
+0
+-----------
+13.
+rule(null;adminRoles supseteqln {{auditor}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj22}, type in {budget}; {read }; )
+0
+-----------
+14.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task2a proj21task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {false}, rid in {proj21task2a}, type in {task}; {request read }; )
+0
+-----------
+15.
+rule(null;expertise supseteqln {{design}}, isEmployee in {True_}, projects supseteqln {{proj11}}, tasks supseteqln {{proj11task1a proj11task1propa}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj11}, proprietary in {false}, rid in {proj11task1}, type in {task}; {request read }; )
+0
+-----------
+16.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj11}}, tasks supseteqln {{proj11task2a proj11task2propa}}; department in {dept1}, expertise supseteqln {{coding}}, project in {proj11}, proprietary in {false}, rid in {proj11task2}, type in {task}; {request read }; )
+0
+-----------
+17.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj22}}, tasks supseteqln {{proj22task1a proj22task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj22}, proprietary in {false}, rid in {proj22task1}, type in {task}; {request read }; )
+0
+-----------
+18.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, project in {proj12}, type in {budget}; {write }; )
+0
+-----------
+19.
+rule(null;adminRoles supseteqln {{auditor}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj21}, type in {budget}; {read }; )
+0
+-----------
+20.
+rule(null;expertise supseteqln {{design}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task1a proj21task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj21}, proprietary in {true}, rid in {proj21task1propa}, type in {task}; {request read setStatus }; )
+0
+-----------
+21.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task2a proj21task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {false}, rid in {proj21task2}, type in {task}; {request read }; )
+0
+-----------
+22.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj12}, proprietary in {false}, rid in {proj12task1}, type in {task}; {setCost }; )
+0
+-----------
+23.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{coding}}, project in {proj12}, proprietary in {false}, rid in {proj12task2}, type in {task}; {setCost }; )
+0
+-----------
+24.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj22}, type in {schedule}; {write read }; )
+0
+-----------
+25.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj11}}, tasks supseteqln {{proj11task2a proj11task2propa}}; department in {dept1}, expertise supseteqln {{coding}}, project in {proj11}, proprietary in {false}, rid in {proj11task2a}, type in {task}; {request read setStatus }; )
+0
+-----------
+26.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj22}, proprietary in {true}, rid in {proj22task2prop}, type in {task}; {setSchedule }; )
+0
+-----------
+27.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj11}, proprietary in {false}, rid in {proj11task1a}, type in {task}; {setCost }; )
+0
+-----------
+28.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj22}, type in {budget}; {write read }; )
+0
+-----------
+29.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj21}, proprietary in {true}, rid in {proj21task1propa}, type in {task}; {setSchedule }; )
+0
+-----------
+30.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{coding}}, project in {proj12}, proprietary in {true}, rid in {proj12task2propa}, type in {task}; {setSchedule }; )
+0
+-----------
+31.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj12}}, tasks supseteqln {{proj12task1a proj12task1propa}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj12}, proprietary in {true}, rid in {proj12task1propa}, type in {task}; {setStatus }; )
+0
+-----------
+32.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj12}, proprietary in {true}, rid in {proj12task1propa}, type in {task}; {setSchedule }; )
+0
+-----------
+33.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {False_}, projects supseteqln {{proj22}}, tasks supseteqln {{proj22task2a proj22task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj22}, proprietary in {true}, rid in {proj22task2propa}, type in {task}; {setStatus }; )
+0
+-----------
+34.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{coding}}, project in {proj11}, proprietary in {false}, rid in {proj11task2a}, type in {task}; {setCost }; )
+0
+-----------
+35.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj22}, proprietary in {true}, rid in {proj22task1prop}, type in {task}; {setSchedule }; )
+0
+-----------
+36.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj21}, proprietary in {false}, rid in {proj21task1a}, type in {task}; {setCost }; )
+0
+-----------
+37.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task2a proj21task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {true}, rid in {proj21task2prop}, type in {task}; {request read }; )
+0
+-----------
+38.
+rule(null;expertise supseteqln {{design}}, isEmployee in {True_}, projects supseteqln {{proj11}}, tasks supseteqln {{proj11task1a proj11task1propa}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj11}, proprietary in {false}, rid in {proj11task1a}, type in {task}; {request read setStatus }; )
+0
+-----------
+39.
+rule(null;expertise supseteqln {{design}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task1a proj21task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj21}, proprietary in {true}, rid in {proj21task1prop}, type in {task}; {request }; )
+0
+-----------
+40.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{coding}}, project in {proj12}, proprietary in {false}, rid in {proj12task2a}, type in {task}; {setCost }; )
+0
+-----------
+41.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj22}}, tasks supseteqln {{proj22task1a proj22task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj22}, proprietary in {false}, rid in {proj22task1a}, type in {task}; {read setStatus }; )
+0
+-----------
+42.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj11}, proprietary in {true}, rid in {proj11task1propa}, type in {task}; {setSchedule }; )
+0
+-----------
+43.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{coding}}, project in {proj11}, proprietary in {true}, rid in {proj11task2prop}, type in {task}; {setSchedule }; )
+0
+-----------
+44.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj21}, type in {schedule}; {write read }; )
+0
+-----------
+45.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj22}, proprietary in {true}, rid in {proj22task1propa}, type in {task}; {setSchedule }; )
+0
+-----------
+46.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj11}, proprietary in {true}, rid in {proj11task1prop}, type in {task}; {setSchedule }; )
+0
+-----------
+47.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj22}, proprietary in {false}, rid in {proj22task2a}, type in {task}; {setCost }; )
+0
+-----------
+48.
+rule(null;department in {dept1}, projects supseteqln {{proj11 proj12}}, projectsLed supseteqln {{proj11}}; department in {dept1}, project in {proj12}, type in {schedule}; {read }; )
+0
+-----------
+49.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj12}, proprietary in {false}, rid in {proj12task1a}, type in {task}; {setCost }; )
+0
+-----------
+50.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj11}, proprietary in {false}, rid in {proj11task1}, type in {task}; {setCost }; )
+0
+-----------
+51.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj22}, proprietary in {false}, rid in {proj22task1a}, type in {task}; {setCost }; )
+0
+-----------
+52.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{coding}}, project in {proj11}, proprietary in {false}, rid in {proj11task2}, type in {task}; {setCost }; )
+0
+-----------
+53.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj22}, proprietary in {true}, rid in {proj22task2propa}, type in {task}; {setSchedule }; )
+0
+-----------
+54.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj12}, proprietary in {true}, rid in {proj12task1prop}, type in {task}; {setSchedule }; )
+0
+-----------
+55.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {False_}, projects supseteqln {{proj12}}, tasks supseteqln {{proj12task2propa proj12task2a}}; department in {dept1}, expertise supseteqln {{coding}}, project in {proj12}, proprietary in {true}, rid in {proj12task2propa}, type in {task}; {setStatus }; )
+0
+-----------
+56.
+rule(null;adminRoles supseteqln {{auditor} {accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, project in {proj11 proj12}, type in {budget}; {read }; )
+0
+-----------
+57.
+rule(null;adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+0
+-----------
+58.
+rule(null;; proprietary in {false}, type in {task}; {read }; expertise > expertise, projects ] project)
+0
+-----------
+59.
+rule(null;tasks supseteqln {{proj12task2propa proj12task2a}}; rid in {proj12task2a}, type in {task}; {request read setStatus }; )
+0
+-----------
+60.
+rule(null;tasks supseteqln {{proj12task2propa proj12task2a}}; expertise supseteqln {{coding}}, project in {proj12}, proprietary in {false}, type in {task}; {request read }; )
+0
+-----------
+61.
+rule(null;; type in {budget schedule}; {write read }; projectsLed ] project)
+0
+-----------
+62.
+rule(null;adminRoles supseteqln {{planner}}; proprietary in {false}, type in {task}; {setSchedule }; projects ] project)
+0
+-----------
+63.
+rule(null;isEmployee in {True_}; type in {task}; {read }; tasks ] rid)
+0
+-----------
+64.
+rule(null;tasks supseteqln {{proj11task2a proj11task2propa}}; rid in {proj11task2propa}, type in {task}; {request read setStatus }; )
+0
+-----------
+65.
+rule(null;adminRoles supseteqln {{accountant}}; proprietary in {true}, type in {task}; {setCost }; projects ] project)
+0
+-----------
+66.
+rule(null;adminRoles supseteqln {{accountant}}; rid in {proj21task2a}, type in {task}; {setCost }; projects ] project)
+0
+-----------
+67.
+rule(null;tasks supseteqln {{proj21task1a proj21task1propa}}; rid in {proj21task1a}, type in {task}; {request read setStatus }; )
+0
+-----------
+68.
+rule(null;; rid in {proj22task2a}, type in {task}; {request read setStatus }; tasks ] rid)
+0
+-----------
+69.
+rule(null;uid in {code12 plan1 des12 aud1}; type in {schedule}; {read }; projects ] project)
+0
+-----------
+70.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, type in {schedule}; {write read }; )
+0
+-----------
+71.
+rule(null;uid in {code21 des21 plan2 aud2}; type in {schedule}; {read }; projects ] project)
+0
+-----------
+72.
+rule(null;isEmployee in {True_}; type in {task}; {request }; tasks ] rid)
+0
+-----------
+73.
+rule(null;uid in {des22 acc2 plan2 aud2}; project in {proj22}, type in {schedule}; {read }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<des11,proj11task1prop,request>
+<code11,proj11task2prop,read>
+<des12,proj12task1a,request>
+<des21,proj21task1prop,read>
+<des21,proj21task1,request>
+<des11,proj11task1propa,setStatus>
+<acc1,proj12sched,read>
+<code11,proj11task2prop,request>
+<code21,proj21task2a,setStatus>
+<code22,proj22sched,read>
+<des12,proj12task1,request>
+<plan1,proj11task2propa,setSchedule>
+<acc2,proj22task1,setCost>
+<acc2,proj21task1,setCost>
+<acc2,proj21sched,read>
+<plan2,proj21task1prop,setSchedule>
+<des22,proj22task1a,request>
+<acc1,proj11budget,write>
+
+OverAssignments
+---------------------
+Log Completeness: 0.9
+Rule Quality Metric: Q_RELATIVE_TO_MEANING_FREQ
+1.
+rule(null;adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+0
+-----------
+2.
+rule(null;; type in {budget schedule}; {write read }; projectsLed ] project)
+0
+-----------
+3.
+rule(null;adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+0
+-----------
+4.
+rule(null;adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+0
+-----------
+5.
+rule(null;tasks supseteqln {{proj12task2propa proj12task2a}}; expertise supseteqln {{coding}}, project in {proj12}, proprietary in {false}, type in {task}; {request read }; )
+0
+-----------
+6.
+rule(null;; type in {schedule}; {read }; projects ] project)
+0
+-----------
+7.
+rule(null;isEmployee in {True_}; type in {task}; {request read }; tasks ] rid)
+0
+-----------
+8.
+rule(null;; proprietary in {false}, type in {task}; {request read setStatus }; tasks ] rid)
+0
+-----------
+9.
+rule(null;tasks supseteqln {{proj22task2a proj22task2propa}}; expertise supseteqln {{coding}}, project in {proj22}, proprietary in {false}, type in {task}; {request read }; )
+0
+-----------
+10.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task2a proj21task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {true}, rid in {proj21task2propa}, type in {task}; {request read setStatus }; )
+0
+-----------
+11.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj21}, type in {budget}; {write read }; )
+0
+-----------
+12.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj22}}, tasks supseteqln {{proj22task1a proj22task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj22}, proprietary in {true}, rid in {proj22task1propa}, type in {task}; {setStatus }; )
+0
+-----------
+13.
+rule(null;adminRoles supseteqln {{auditor}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj22}, type in {budget}; {read }; )
+0
+-----------
+14.
+rule(null;tasks supseteqln {{proj11task1a proj11task1propa}}; expertise supseteqln {{design}}, project in {proj11}, type in {task}; {request read }; )
+0
+-----------
+15.
+rule(null;tasks supseteqln {{proj11task2a proj11task2propa}}; expertise supseteqln {{coding}}, project in {proj11}, type in {task}; {request read }; )
+0
+-----------
+16.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj22}}, tasks supseteqln {{proj22task1a proj22task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj22}, proprietary in {false}, rid in {proj22task1}, type in {task}; {request read }; )
+0
+-----------
+17.
+rule(null;expertise supseteqln {{design}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task1a proj21task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj21}, proprietary in {false}, rid in {proj21task1}, type in {task}; {read }; )
+0
+-----------
+18.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, project in {proj12}, type in {budget}; {write }; )
+0
+-----------
+19.
+rule(null;adminRoles supseteqln {{auditor}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj21}, type in {budget}; {read }; )
+0
+-----------
+20.
+rule(null;tasks supseteqln {{proj11task2a proj11task2propa}}; rid in {proj11task2propa}, type in {task}; {request read setStatus }; )
+0
+-----------
+21.
+rule(null;expertise supseteqln {{design}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task1a proj21task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj21}, proprietary in {true}, rid in {proj21task1propa}, type in {task}; {request read setStatus }; )
+0
+-----------
+22.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task2a proj21task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {false}, rid in {proj21task2}, type in {task}; {request read }; )
+0
+-----------
+23.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj22}, type in {schedule}; {write read }; )
+0
+-----------
+24.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj22}, type in {budget}; {write read }; )
+0
+-----------
+25.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj12}}, tasks supseteqln {{proj12task1a proj12task1propa}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj12}, proprietary in {true}, rid in {proj12task1propa}, type in {task}; {setStatus }; )
+0
+-----------
+26.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {False_}, projects supseteqln {{proj22}}, tasks supseteqln {{proj22task2a proj22task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj22}, proprietary in {true}, rid in {proj22task2propa}, type in {task}; {setStatus }; )
+0
+-----------
+27.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task2a proj21task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {true}, rid in {proj21task2prop}, type in {task}; {request read }; )
+0
+-----------
+28.
+rule(null;expertise supseteqln {{design}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task1a proj21task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj21}, proprietary in {true}, rid in {proj21task1prop}, type in {task}; {request }; )
+0
+-----------
+29.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, type in {schedule}; {write read }; )
+0
+-----------
+30.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj12}}, tasks supseteqln {{proj12task1a proj12task1propa}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj12}, proprietary in {false}, rid in {proj12task1}, type in {task}; {read }; )
+0
+-----------
+31.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj21}, type in {schedule}; {write read }; )
+0
+-----------
+32.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {False_}, projects supseteqln {{proj12}}, tasks supseteqln {{proj12task2propa proj12task2a}}; department in {dept1}, expertise supseteqln {{coding}}, project in {proj12}, proprietary in {true}, rid in {proj12task2propa}, type in {task}; {setStatus }; )
+0
+-----------
+33.
+rule(null;adminRoles supseteqln {{auditor} {accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, project in {proj11 proj12}, type in {budget}; {read }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<des21,proj21task1prop,read>
+<des21,proj21task1,request>
+<des11,proj11task1propa,setStatus>
+<des12,proj12task1,request>
+<acc1,proj11budget,write>
+
+OverAssignments
+---------------------
+Log Completeness: 0.9
+Rule Quality Metric: Q_RELATIVE_TO_UP0_FREQ
+1.
+rule(null;; type in {budget schedule}; {write read }; department=department)
+19
+<mgr2,proj22sched,read>
+<ldr12,proj11budget,read>
+<ldr12,proj11sched,read>
+<mgr2,proj21sched,write>
+<ldr11,proj12sched,write>
+<ldr12,proj11budget,write>
+<mgr2,proj21budget,write>
+<mgr1,proj12sched,read>
+<mgr2,proj21sched,read>
+<ldr11,proj12budget,write>
+<ldr11,proj12budget,read>
+<mgr1,proj11sched,read>
+<ldr12,proj11sched,write>
+<mgr2,proj22sched,write>
+<mgr2,proj22budget,write>
+<mgr1,proj11budget,write>
+<mgr1,proj11sched,write>
+<mgr1,proj12budget,write>
+<mgr1,proj12sched,write>
+-----------
+2.
+rule(null;adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; )
+8
+<mgr2,proj12budget,read>
+<mgr1,proj22budget,approve>
+<mgr1,proj22budget,read>
+<mgr2,proj12budget,approve>
+<mgr1,proj21budget,read>
+<mgr1,proj21budget,approve>
+<mgr2,proj11budget,approve>
+<mgr2,proj11budget,read>
+-----------
+3.
+rule(null;isEmployee in {False_ True_}; department in {dept2 dept1}, proprietary in {true false}, type in {task}; {request read setStatus }; tasks ] rid)
+8
+<code12,proj12task2propa,request>
+<code12,proj12task2propa,read>
+<des12,proj12task1propa,read>
+<des12,proj12task1propa,request>
+<des22,proj22task1propa,request>
+<code22,proj22task2propa,read>
+<code22,proj22task2propa,request>
+<des22,proj22task1propa,read>
+-----------
+4.
+rule(null;; type in {schedule}; {read }; projects ] project)
+0
+-----------
+5.
+rule(null;adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+0
+-----------
+6.
+rule(null;adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+0
+-----------
+7.
+rule(null;tasks supseteqln {{proj12task2propa proj12task2a}}; expertise supseteqln {{coding}}, project in {proj12}, proprietary in {false}, type in {task}; {request read }; )
+0
+-----------
+8.
+rule(null;tasks supseteqln {{proj22task2a proj22task2propa}}; expertise supseteqln {{coding}}, project in {proj22}, proprietary in {false}, type in {task}; {request read }; )
+0
+-----------
+9.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj21}, type in {budget}; {write read }; )
+0
+-----------
+10.
+rule(null;adminRoles supseteqln {{auditor}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj22}, type in {budget}; {read }; )
+0
+-----------
+11.
+rule(null;tasks supseteqln {{proj11task1a proj11task1propa}}; expertise supseteqln {{design}}, project in {proj11}, type in {task}; {request read }; )
+0
+-----------
+12.
+rule(null;tasks supseteqln {{proj11task2a proj11task2propa}}; expertise supseteqln {{coding}}, project in {proj11}, type in {task}; {request read }; )
+0
+-----------
+13.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj22}}, tasks supseteqln {{proj22task1a proj22task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj22}, proprietary in {false}, rid in {proj22task1}, type in {task}; {request read }; )
+0
+-----------
+14.
+rule(null;expertise supseteqln {{design}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task1a proj21task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj21}, proprietary in {false}, rid in {proj21task1}, type in {task}; {read }; )
+0
+-----------
+15.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, project in {proj12}, type in {budget}; {write }; )
+0
+-----------
+16.
+rule(null;adminRoles supseteqln {{auditor}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj21}, type in {budget}; {read }; )
+0
+-----------
+17.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task2a proj21task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {false}, rid in {proj21task2}, type in {task}; {request read }; )
+0
+-----------
+18.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj22}, type in {schedule}; {write read }; )
+0
+-----------
+19.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj22}, type in {budget}; {write read }; )
+0
+-----------
+20.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task2a proj21task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {true}, rid in {proj21task2prop}, type in {task}; {request read }; )
+0
+-----------
+21.
+rule(null;expertise supseteqln {{design}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task1a proj21task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj21}, proprietary in {true}, rid in {proj21task1prop}, type in {task}; {request }; )
+0
+-----------
+22.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, type in {schedule}; {write read }; )
+0
+-----------
+23.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj12}}, tasks supseteqln {{proj12task1a proj12task1propa}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj12}, proprietary in {false}, rid in {proj12task1}, type in {task}; {read }; )
+0
+-----------
+24.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj21}, type in {schedule}; {write read }; )
+0
+-----------
+25.
+rule(null;adminRoles supseteqln {{auditor} {accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, project in {proj11 proj12}, type in {budget}; {read }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<des21,proj21task1prop,read>
+<des21,proj21task1,request>
+<des12,proj12task1,request>
+<acc1,proj11budget,write>
+
+OverAssignments
+---------------------
+Log Completeness: 0.9
+Rule Quality Metric: Q_RELATIVE_TO_PERMISSIONS_FREQ
+1.
+rule(null;adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+0
+-----------
+2.
+rule(null;; type in {budget schedule}; {write read }; projectsLed ] project)
+0
+-----------
+3.
+rule(null;tasks supseteqln {{proj12task2propa proj12task2a}}; expertise supseteqln {{coding}}, project in {proj12}, proprietary in {false}, type in {task}; {request read }; )
+0
+-----------
+4.
+rule(null;adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+0
+-----------
+5.
+rule(null;adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+0
+-----------
+6.
+rule(null;; type in {schedule}; {read }; projects ] project)
+0
+-----------
+7.
+rule(null;isEmployee in {True_}; type in {task}; {request read }; tasks ] rid)
+0
+-----------
+8.
+rule(null;; proprietary in {false}, type in {task}; {request read setStatus }; tasks ] rid)
+0
+-----------
+9.
+rule(null;tasks supseteqln {{proj22task2a proj22task2propa}}; expertise supseteqln {{coding}}, project in {proj22}, proprietary in {false}, type in {task}; {request read }; )
+0
+-----------
+10.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task2a proj21task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {true}, rid in {proj21task2propa}, type in {task}; {request read setStatus }; )
+0
+-----------
+11.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj21}, type in {budget}; {write read }; )
+0
+-----------
+12.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj22}}, tasks supseteqln {{proj22task1a proj22task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj22}, proprietary in {true}, rid in {proj22task1propa}, type in {task}; {setStatus }; )
+0
+-----------
+13.
+rule(null;adminRoles supseteqln {{auditor}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj22}, type in {budget}; {read }; )
+0
+-----------
+14.
+rule(null;tasks supseteqln {{proj11task1a proj11task1propa}}; expertise supseteqln {{design}}, project in {proj11}, type in {task}; {request read }; )
+0
+-----------
+15.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj11}}, tasks supseteqln {{proj11task2a proj11task2propa}}; department in {dept1}, expertise supseteqln {{coding}}, project in {proj11}, proprietary in {false}, rid in {proj11task2}, type in {task}; {request read }; )
+0
+-----------
+16.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj22}}, tasks supseteqln {{proj22task1a proj22task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj22}, proprietary in {false}, rid in {proj22task1}, type in {task}; {request read }; )
+0
+-----------
+17.
+rule(null;expertise supseteqln {{design}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task1a proj21task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj21}, proprietary in {false}, rid in {proj21task1}, type in {task}; {read }; )
+0
+-----------
+18.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, project in {proj12}, type in {budget}; {write }; )
+0
+-----------
+19.
+rule(null;adminRoles supseteqln {{auditor}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj21}, type in {budget}; {read }; )
+0
+-----------
+20.
+rule(null;tasks supseteqln {{proj11task2a proj11task2propa}}; rid in {proj11task2propa}, type in {task}; {request read setStatus }; )
+0
+-----------
+21.
+rule(null;expertise supseteqln {{design}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task1a proj21task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj21}, proprietary in {true}, rid in {proj21task1propa}, type in {task}; {request read setStatus }; )
+0
+-----------
+22.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task2a proj21task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {false}, rid in {proj21task2}, type in {task}; {request read }; )
+0
+-----------
+23.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj22}, type in {schedule}; {write read }; )
+0
+-----------
+24.
+rule(null;adminRoles supseteqln {{accountant}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj22}, type in {budget}; {write read }; )
+0
+-----------
+25.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj12}}, tasks supseteqln {{proj12task1a proj12task1propa}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj12}, proprietary in {true}, rid in {proj12task1propa}, type in {task}; {setStatus }; )
+0
+-----------
+26.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {False_}, projects supseteqln {{proj22}}, tasks supseteqln {{proj22task2a proj22task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj22}, proprietary in {true}, rid in {proj22task2propa}, type in {task}; {setStatus }; )
+0
+-----------
+27.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task2a proj21task2propa}}; department in {dept2}, expertise supseteqln {{coding}}, project in {proj21}, proprietary in {true}, rid in {proj21task2prop}, type in {task}; {request read }; )
+0
+-----------
+28.
+rule(null;expertise supseteqln {{design}}, isEmployee in {True_}, projects supseteqln {{proj21}}, tasks supseteqln {{proj21task1a proj21task1propa}}; department in {dept2}, expertise supseteqln {{design}}, project in {proj21}, proprietary in {true}, rid in {proj21task1prop}, type in {task}; {request }; )
+0
+-----------
+29.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, type in {schedule}; {write read }; )
+0
+-----------
+30.
+rule(null;expertise supseteqln {{design}}, isEmployee in {False_}, projects supseteqln {{proj12}}, tasks supseteqln {{proj12task1a proj12task1propa}}; department in {dept1}, expertise supseteqln {{design}}, project in {proj12}, proprietary in {false}, rid in {proj12task1}, type in {task}; {read }; )
+0
+-----------
+31.
+rule(null;adminRoles supseteqln {{planner}}, projects supseteqln {{proj22 proj21}}; department in {dept2}, project in {proj21}, type in {schedule}; {write read }; )
+0
+-----------
+32.
+rule(null;expertise supseteqln {{coding}}, isEmployee in {False_}, projects supseteqln {{proj12}}, tasks supseteqln {{proj12task2propa proj12task2a}}; department in {dept1}, expertise supseteqln {{coding}}, project in {proj12}, proprietary in {true}, rid in {proj12task2propa}, type in {task}; {setStatus }; )
+0
+-----------
+33.
+rule(null;adminRoles supseteqln {{auditor} {accountant}}, projects supseteqln {{proj11 proj12}}; department in {dept1}, project in {proj11 proj12}, type in {budget}; {read }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<code11,proj11task2prop,read>
+<des21,proj21task1prop,read>
+<des21,proj21task1,request>
+<des11,proj11task1propa,setStatus>
+<code11,proj11task2prop,request>
+<des12,proj12task1,request>
+<acc1,proj11budget,write>
+
+
+OverAssignments Summary Report
+-------------------------
+Q_RELATIVE_TO_COVERED: 0
+Q_RELATIVE_TO_MEANING: 0
+Q_RELATIVE_TO_UP0: 73
+Q_RELATIVE_TO_PERMISSIONS: 21
+Q_RELATIVE_TO_SIZE_AND_PERMISSIONS: 25
+Q_PROGOL: 45
+Q_RELATIVE_TO_COVERED_FREQ: 0
+Q_RELATIVE_TO_MEANING_FREQ: 0
+Q_RELATIVE_TO_UP0_FREQ: 35
+Q_RELATIVE_TO_PERMISSIONS_FREQ: 0
+
+UnderAssignments Summary Report
+-------------------------
+Q_RELATIVE_TO_COVERED: 4
+Q_RELATIVE_TO_MEANING: 4
+Q_RELATIVE_TO_UP0: 4
+Q_RELATIVE_TO_PERMISSIONS: 4
+Q_RELATIVE_TO_SIZE_AND_PERMISSIONS: 2
+Q_PROGOL: 1
+Q_RELATIVE_TO_COVERED_FREQ: 18
+Q_RELATIVE_TO_MEANING_FREQ: 5
+Q_RELATIVE_TO_UP0_FREQ: 4
+Q_RELATIVE_TO_PERMISSIONS_FREQ: 7

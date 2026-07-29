@@ -1,0 +1,37 @@
+-q ./case-studies/project-management.abac ./progol/project-management/progbac/shuf1/ ./progol/project-management/quality/shuf1.output -shuf1
+
+-q ./case-studies/project-management.abac ./progol/project-management/progbac/high/ ./progol/project-management/quality/high.output -high
+
+-q ./case-studies/project-management.abac ./progol/project-management/progbac/low/ ./progol/project-management/quality/low.output -low
+
+-q ./case-studies/project-management.abac ./progol/project-management/progbac/orig/ ./progol/project-management/quality/orig.output
+
+----------------
+
+-q ./case-studies/online-video.abac ./progol/online-video/progbac/shuf1/ ./progol/online-video/quality/shuf1.output -shuf1
+
+-q ./case-studies/online-video.abac ./progol/online-video/progbac/high/ ./progol/online-video/quality/high.output -high
+
+-q ./case-studies/online-video.abac ./progol/online-video/progbac/low/ ./progol/online-video/quality/low.output -low
+
+-q ./case-studies/online-video.abac ./progol/online-video/progbac/orig/ ./progol/online-video/quality/orig.output
+
+----------------
+
+-q ./case-studies/healthcare.abac ./progol/healthcare/progbac/shuf1/ ./progol/healthcare/quality/shuf1.output -shuf1
+
+-q ./case-studies/healthcare.abac ./progol/healthcare/progbac/high/ ./progol/healthcare/quality/high.output -high
+
+-q ./case-studies/healthcare.abac ./progol/healthcare/progbac/low/ ./progol/healthcare/quality/low.output -low
+
+-q ./case-studies/healthcare.abac ./progol/healthcare/progbac/orig/ ./progol/healthcare/quality/orig.output
+
+----------------
+
+-q ./case-studies/university.abac ./progol/university/progbac/shuf1/ ./progol/university/quality/shuf1.output -shuf1
+
+-q ./case-studies/university.abac ./progol/university/progbac/high/ ./progol/university/quality/high.output -high
+
+-q ./case-studies/university.abac ./progol/university/progbac/low/ ./progol/university/quality/low.output -low
+
+-q ./case-studies/university.abac ./progol/university/progbac/orig/ ./progol/university/quality/orig.output

@@ -1,0 +1,51 @@
+userAttrib(oncNurse1, position=nurse, ward=oncWard)
+userAttrib(oncNurse2, position=nurse, ward=oncWard)
+userAttrib(carNurse1, position=nurse, ward=carWard)
+userAttrib(carNurse2, position=nurse, ward=carWard)
+userAttrib(oncDoc1, position=doctor, specialties={oncology}, teams={oncTeam1 oncTeam2})
+userAttrib(oncDoc2, position=doctor, specialties={oncology}, teams={oncTeam1})
+userAttrib(oncDoc3, position=doctor, specialties={oncology}, teams={oncTeam2})
+userAttrib(oncDoc4, position=doctor, specialties={oncology}, teams={oncTeam2})
+userAttrib(carDoc1, position=doctor, specialties={cardiology}, teams={carTeam1})
+userAttrib(carDoc2, position=doctor, specialties={cardiology}, teams={carTeam2})
+userAttrib(anesDoc1, position=doctor, specialties={anesthesiology}, teams={oncTeam1 carTeam1})
+userAttrib(doc1, position=doctor, specialties={oncology pediatrics})
+userAttrib(doc2, position=doctor, specialties={cardiology neurology})
+userAttrib(oncPat1, ward=oncWard)
+userAttrib(oncPat2, ward=oncWard)
+userAttrib(carPat1, ward=carWard)
+userAttrib(carPat2, ward=carWard)
+userAttrib(oncAgent1, agentFor={oncPat2})
+userAttrib(oncAgent2, agentFor={oncPat2})
+userAttrib(carAgent1, agentFor={carPat2})
+userAttrib(carAgent2, agentFor={carPat2})
+resourceAttrib(oncPat1oncItem, type=HRitem, author=oncDoc1, patient=oncPat1, topics={oncology}, treatingTeam=oncTeam1, ward=oncWard)
+resourceAttrib(oncPat1nursingItem, type=HRitem, author=oncNurse2, patient=oncPat1, topics={nursing}, treatingTeam=oncTeam1, ward=oncWard)
+resourceAttrib(oncPat1noteItem, type=HRitem, author=oncPat1, patient=oncPat1, topics={note}, treatingTeam=oncTeam1, ward=oncWard)
+resourceAttrib(oncPat1HR, type=HR, patient=oncPat1, treatingTeam=oncTeam1, ward=oncWard)
+resourceAttrib(oncPat2oncItem, type=HRitem, author=doc1, patient=oncPat2, topics={oncology}, treatingTeam=oncTeam2, ward=oncWard)
+resourceAttrib(oncPat2nursingItem, type=HRitem, author=oncNurse1, patient=oncPat2, topics={nursing}, treatingTeam=oncTeam2, ward=oncWard)
+resourceAttrib(oncPat2noteItem, type=HRitem, author=oncAgent1, patient=oncPat2, topics={note}, treatingTeam=oncTeam2, ward=oncWard)
+resourceAttrib(oncPat2HR, type=HR, patient=oncPat2, treatingTeam=oncTeam2, ward=oncWard)
+resourceAttrib(carPat1carItem, type=HRitem, author=carDoc2, patient=carPat1, topics={cardiology}, treatingTeam=carTeam1, ward=carWard)
+resourceAttrib(carPat1nursingItem, type=HRitem, author=carNurse1, patient=carPat1, topics={nursing}, treatingTeam=carTeam1, ward=carWard)
+resourceAttrib(carPat1noteItem, type=HRitem, author=carPat1, patient=carPat1, topics={note}, treatingTeam=carTeam1, ward=carWard)
+resourceAttrib(carPat1HR, type=HR, patient=carPat1, treatingTeam=carTeam1, ward=carWard)
+resourceAttrib(carPat2carItem, type=HRitem, author=doc2, patient=carPat2, topics={cardiology}, treatingTeam=carTeam2, ward=carWard)
+resourceAttrib(carPat2nursingItem, type=HRitem, author=carNurse2, patient=carPat2, topics={nursing}, treatingTeam=carTeam2, ward=carWard)
+resourceAttrib(carPat2noteItem, type=HRitem, author=carAgent1, patient=carPat2, topics={note}, treatingTeam=carTeam2, ward=carWard)
+resourceAttrib(carPat2HR, type=HR, patient=carPat2, treatingTeam=carTeam2, ward=carWard)
+unremovableResourceAttribs(type)
+up(A,B,addItem) :- positionU(A,nurse), wardU_equals_wardR(A,B).
+up(A,B,read) :- positionU(A,nurse), topicsR(B,nursing), wardU_equals_wardR(A,B).
+up(A,B,addNote) :- agentForU(A,oncPat2), ridR(B,oncPat2HR).
+up(A,B,read) :- uidU_equals_authorR(A,B).
+up(A,B,addItem) :- positionU(A,doctor), teamsU(A,oncTeam1), ridR(B,oncPat1HR).
+up(A,B,read) :- topicsR(B,note), agentForU_contains_patientR(A,B).
+up(A,B,addItem) :- positionU(A,doctor), teamsU(A,carTeam1), ridR(B,carPat1HR).
+up(A,B,addItem) :- teamsU(A,oncTeam2), ridR(B,oncPat2HR).
+up(A,B,addNote) :- uidU_equals_patientR(A,B).
+up(A,B,addItem) :- uidU(A,carDoc2), ridR(B,carPat2HR).
+up(A,B,read) :- positionU(A,doctor), specialtiesU_superset_topicsR(A,B).
+up(A,B,read) :- topicsR(B,note), uidU_equals_patientR(A,B).
+up(A,B,addNote) :- uidU(A,carAgent1), ridR(B,carPat2HR).

@@ -1,0 +1,67 @@
+# rules for nurses and doctors are more likely than rules for patients and
+# agents
+ruleDist(nurseHR, .25)
+ruleDist(teamHR, .25)
+ruleDist(selfHR, .04)
+ruleDist(agentHR, .04)
+ruleDist(authorHRI, .04)
+ruleDist(nurseHRI, .26)
+ruleDist(selfHRI, .04)
+ruleDist(teamHRI, .04)
+ruleDist(agentHRI, .04)
+
+# some clinicians are more likely than others, by a factor of up to 3.
+# some patients and agent are more likely than others, by a factor of approx 2.
+userDist(oncNurse1, .09)
+userDist(oncNurse2, .04)
+userDist(carNurse1, .09)
+userDist(carNurse2, .04)
+userDist(oncDoc1, .1)
+userDist(oncDoc2, .03)
+userDist(oncDoc3, .03)
+userDist(oncDoc4, .04)
+userDist(carDoc1, .03)
+userDist(carDoc2, .03)
+userDist(anesDoc1, .09)
+userDist(doc1, .04)
+userDist(doc2, .03)
+userDist(oncPat1, .07)
+userDist(oncPat2, .03)
+userDist(carPat1, .07)
+userDist(carPat2, .03)
+userDist(oncAgent1, .07)
+userDist(oncAgent2, .03)
+userDist(carAgent1, .07)
+userDist(carAgent2, .03)
+
+# resources are approximately equally likely
+
+# resources for oncPat1
+resDist(oncPat1oncItem, .07)
+resDist(oncPat1nursingItem, .06)
+resDist(oncPat1noteItem, .06)
+resDist(oncPat1HR, .06)
+
+# resources for oncPat2
+resDist(oncPat2oncItem, .07)
+resDist(oncPat2nursingItem, .06)
+resDist(oncPat2noteItem, .06)
+resDist(oncPat2HR, .06)
+
+# resources for carPat1
+resDist(carPat1carItem, .07)
+resDist(carPat1nursingItem, .06)
+resDist(carPat1noteItem, .06)
+resDist(carPat1HR, .06)
+
+# resources for carPat2
+resDist(carPat2carItem, .07)
+resDist(carPat2nursingItem, .06)
+resDist(carPat2noteItem, .06)
+resDist(carPat2HR, .06)
+
+# operations are equally likely.  each rule has only one operation,
+# so this distribution actually has no effect.
+opDist(addItem, .33)
+opDist(addNote, .33)
+opDist(read, .34)

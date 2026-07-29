@@ -1,0 +1,50 @@
+userAttrib(child1r, ageGroup=child, memberType=regular)
+userAttrib(child2r, ageGroup=child, memberType=regular)
+userAttrib(teen1r, ageGroup=teen, memberType=regular)
+userAttrib(teen2r, ageGroup=teen, memberType=regular)
+userAttrib(adult1r, ageGroup=adult, memberType=regular)
+userAttrib(adult2r, ageGroup=adult, memberType=regular)
+userAttrib(child1p, ageGroup=child, memberType=premium)
+userAttrib(child2p, ageGroup=child, memberType=premium)
+userAttrib(teen1p, ageGroup=teen, memberType=premium)
+userAttrib(teen2p, ageGroup=teen, memberType=premium)
+userAttrib(adult1p, ageGroup=adult, memberType=premium)
+userAttrib(adult2p, ageGroup=adult, memberType=premium)
+resourceAttrib(the_lion_king, rating=G, videoType=old)
+resourceAttrib(toy_story, rating=G, videoType=old)
+resourceAttrib(star_wars, rating=PG, videoType=old)
+resourceAttrib(jaws, rating=PG, videoType=old)
+resourceAttrib(brave_heart, rating=R, videoType=old)
+resourceAttrib(my_cousin_vinny, rating=R, videoType=old)
+resourceAttrib(happy_feet, rating=G, videoType=new)
+resourceAttrib(happy_feet_2, rating=G, videoType=new)
+resourceAttrib(cars, rating=G, videoType=new)
+resourceAttrib(brave, rating=PG, videoType=new)
+resourceAttrib(life_of_pi, rating=PG, videoType=new)
+resourceAttrib(flight, rating=R, videoType=new)
+resourceAttrib(cloud_atlas, rating=R, videoType=new)
+up(adult1p,jaws,view).
+up(teen1p,toy_story,view).
+up(teen2p,toy_story,view).
+up(adult1p,star_wars,view).
+up(adult2p,star_wars,view).
+up(teen2p,the_lion_king,view).
+up(teen1p,the_lion_king,view).
+up(adult2p,toy_story,view).
+up(adult1p,toy_story,view).
+up(teen2p,star_wars,view).
+up(adult2p,the_lion_king,view).
+up(A,B,view) :- uidU(A,adult1r), ridR(B,my_cousin_vinny).
+up(A,B,view) :- memberTypeU(A,regular), ageGroupU(A,adult), videoTypeR(B,old).
+up(A,B,view) :- memberTypeU(A,premium), ageGroupU(A,child), ridR(B,cars).
+up(A,B,view) :- memberTypeU(A,premium), videoTypeR(B,new).
+up(A,B,view) :- uidU(A,teen1r), videoTypeR(B,old).
+up(A,B,view) :- ageGroupU(A,child), ridR(B,toy_story).
+up(A,B,view) :- uidU(A,teen2r), videoTypeR(B,old).
+up(A,B,view) :- ageGroupU(A,child), ridR(B,the_lion_king).
+up(A,B,view) :- ageGroupU(A,adult), ridR(B,my_cousin_vinny).
+up(A,B,view) :- ageGroupU(A,adult), ridR(B,brave_heart).
+up(A,B,view) :- uidU(A,adult2p), ridR(B,jaws).
+up(A,B,view) :- ageGroupU(A,teen), ridR(B,jaws).
+up(A,B,view) :- uidU(A,teen1p), ridR(B,star_wars).
+up(A,B,view) :- uidU(A,adult1p), ridR(B,the_lion_king).

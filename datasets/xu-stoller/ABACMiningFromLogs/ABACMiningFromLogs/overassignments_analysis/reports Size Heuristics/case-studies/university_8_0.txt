@@ -1,0 +1,1479 @@
+OverAssignments
+---------------------
+Log Completeness: 0.8
+Rule Quality Metric: Q_RELATIVE_TO_COVERED
+1.
+rule(null;department in {registrar}; type in {transcript roster}; {read }; )
+0
+-----------
+2.
+rule(null;department in {admissions}; type in {application}; {read setStatus }; )
+0
+-----------
+3.
+rule(null;; type in {gradebook}; {readScore addScore }; crsTaught ] crs)
+0
+-----------
+4.
+rule(null;position in {faculty}; type in {gradebook}; {readScore assignGrade addScore changeScore }; crsTaught ] crs)
+0
+-----------
+5.
+rule(null;position in {faculty}; type in {roster}; {read }; crsTaught ] crs)
+0
+-----------
+6.
+rule(null;; type in {transcript}; {read }; uid=student)
+0
+-----------
+7.
+rule(null;; crs in {ee602}, type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+8.
+rule(null;position in {applicant}; type in {application}; {checkStatus }; uid=student)
+0
+-----------
+9.
+rule(null;department in {registrar}; crs in {ee602}, type in {roster}; {write }; )
+0
+-----------
+10.
+rule(null;uid in {csStu4 csStu2}; type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+11.
+rule(null;uid in {csStu4}; student in {csStu4}, type in {application}; {checkStatus }; )
+0
+-----------
+12.
+rule(null;uid in {eeStu4}; student in {eeStu4}, type in {application}; {checkStatus }; )
+0
+-----------
+13.
+rule(null;crsTaken supseteqln {{cs101}}; student in {csStu1}, type in {application}; {checkStatus }; )
+0
+-----------
+14.
+rule(null;; crs in {cs101}, type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+15.
+rule(null;; crs in {ee101}, type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+16.
+rule(null;crsTaken supseteqln {{ee101}}; student in {eeStu1}, type in {application}; {checkStatus }; )
+0
+-----------
+17.
+rule(null;crsTaken supseteqln {{cs602}}, crsTaught supseteqln {{cs601}}; student in {csStu3}, type in {application}; {checkStatus }; )
+0
+-----------
+18.
+rule(null;isChair in {true}; student in {eeStu5}, type in {transcript}; {read }; department=department)
+0
+-----------
+19.
+rule(null;uid in {registrar2}; crs in {ee601}, type in {roster}; {write read }; )
+0
+-----------
+20.
+rule(null;crsTaken supseteqln {{ee602}}, crsTaught supseteqln {{ee601}}; student in {eeStu3}, type in {application}; {checkStatus }; )
+0
+-----------
+21.
+rule(null;isChair in {true}; student in {eeStu1}, type in {transcript}; {read }; department=department)
+0
+-----------
+22.
+rule(null;isChair in {true}; student in {eeStu3}, type in {transcript}; {read }; department=department)
+0
+-----------
+23.
+rule(null;crsTaken supseteqln {{ee601 ee602}}; student in {eeStu5}, type in {application}; {checkStatus }; )
+0
+-----------
+24.
+rule(null;isChair in {true}; student in {csStu2}, type in {transcript}; {read }; department=department)
+0
+-----------
+25.
+rule(null;crsTaught supseteqln {{ee101 ee602}}; type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+26.
+rule(null;isChair in {true}; student in {csStu5}, type in {transcript}; {read }; department=department)
+0
+-----------
+27.
+rule(null;isChair in {true}; student in {csStu1}, type in {transcript}; {read }; department=department)
+0
+-----------
+28.
+rule(null;uid in {registrar1}; type in {roster}; {write read }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<registrar2,cs601roster,write>
+<eeStu2,eeStu2application,checkStatus>
+<eeStu4,ee601gradebook,readMyScores>
+<csChair,csStu3trans,read>
+<registrar2,cs101roster,write>
+<registrar2,cs602roster,write>
+<csStu2,csStu2application,checkStatus>
+<csStu5,cs602gradebook,readMyScores>
+<eeStu5,ee601gradebook,readMyScores>
+<eeChair,eeStu2trans,read>
+<csStu5,csStu5application,checkStatus>
+<registrar2,ee101roster,write>
+<csChair,csStu4trans,read>
+<eeChair,eeStu4trans,read>
+<csStu3,cs602gradebook,readMyScores>
+<csStu5,cs601gradebook,readMyScores>
+
+OverAssignments
+---------------------
+Log Completeness: 0.8
+Rule Quality Metric: Q_RELATIVE_TO_MEANING
+1.
+rule(null;department in {registrar}; type in {transcript roster}; {read }; )
+0
+-----------
+2.
+rule(null;department in {admissions}; type in {application}; {read setStatus }; )
+0
+-----------
+3.
+rule(null;; type in {gradebook}; {readScore addScore }; crsTaught ] crs)
+0
+-----------
+4.
+rule(null;; type in {transcript}; {read }; uid=student)
+0
+-----------
+5.
+rule(null;position in {faculty}; type in {gradebook}; {readScore assignGrade addScore changeScore }; crsTaught ] crs)
+0
+-----------
+6.
+rule(null;; type in {application}; {checkStatus }; uid=student)
+0
+-----------
+7.
+rule(null;position in {faculty}; type in {roster}; {read }; crsTaught ] crs)
+0
+-----------
+8.
+rule(null;uid in {registrar1}; type in {roster}; {write read }; )
+0
+-----------
+9.
+rule(null;uid in {csStu4 csStu2}; type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+10.
+rule(null;; crs in {cs101}, type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+11.
+rule(null;department in {registrar}; crs in {ee602}, type in {roster}; {write }; )
+0
+-----------
+12.
+rule(null;isChair in {true}; student in {eeStu5}, type in {transcript}; {read }; department=department)
+0
+-----------
+13.
+rule(null;uid in {registrar2}; crs in {ee601}, type in {roster}; {write read }; )
+0
+-----------
+14.
+rule(null;isChair in {true}; student in {eeStu1}, type in {transcript}; {read }; department=department)
+0
+-----------
+15.
+rule(null;isChair in {true}; student in {eeStu3}, type in {transcript}; {read }; department=department)
+0
+-----------
+16.
+rule(null;isChair in {true}; student in {csStu2}, type in {transcript}; {read }; department=department)
+0
+-----------
+17.
+rule(null;isChair in {true}; student in {csStu5}, type in {transcript}; {read }; department=department)
+0
+-----------
+18.
+rule(null;isChair in {true}; student in {csStu1}, type in {transcript}; {read }; department=department)
+0
+-----------
+19.
+rule(null;; department in {ee}, type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<registrar2,cs601roster,write>
+<csChair,csStu3trans,read>
+<registrar2,cs101roster,write>
+<registrar2,cs602roster,write>
+<csStu5,cs602gradebook,readMyScores>
+<eeChair,eeStu2trans,read>
+<registrar2,ee101roster,write>
+<csChair,csStu4trans,read>
+<eeChair,eeStu4trans,read>
+<csStu3,cs602gradebook,readMyScores>
+<csStu5,cs601gradebook,readMyScores>
+
+OverAssignments
+---------------------
+Log Completeness: 0.8
+Rule Quality Metric: Q_RELATIVE_TO_UP0
+1.
+rule(null;isChair in {true}; type in {transcript}; {read }; )
+10
+<eeChair,csStu2trans,read>
+<csChair,eeStu4trans,read>
+<eeChair,csStu1trans,read>
+<eeChair,csStu5trans,read>
+<eeChair,csStu4trans,read>
+<csChair,eeStu5trans,read>
+<eeChair,csStu3trans,read>
+<csChair,eeStu1trans,read>
+<csChair,eeStu2trans,read>
+<csChair,eeStu3trans,read>
+-----------
+2.
+rule(null;department in {admissions}; type in {application}; {read setStatus }; )
+0
+-----------
+3.
+rule(null;department in {registrar}; type in {transcript}; {read }; )
+0
+-----------
+4.
+rule(null;; type in {gradebook}; {readScore addScore }; crsTaught ] crs)
+0
+-----------
+5.
+rule(null;department in {registrar}; type in {roster}; {write read }; )
+0
+-----------
+6.
+rule(null;; type in {application}; {checkStatus }; uid=student)
+0
+-----------
+7.
+rule(null;; type in {transcript}; {read }; uid=student)
+0
+-----------
+8.
+rule(null;; type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+9.
+rule(null;position in {faculty}; type in {gradebook}; {readScore assignGrade addScore changeScore }; crsTaught ] crs)
+0
+-----------
+10.
+rule(null;position in {faculty}; type in {roster}; {read }; crsTaught ] crs)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+
+OverAssignments
+---------------------
+Log Completeness: 0.8
+Rule Quality Metric: Q_RELATIVE_TO_PERMISSIONS
+1.
+rule(null;department in {registrar}; type in {transcript roster}; {read }; )
+0
+-----------
+2.
+rule(null;department in {admissions}; type in {application}; {read setStatus }; )
+0
+-----------
+3.
+rule(null;; type in {gradebook}; {readScore addScore }; crsTaught ] crs)
+0
+-----------
+4.
+rule(null;; type in {transcript}; {read }; uid=student)
+0
+-----------
+5.
+rule(null;position in {faculty}; type in {gradebook}; {readScore assignGrade addScore changeScore }; crsTaught ] crs)
+0
+-----------
+6.
+rule(null;isChair in {true}; type in {transcript}; {read }; department=department)
+0
+-----------
+7.
+rule(null;position in {faculty}; type in {roster}; {read }; crsTaught ] crs)
+0
+-----------
+8.
+rule(null;uid in {registrar1}; type in {roster}; {write read }; )
+0
+-----------
+9.
+rule(null;; type in {application}; {checkStatus }; uid=student)
+0
+-----------
+10.
+rule(null;uid in {csStu4 csStu2}; type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+11.
+rule(null;department in {ee}; type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+12.
+rule(null;; crs in {cs101}, type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+13.
+rule(null;department in {registrar}; crs in {ee602}, type in {roster}; {write }; )
+0
+-----------
+14.
+rule(null;uid in {registrar2}; type in {roster}; {write read }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<csStu5,cs602gradebook,readMyScores>
+<csStu3,cs602gradebook,readMyScores>
+<csStu5,cs601gradebook,readMyScores>
+
+OverAssignments
+---------------------
+Log Completeness: 0.8
+Rule Quality Metric: Q_RELATIVE_TO_SIZE_AND_PERMISSIONS
+1.
+rule(null;; type in {gradebook}; {addScore }; crsTaught ] crs)
+0
+-----------
+2.
+rule(null;; crs in {ee602}, type in {gradebook}; {readScore }; crsTaught ] crs)
+0
+-----------
+3.
+rule(null;; crs in {ee602}, type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+4.
+rule(null;; crs in {ee101}, type in {gradebook}; {readScore }; crsTaught ] crs)
+0
+-----------
+5.
+rule(null;; crs in {cs101}, type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+6.
+rule(null;; crs in {cs601}, type in {gradebook}; {readScore }; crsTaught ] crs)
+0
+-----------
+7.
+rule(null;; crs in {ee101}, type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+8.
+rule(null;; type in {application}; {checkStatus }; uid=student)
+0
+-----------
+9.
+rule(null;uid in {csStu4 csStu2}; crs in {cs601}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+10.
+rule(null;crsTaught supseteqln {{ee101 ee602}}; crs in {ee601}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+11.
+rule(null;department in {registrar}; type in {transcript}; {read }; )
+0
+-----------
+12.
+rule(null;department in {admissions}; type in {application}; {read setStatus }; )
+0
+-----------
+13.
+rule(null;department in {registrar}; type in {roster}; {write read }; )
+0
+-----------
+14.
+rule(null;position in {faculty}; type in {gradebook}; {readScore assignGrade changeScore }; crsTaught ] crs)
+0
+-----------
+15.
+rule(null;uid in {csStu4}; student in {csStu4}, type in {transcript}; {read }; )
+0
+-----------
+16.
+rule(null;position in {faculty}; type in {roster}; {read }; crsTaught ] crs)
+0
+-----------
+17.
+rule(null;crsTaken supseteqln {{cs602}}, crsTaught supseteqln {{cs601}}; student in {csStu3}, type in {transcript}; {read }; )
+0
+-----------
+18.
+rule(null;isChair in {true}; student in {eeStu1}, type in {transcript}; {read }; department=department)
+0
+-----------
+19.
+rule(null;crsTaught supseteqln {{ee101 ee602}}; student in {eeStu2}, type in {transcript}; {read }; )
+0
+-----------
+20.
+rule(null;crsTaken supseteqln {{cs101}}; student in {csStu1}, type in {transcript}; {read }; )
+0
+-----------
+21.
+rule(null;crsTaken supseteqln {{ee602}}, crsTaught supseteqln {{ee601}}; student in {eeStu3}, type in {transcript}; {read }; )
+0
+-----------
+22.
+rule(null;crsTaught supseteqln {{cs602 cs101}}; student in {csStu2}, type in {transcript}; {read }; )
+0
+-----------
+23.
+rule(null;isChair in {true}; student in {eeStu5}, type in {transcript}; {read }; department=department)
+0
+-----------
+24.
+rule(null;crsTaken supseteqln {{cs602 cs601}}; student in {csStu5}, type in {transcript}; {read }; )
+0
+-----------
+25.
+rule(null;isChair in {true}; student in {eeStu3}, type in {transcript}; {read }; department=department)
+0
+-----------
+26.
+rule(null;crsTaken supseteqln {{ee601 ee602}}; student in {eeStu5}, type in {transcript}; {read }; )
+0
+-----------
+27.
+rule(null;isChair in {true}; student in {csStu2}, type in {transcript}; {read }; department=department)
+0
+-----------
+28.
+rule(null;isChair in {true}; student in {csStu5}, type in {transcript}; {read }; department=department)
+0
+-----------
+29.
+rule(null;isChair in {true}; student in {csStu1}, type in {transcript}; {read }; department=department)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<eeStu4,eeStu4trans,read>
+<eeStu4,ee601gradebook,readMyScores>
+<csChair,csStu3trans,read>
+<csStu5,cs602gradebook,readMyScores>
+<eeStu5,ee601gradebook,readMyScores>
+<eeStu1,eeStu1trans,read>
+<eeChair,eeStu2trans,read>
+<eeStu3,ee601gradebook,readScore>
+<csStu2,cs602gradebook,readScore>
+<csStu2,cs101gradebook,readScore>
+<csChair,csStu4trans,read>
+<eeChair,eeStu4trans,read>
+<csStu3,cs602gradebook,readMyScores>
+<csStu5,cs601gradebook,readMyScores>
+
+OverAssignments
+---------------------
+Log Completeness: 0.8
+Rule Quality Metric: Q_PROGOL
+1.
+rule(null;isChair in {true}; type in {transcript}; {read }; )
+10
+<eeChair,csStu2trans,read>
+<csChair,eeStu4trans,read>
+<eeChair,csStu1trans,read>
+<eeChair,csStu5trans,read>
+<eeChair,csStu4trans,read>
+<csChair,eeStu5trans,read>
+<eeChair,csStu3trans,read>
+<csChair,eeStu1trans,read>
+<csChair,eeStu2trans,read>
+<csChair,eeStu3trans,read>
+-----------
+2.
+rule(null;position in {faculty}; type in {roster}; {read }; department=department)
+8
+<eeFac2,ee602roster,read>
+<csFac2,cs602roster,read>
+<csFac2,cs101roster,read>
+<csFac1,cs601roster,read>
+<eeFac2,ee101roster,read>
+<csFac1,cs602roster,read>
+<eeFac1,ee602roster,read>
+<eeFac1,ee601roster,read>
+-----------
+3.
+rule(null;department in {registrar}; type in {transcript}; {read }; )
+0
+-----------
+4.
+rule(null;; type in {gradebook}; {readScore addScore }; crsTaught ] crs)
+0
+-----------
+5.
+rule(null;; type in {application}; {checkStatus }; uid=student)
+0
+-----------
+6.
+rule(null;; type in {transcript}; {read }; uid=student)
+0
+-----------
+7.
+rule(null;; type in {gradebook}; {readMyScores }; crsTaken ] crs)
+0
+-----------
+8.
+rule(null;position in {faculty}; type in {gradebook}; {readScore assignGrade addScore changeScore }; crsTaught ] crs)
+0
+-----------
+9.
+rule(null;department in {admissions}; student in {csStu5}, type in {application}; {read setStatus }; )
+0
+-----------
+10.
+rule(null;department in {admissions}; student in {eeStu1}, type in {application}; {read setStatus }; )
+0
+-----------
+11.
+rule(null;department in {admissions}; student in {csStu4}, type in {application}; {read setStatus }; )
+0
+-----------
+12.
+rule(null;department in {admissions}; student in {eeStu2}, type in {application}; {read setStatus }; )
+0
+-----------
+13.
+rule(null;department in {admissions}; student in {applicant1}, type in {application}; {read setStatus }; )
+0
+-----------
+14.
+rule(null;department in {admissions}; student in {applicant2}, type in {application}; {read }; )
+0
+-----------
+15.
+rule(null;department in {admissions}, position in {staff}; student in {eeStu4 eeStu5 csStu1 eeStu3 csStu3 csStu2}, type in {application}; {read setStatus }; )
+0
+-----------
+16.
+rule(null;department in {registrar}; type in {roster}; {write read }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<admissions2,application2,setStatus>
+<admissions1,application2,setStatus>
+
+OverAssignments
+---------------------
+Log Completeness: 0.8
+Rule Quality Metric: Q_RELATIVE_TO_COVERED_FREQ
+1.
+rule(null;crsTaken supseteqln {{cs601}}, crsTaught supseteqln {{cs602 cs101}}, department in {cs}, position in {student}; crs in {cs101}, department in {cs}, type in {gradebook}; {addScore }; )
+0
+-----------
+2.
+rule(null;crsTaught supseteqln {{cs101}}, department in {cs}, position in {faculty}; crs in {cs101}, department in {cs}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+3.
+rule(null;crsTaught supseteqln {{ee101}}, department in {ee}, position in {faculty}; crs in {ee101}, department in {ee}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+4.
+rule(null;crsTaught supseteqln {{cs601}}, department in {cs}, position in {faculty}; crs in {cs601}, department in {cs}, type in {roster}; {read }; )
+0
+-----------
+5.
+rule(null;crsTaken supseteqln {{cs601}}, crsTaught supseteqln {{cs602 cs101}}, department in {cs}, position in {student}; crs in {cs602}, department in {cs}, type in {gradebook}; {addScore }; )
+0
+-----------
+6.
+rule(null;crsTaught supseteqln {{ee601}}, department in {ee}, position in {faculty}; crs in {ee601}, department in {ee}, type in {roster}; {read }; )
+0
+-----------
+7.
+rule(null;crsTaught supseteqln {{ee601}}, department in {ee}, position in {faculty}; crs in {ee601}, department in {ee}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+8.
+rule(null;crsTaken supseteqln {{cs602}}, crsTaught supseteqln {{cs601}}, department in {cs}, position in {student}; student in {csStu3}, type in {application}; {checkStatus }; )
+0
+-----------
+9.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; crs in {ee602}, department in {ee}, type in {gradebook}; {readScore addScore }; )
+0
+-----------
+10.
+rule(null;crsTaken supseteqln {{ee602}}, crsTaught supseteqln {{ee601}}, department in {ee}, position in {student}; department in {ee}, student in {eeStu3}, type in {transcript}; {read }; )
+0
+-----------
+11.
+rule(null;crsTaken supseteqln {{cs601}}, department in {cs}, position in {student}, uid in {csStu4}; student in {csStu4}, type in {application}; {checkStatus }; )
+0
+-----------
+12.
+rule(null;department in {registrar}, position in {staff}, uid in {registrar1}; crs in {ee602}, department in {ee}, type in {roster}; {write read }; )
+0
+-----------
+13.
+rule(null;crsTaken supseteqln {{cs601}}, crsTaught supseteqln {{cs602 cs101}}, department in {cs}, position in {student}; department in {cs}, student in {csStu2}, type in {transcript}; {read }; )
+0
+-----------
+14.
+rule(null;crsTaken supseteqln {{cs101}}, department in {cs}, position in {student}; department in {cs}, student in {csStu1}, type in {transcript}; {read }; )
+0
+-----------
+15.
+rule(null;crsTaken supseteqln {{ee601}}, department in {ee}, position in {student}, uid in {eeStu4}; student in {eeStu4}, type in {application}; {checkStatus }; )
+0
+-----------
+16.
+rule(null;crsTaken supseteqln {{cs601}}, department in {cs}, position in {student}, uid in {csStu4 csStu2}; crs in {cs601}, department in {cs}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+17.
+rule(null;department in {registrar}, position in {staff}; crs in {ee601}, department in {ee}, type in {roster}; {read }; )
+0
+-----------
+18.
+rule(null;crsTaken supseteqln {{ee602}}, department in {ee}, position in {student}; crs in {ee602}, department in {ee}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+19.
+rule(null;department in {ee}, isChair in {true}; department in {ee}, student in {eeStu5}, type in {transcript}; {read }; )
+0
+-----------
+20.
+rule(null;department in {registrar}, position in {staff}, uid in {registrar2}; crs in {ee601}, department in {ee}, type in {roster}; {write }; )
+0
+-----------
+21.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; crs in {ee101}, department in {ee}, type in {gradebook}; {readScore addScore }; )
+0
+-----------
+22.
+rule(null;crsTaught supseteqln {{cs601}}, department in {cs}, position in {student}; crs in {cs601}, department in {cs}, type in {gradebook}; {addScore }; )
+0
+-----------
+23.
+rule(null;crsTaught supseteqln {{cs601}}, department in {cs}, position in {faculty}; crs in {cs601}, department in {cs}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+24.
+rule(null;crsTaken supseteqln {{cs601}}, department in {cs}, position in {student}, uid in {csStu4}; department in {cs}, student in {csStu4}, type in {transcript}; {read }; )
+0
+-----------
+25.
+rule(null;crsTaken supseteqln {{ee602}}, crsTaught supseteqln {{ee601}}, department in {ee}, position in {student}; student in {eeStu3}, type in {application}; {checkStatus }; )
+0
+-----------
+26.
+rule(null;crsTaken supseteqln {{ee602}}, crsTaught supseteqln {{ee601}}, department in {ee}, position in {student}; crs in {ee601}, department in {ee}, type in {gradebook}; {addScore }; )
+0
+-----------
+27.
+rule(null;crsTaught supseteqln {{ee101}}, department in {ee}, position in {faculty}; crs in {ee101}, department in {ee}, type in {roster}; {read }; )
+0
+-----------
+28.
+rule(null;department in {ee}, isChair in {true}; department in {ee}, student in {eeStu1}, type in {transcript}; {read }; )
+0
+-----------
+29.
+rule(null;crsTaken supseteqln {{cs101}}, department in {cs}, position in {student}; student in {csStu1}, type in {application}; {checkStatus }; )
+0
+-----------
+30.
+rule(null;department in {ee}, isChair in {true}; department in {ee}, student in {eeStu3}, type in {transcript}; {read }; )
+0
+-----------
+31.
+rule(null;crsTaken supseteqln {{ee601 ee602}}, department in {ee}, position in {student}; department in {ee}, student in {eeStu5}, type in {transcript}; {read }; )
+0
+-----------
+32.
+rule(null;crsTaken supseteqln {{cs101}}, department in {cs}, position in {student}; crs in {cs101}, department in {cs}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+33.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; department in {ee}, student in {eeStu2}, type in {transcript}; {read }; )
+0
+-----------
+34.
+rule(null;crsTaken supseteqln {{cs602}}, crsTaught supseteqln {{cs601}}, department in {cs}, position in {student}; crs in {cs601}, department in {cs}, type in {gradebook}; {readScore }; )
+0
+-----------
+35.
+rule(null;crsTaken supseteqln {{ee601 ee602}}, department in {ee}, position in {student}; student in {eeStu5}, type in {application}; {checkStatus }; )
+0
+-----------
+36.
+rule(null;crsTaken supseteqln {{ee101}}, department in {ee}, position in {student}; crs in {ee101}, department in {ee}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+37.
+rule(null;department in {registrar}, position in {staff}, uid in {registrar2}; crs in {ee101}, department in {ee}, type in {roster}; {read }; )
+0
+-----------
+38.
+rule(null;department in {cs}, isChair in {true}; department in {cs}, student in {csStu2}, type in {transcript}; {read }; )
+0
+-----------
+39.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; crs in {ee601}, department in {ee}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+40.
+rule(null;crsTaken supseteqln {{ee101}}, department in {ee}, position in {student}; student in {eeStu1}, type in {application}; {checkStatus }; )
+0
+-----------
+41.
+rule(null;department in {cs}, isChair in {true}; department in {cs}, student in {csStu5}, type in {transcript}; {read }; )
+0
+-----------
+42.
+rule(null;department in {cs}, isChair in {true}; department in {cs}, student in {csStu1}, type in {transcript}; {read }; )
+0
+-----------
+43.
+rule(null;department in {registrar}, position in {staff}, uid in {registrar2}; crs in {ee602}, department in {ee}, type in {roster}; {write }; )
+0
+-----------
+44.
+rule(null;crsTaught supseteqln {{cs101}}, department in {cs}, position in {faculty}; crs in {cs101}, department in {cs}, type in {roster}; {read }; )
+0
+-----------
+45.
+rule(null;department in {admissions}, position in {staff}; student in {csStu5 eeStu1}, type in {application}; {setStatus }; )
+0
+-----------
+46.
+rule(null;department in {admissions}, position in {staff}; student in {csStu4 eeStu2}, type in {application}; {read }; )
+0
+-----------
+47.
+rule(null;department in {admissions}, position in {staff}, uid in {admissions1}; student in {csStu4 eeStu1 eeStu2}, type in {application}; {read setStatus }; )
+0
+-----------
+48.
+rule(null;department in {registrar}; type in {transcript}; {read }; )
+0
+-----------
+49.
+rule(null;department in {admissions}; student in {eeStu4 eeStu3 csStu3 csStu2}, type in {application}; {read setStatus }; )
+0
+-----------
+50.
+rule(null;position in {applicant}; type in {application}; {checkStatus }; uid=student)
+0
+-----------
+51.
+rule(null;department in {registrar}; department in {cs}, type in {roster}; {read }; )
+0
+-----------
+52.
+rule(null;uid in {admissions2}; student in {applicant2}, type in {application}; {read }; )
+0
+-----------
+53.
+rule(null;crsTaken supseteqln {{cs602 cs601}}; student in {csStu5}, type in {transcript}; {read }; )
+0
+-----------
+54.
+rule(null;crsTaken supseteqln {{cs602}}, crsTaught supseteqln {{cs601}}; student in {csStu3}, type in {transcript}; {read }; )
+0
+-----------
+55.
+rule(null;department in {admissions}; student in {eeStu5 csStu1}, type in {application}; {read setStatus }; )
+0
+-----------
+56.
+rule(null;uid in {admissions2}; student in {applicant1 csStu5}, type in {application}; {read setStatus }; )
+0
+-----------
+57.
+rule(null;uid in {registrar1}; crs in {ee101}, type in {roster}; {write }; )
+0
+-----------
+58.
+rule(null;uid in {registrar1}; department in {cs}, type in {roster}; {write read }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<admissions2,eeStu1application,read>
+<admissions2,eeStu2application,setStatus>
+<registrar2,cs601roster,write>
+<eeStu2,eeStu2application,checkStatus>
+<eeStu4,eeStu4trans,read>
+<eeStu4,ee601gradebook,readMyScores>
+<csChair,csStu3trans,read>
+<registrar2,cs101roster,write>
+<registrar2,cs602roster,write>
+<csStu2,csStu2application,checkStatus>
+<csStu5,cs602gradebook,readMyScores>
+<eeStu5,ee601gradebook,readMyScores>
+<eeStu1,eeStu1trans,read>
+<registrar1,ee101roster,read>
+<eeChair,eeStu2trans,read>
+<eeStu3,ee601gradebook,readScore>
+<csStu5,csStu5application,checkStatus>
+<admissions1,csStu5application,read>
+<admissions2,application2,setStatus>
+<csStu2,cs602gradebook,readScore>
+<admissions1,application2,read>
+<admissions1,application1,read>
+<admissions2,csStu4application,setStatus>
+<csStu2,cs101gradebook,readScore>
+<registrar1,ee601roster,write>
+<registrar2,ee101roster,write>
+<registrar2,ee602roster,read>
+<csChair,csStu4trans,read>
+<eeChair,eeStu4trans,read>
+<csStu3,cs602gradebook,readMyScores>
+<csStu5,cs601gradebook,readMyScores>
+<admissions1,application2,setStatus>
+<admissions1,application1,setStatus>
+
+OverAssignments
+---------------------
+Log Completeness: 0.8
+Rule Quality Metric: Q_RELATIVE_TO_MEANING_FREQ
+1.
+rule(null;department in {admissions}; type in {application}; {read setStatus }; )
+0
+-----------
+2.
+rule(null;department in {registrar}; type in {transcript}; {read }; )
+0
+-----------
+3.
+rule(null;position in {applicant}; type in {application}; {checkStatus }; uid=student)
+0
+-----------
+4.
+rule(null;crsTaken supseteqln {{cs602 cs601}}; student in {csStu5}, type in {transcript}; {read }; )
+0
+-----------
+5.
+rule(null;crsTaken supseteqln {{cs602}}, crsTaught supseteqln {{cs601}}; student in {csStu3}, type in {transcript}; {read }; )
+0
+-----------
+6.
+rule(null;department in {registrar}; type in {roster}; {write read }; )
+0
+-----------
+7.
+rule(null;crsTaken supseteqln {{cs601}}, crsTaught supseteqln {{cs602 cs101}}, department in {cs}, position in {student}; crs in {cs101}, department in {cs}, type in {gradebook}; {addScore }; )
+0
+-----------
+8.
+rule(null;crsTaught supseteqln {{cs101}}, department in {cs}, position in {faculty}; crs in {cs101}, department in {cs}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+9.
+rule(null;crsTaught supseteqln {{ee101}}, department in {ee}, position in {faculty}; crs in {ee101}, department in {ee}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+10.
+rule(null;crsTaught supseteqln {{cs601}}, department in {cs}, position in {faculty}; crs in {cs601}, department in {cs}, type in {roster}; {read }; )
+0
+-----------
+11.
+rule(null;crsTaken supseteqln {{cs601}}, crsTaught supseteqln {{cs602 cs101}}, department in {cs}, position in {student}; crs in {cs602}, department in {cs}, type in {gradebook}; {addScore }; )
+0
+-----------
+12.
+rule(null;crsTaught supseteqln {{ee601}}, department in {ee}, position in {faculty}; crs in {ee601}, department in {ee}, type in {roster}; {read }; )
+0
+-----------
+13.
+rule(null;crsTaught supseteqln {{ee601}}, department in {ee}, position in {faculty}; crs in {ee601}, department in {ee}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+14.
+rule(null;crsTaken supseteqln {{cs602}}, crsTaught supseteqln {{cs601}}, department in {cs}, position in {student}; student in {csStu3}, type in {application}; {checkStatus }; )
+0
+-----------
+15.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; crs in {ee602}, department in {ee}, type in {gradebook}; {readScore addScore }; )
+0
+-----------
+16.
+rule(null;crsTaken supseteqln {{ee602}}, crsTaught supseteqln {{ee601}}, department in {ee}, position in {student}; department in {ee}, student in {eeStu3}, type in {transcript}; {read }; )
+0
+-----------
+17.
+rule(null;crsTaken supseteqln {{cs601}}, department in {cs}, position in {student}, uid in {csStu4}; student in {csStu4}, type in {application}; {checkStatus }; )
+0
+-----------
+18.
+rule(null;crsTaken supseteqln {{cs601}}, crsTaught supseteqln {{cs602 cs101}}, department in {cs}, position in {student}; department in {cs}, student in {csStu2}, type in {transcript}; {read }; )
+0
+-----------
+19.
+rule(null;crsTaken supseteqln {{cs101}}, department in {cs}, position in {student}; department in {cs}, student in {csStu1}, type in {transcript}; {read }; )
+0
+-----------
+20.
+rule(null;crsTaken supseteqln {{ee601}}, department in {ee}, position in {student}, uid in {eeStu4}; student in {eeStu4}, type in {application}; {checkStatus }; )
+0
+-----------
+21.
+rule(null;crsTaken supseteqln {{cs601}}, department in {cs}, position in {student}, uid in {csStu4 csStu2}; crs in {cs601}, department in {cs}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+22.
+rule(null;crsTaken supseteqln {{ee602}}, department in {ee}, position in {student}; crs in {ee602}, department in {ee}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+23.
+rule(null;department in {ee}, isChair in {true}; department in {ee}, student in {eeStu5}, type in {transcript}; {read }; )
+0
+-----------
+24.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; crs in {ee101}, department in {ee}, type in {gradebook}; {readScore addScore }; )
+0
+-----------
+25.
+rule(null;crsTaught supseteqln {{cs601}}, department in {cs}, position in {student}; crs in {cs601}, department in {cs}, type in {gradebook}; {addScore }; )
+0
+-----------
+26.
+rule(null;crsTaught supseteqln {{cs601}}, department in {cs}, position in {faculty}; crs in {cs601}, department in {cs}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+27.
+rule(null;crsTaken supseteqln {{cs601}}, department in {cs}, position in {student}, uid in {csStu4}; department in {cs}, student in {csStu4}, type in {transcript}; {read }; )
+0
+-----------
+28.
+rule(null;crsTaken supseteqln {{ee602}}, crsTaught supseteqln {{ee601}}, department in {ee}, position in {student}; student in {eeStu3}, type in {application}; {checkStatus }; )
+0
+-----------
+29.
+rule(null;crsTaken supseteqln {{ee602}}, crsTaught supseteqln {{ee601}}, department in {ee}, position in {student}; crs in {ee601}, department in {ee}, type in {gradebook}; {addScore }; )
+0
+-----------
+30.
+rule(null;crsTaught supseteqln {{ee101}}, department in {ee}, position in {faculty}; crs in {ee101}, department in {ee}, type in {roster}; {read }; )
+0
+-----------
+31.
+rule(null;department in {ee}, isChair in {true}; department in {ee}, student in {eeStu1}, type in {transcript}; {read }; )
+0
+-----------
+32.
+rule(null;crsTaken supseteqln {{cs101}}, department in {cs}, position in {student}; student in {csStu1}, type in {application}; {checkStatus }; )
+0
+-----------
+33.
+rule(null;department in {ee}, isChair in {true}; department in {ee}, student in {eeStu3}, type in {transcript}; {read }; )
+0
+-----------
+34.
+rule(null;crsTaken supseteqln {{ee601 ee602}}, department in {ee}, position in {student}; department in {ee}, student in {eeStu5}, type in {transcript}; {read }; )
+0
+-----------
+35.
+rule(null;crsTaken supseteqln {{cs101}}, department in {cs}, position in {student}; crs in {cs101}, department in {cs}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+36.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; department in {ee}, student in {eeStu2}, type in {transcript}; {read }; )
+0
+-----------
+37.
+rule(null;crsTaken supseteqln {{cs602}}, crsTaught supseteqln {{cs601}}, department in {cs}, position in {student}; crs in {cs601}, department in {cs}, type in {gradebook}; {readScore }; )
+0
+-----------
+38.
+rule(null;crsTaken supseteqln {{ee601 ee602}}, department in {ee}, position in {student}; student in {eeStu5}, type in {application}; {checkStatus }; )
+0
+-----------
+39.
+rule(null;crsTaken supseteqln {{ee101}}, department in {ee}, position in {student}; crs in {ee101}, department in {ee}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+40.
+rule(null;department in {cs}, isChair in {true}; department in {cs}, student in {csStu2}, type in {transcript}; {read }; )
+0
+-----------
+41.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; crs in {ee601}, department in {ee}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+42.
+rule(null;crsTaken supseteqln {{ee101}}, department in {ee}, position in {student}; student in {eeStu1}, type in {application}; {checkStatus }; )
+0
+-----------
+43.
+rule(null;department in {cs}, isChair in {true}; department in {cs}, student in {csStu5}, type in {transcript}; {read }; )
+0
+-----------
+44.
+rule(null;department in {cs}, isChair in {true}; department in {cs}, student in {csStu1}, type in {transcript}; {read }; )
+0
+-----------
+45.
+rule(null;crsTaught supseteqln {{cs101}}, department in {cs}, position in {faculty}; crs in {cs101}, department in {cs}, type in {roster}; {read }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<eeStu2,eeStu2application,checkStatus>
+<eeStu4,eeStu4trans,read>
+<eeStu4,ee601gradebook,readMyScores>
+<csChair,csStu3trans,read>
+<csStu2,csStu2application,checkStatus>
+<csStu5,cs602gradebook,readMyScores>
+<eeStu5,ee601gradebook,readMyScores>
+<eeStu1,eeStu1trans,read>
+<eeChair,eeStu2trans,read>
+<eeStu3,ee601gradebook,readScore>
+<csStu5,csStu5application,checkStatus>
+<csStu2,cs602gradebook,readScore>
+<csStu2,cs101gradebook,readScore>
+<csChair,csStu4trans,read>
+<eeChair,eeStu4trans,read>
+<csStu3,cs602gradebook,readMyScores>
+<csStu5,cs601gradebook,readMyScores>
+
+OverAssignments
+---------------------
+Log Completeness: 0.8
+Rule Quality Metric: Q_RELATIVE_TO_UP0_FREQ
+1.
+rule(null;department in {admissions}; type in {application}; {read setStatus }; )
+0
+-----------
+2.
+rule(null;department in {registrar}; type in {transcript roster}; {read }; )
+0
+-----------
+3.
+rule(null;; type in {application}; {checkStatus }; uid=student)
+0
+-----------
+4.
+rule(null;crsTaken supseteqln {{cs602 cs601}}; student in {csStu5}, type in {transcript}; {read }; )
+0
+-----------
+5.
+rule(null;crsTaken supseteqln {{cs602}}, crsTaught supseteqln {{cs601}}; student in {csStu3}, type in {transcript}; {read }; )
+0
+-----------
+6.
+rule(null;uid in {registrar1 registrar2}; type in {roster}; {write read }; )
+0
+-----------
+7.
+rule(null;crsTaken supseteqln {{cs601}}, crsTaught supseteqln {{cs602 cs101}}, department in {cs}, position in {student}; crs in {cs101}, department in {cs}, type in {gradebook}; {addScore }; )
+0
+-----------
+8.
+rule(null;crsTaught supseteqln {{cs101}}, department in {cs}, position in {faculty}; crs in {cs101}, department in {cs}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+9.
+rule(null;crsTaught supseteqln {{ee101}}, department in {ee}, position in {faculty}; crs in {ee101}, department in {ee}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+10.
+rule(null;crsTaught supseteqln {{cs601}}, department in {cs}, position in {faculty}; crs in {cs601}, department in {cs}, type in {roster}; {read }; )
+0
+-----------
+11.
+rule(null;crsTaken supseteqln {{cs601}}, crsTaught supseteqln {{cs602 cs101}}, department in {cs}, position in {student}; crs in {cs602}, department in {cs}, type in {gradebook}; {addScore }; )
+0
+-----------
+12.
+rule(null;crsTaught supseteqln {{ee601}}, department in {ee}, position in {faculty}; crs in {ee601}, department in {ee}, type in {roster}; {read }; )
+0
+-----------
+13.
+rule(null;crsTaught supseteqln {{ee601}}, department in {ee}, position in {faculty}; crs in {ee601}, department in {ee}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+14.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; crs in {ee602}, department in {ee}, type in {gradebook}; {readScore addScore }; )
+0
+-----------
+15.
+rule(null;crsTaken supseteqln {{ee602}}, crsTaught supseteqln {{ee601}}, department in {ee}, position in {student}; department in {ee}, student in {eeStu3}, type in {transcript}; {read }; )
+0
+-----------
+16.
+rule(null;crsTaken supseteqln {{cs601}}, crsTaught supseteqln {{cs602 cs101}}, department in {cs}, position in {student}; department in {cs}, student in {csStu2}, type in {transcript}; {read }; )
+0
+-----------
+17.
+rule(null;crsTaken supseteqln {{cs101}}, department in {cs}, position in {student}; department in {cs}, student in {csStu1}, type in {transcript}; {read }; )
+0
+-----------
+18.
+rule(null;crsTaken supseteqln {{cs601}}, department in {cs}, position in {student}, uid in {csStu4 csStu2}; crs in {cs601}, department in {cs}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+19.
+rule(null;crsTaken supseteqln {{ee602}}, department in {ee}, position in {student}; crs in {ee602}, department in {ee}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+20.
+rule(null;department in {ee}, isChair in {true}; department in {ee}, student in {eeStu5}, type in {transcript}; {read }; )
+0
+-----------
+21.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; crs in {ee101}, department in {ee}, type in {gradebook}; {readScore addScore }; )
+0
+-----------
+22.
+rule(null;crsTaught supseteqln {{cs601}}, department in {cs}, position in {student}; crs in {cs601}, department in {cs}, type in {gradebook}; {addScore }; )
+0
+-----------
+23.
+rule(null;crsTaught supseteqln {{cs601}}, department in {cs}, position in {faculty}; crs in {cs601}, department in {cs}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+24.
+rule(null;crsTaken supseteqln {{cs601}}, department in {cs}, position in {student}, uid in {csStu4}; department in {cs}, student in {csStu4}, type in {transcript}; {read }; )
+0
+-----------
+25.
+rule(null;crsTaken supseteqln {{ee602}}, crsTaught supseteqln {{ee601}}, department in {ee}, position in {student}; crs in {ee601}, department in {ee}, type in {gradebook}; {addScore }; )
+0
+-----------
+26.
+rule(null;crsTaught supseteqln {{ee101}}, department in {ee}, position in {faculty}; crs in {ee101}, department in {ee}, type in {roster}; {read }; )
+0
+-----------
+27.
+rule(null;department in {ee}, isChair in {true}; department in {ee}, student in {eeStu1}, type in {transcript}; {read }; )
+0
+-----------
+28.
+rule(null;department in {ee}, isChair in {true}; department in {ee}, student in {eeStu3}, type in {transcript}; {read }; )
+0
+-----------
+29.
+rule(null;crsTaken supseteqln {{ee601 ee602}}, department in {ee}, position in {student}; department in {ee}, student in {eeStu5}, type in {transcript}; {read }; )
+0
+-----------
+30.
+rule(null;crsTaken supseteqln {{cs101}}, department in {cs}, position in {student}; crs in {cs101}, department in {cs}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+31.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; department in {ee}, student in {eeStu2}, type in {transcript}; {read }; )
+0
+-----------
+32.
+rule(null;crsTaken supseteqln {{cs602}}, crsTaught supseteqln {{cs601}}, department in {cs}, position in {student}; crs in {cs601}, department in {cs}, type in {gradebook}; {readScore }; )
+0
+-----------
+33.
+rule(null;crsTaken supseteqln {{ee101}}, department in {ee}, position in {student}; crs in {ee101}, department in {ee}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+34.
+rule(null;department in {cs}, isChair in {true}; department in {cs}, student in {csStu2}, type in {transcript}; {read }; )
+0
+-----------
+35.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; crs in {ee601}, department in {ee}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+36.
+rule(null;department in {cs}, isChair in {true}; department in {cs}, student in {csStu5}, type in {transcript}; {read }; )
+0
+-----------
+37.
+rule(null;department in {cs}, isChair in {true}; department in {cs}, student in {csStu1}, type in {transcript}; {read }; )
+0
+-----------
+38.
+rule(null;crsTaught supseteqln {{cs101}}, department in {cs}, position in {faculty}; crs in {cs101}, department in {cs}, type in {roster}; {read }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<eeStu4,eeStu4trans,read>
+<eeStu4,ee601gradebook,readMyScores>
+<csChair,csStu3trans,read>
+<csStu5,cs602gradebook,readMyScores>
+<eeStu5,ee601gradebook,readMyScores>
+<eeStu1,eeStu1trans,read>
+<eeChair,eeStu2trans,read>
+<eeStu3,ee601gradebook,readScore>
+<csStu2,cs602gradebook,readScore>
+<csStu2,cs101gradebook,readScore>
+<csChair,csStu4trans,read>
+<eeChair,eeStu4trans,read>
+<csStu3,cs602gradebook,readMyScores>
+<csStu5,cs601gradebook,readMyScores>
+
+OverAssignments
+---------------------
+Log Completeness: 0.8
+Rule Quality Metric: Q_RELATIVE_TO_PERMISSIONS_FREQ
+1.
+rule(null;department in {admissions}; type in {application}; {read setStatus }; )
+0
+-----------
+2.
+rule(null;department in {registrar}; type in {transcript roster}; {read }; )
+0
+-----------
+3.
+rule(null;position in {applicant}; type in {application}; {checkStatus }; uid=student)
+0
+-----------
+4.
+rule(null;crsTaken supseteqln {{cs602 cs601}}; student in {csStu5}, type in {transcript}; {read }; )
+0
+-----------
+5.
+rule(null;crsTaken supseteqln {{cs602}}, crsTaught supseteqln {{cs601}}; student in {csStu3}, type in {transcript}; {read }; )
+0
+-----------
+6.
+rule(null;uid in {registrar1 registrar2}; type in {roster}; {write read }; )
+0
+-----------
+7.
+rule(null;crsTaken supseteqln {{cs601}}, crsTaught supseteqln {{cs602 cs101}}, department in {cs}, position in {student}; crs in {cs101}, department in {cs}, type in {gradebook}; {addScore }; )
+0
+-----------
+8.
+rule(null;crsTaught supseteqln {{cs101}}, department in {cs}, position in {faculty}; crs in {cs101}, department in {cs}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+9.
+rule(null;crsTaught supseteqln {{ee101}}, department in {ee}, position in {faculty}; crs in {ee101}, department in {ee}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+10.
+rule(null;crsTaught supseteqln {{cs601}}, department in {cs}, position in {faculty}; crs in {cs601}, department in {cs}, type in {roster}; {read }; )
+0
+-----------
+11.
+rule(null;crsTaken supseteqln {{cs601}}, crsTaught supseteqln {{cs602 cs101}}, department in {cs}, position in {student}; crs in {cs602}, department in {cs}, type in {gradebook}; {addScore }; )
+0
+-----------
+12.
+rule(null;crsTaught supseteqln {{ee601}}, department in {ee}, position in {faculty}; crs in {ee601}, department in {ee}, type in {roster}; {read }; )
+0
+-----------
+13.
+rule(null;crsTaught supseteqln {{ee601}}, department in {ee}, position in {faculty}; crs in {ee601}, department in {ee}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+14.
+rule(null;crsTaken supseteqln {{cs602}}, crsTaught supseteqln {{cs601}}, department in {cs}, position in {student}; student in {csStu3}, type in {application}; {checkStatus }; )
+0
+-----------
+15.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; crs in {ee602}, department in {ee}, type in {gradebook}; {readScore addScore }; )
+0
+-----------
+16.
+rule(null;crsTaken supseteqln {{ee602}}, crsTaught supseteqln {{ee601}}, department in {ee}, position in {student}; department in {ee}, student in {eeStu3}, type in {transcript}; {read }; )
+0
+-----------
+17.
+rule(null;crsTaken supseteqln {{cs601}}, department in {cs}, position in {student}, uid in {csStu4}; student in {csStu4}, type in {application}; {checkStatus }; )
+0
+-----------
+18.
+rule(null;crsTaken supseteqln {{cs601}}, crsTaught supseteqln {{cs602 cs101}}, department in {cs}, position in {student}; department in {cs}, student in {csStu2}, type in {transcript}; {read }; )
+0
+-----------
+19.
+rule(null;crsTaken supseteqln {{cs101}}, department in {cs}, position in {student}; department in {cs}, student in {csStu1}, type in {transcript}; {read }; )
+0
+-----------
+20.
+rule(null;crsTaken supseteqln {{ee601}}, department in {ee}, position in {student}, uid in {eeStu4}; student in {eeStu4}, type in {application}; {checkStatus }; )
+0
+-----------
+21.
+rule(null;crsTaken supseteqln {{cs601}}, department in {cs}, position in {student}, uid in {csStu4 csStu2}; crs in {cs601}, department in {cs}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+22.
+rule(null;crsTaken supseteqln {{ee602}}, department in {ee}, position in {student}; crs in {ee602}, department in {ee}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+23.
+rule(null;department in {ee}, isChair in {true}; department in {ee}, student in {eeStu5}, type in {transcript}; {read }; )
+0
+-----------
+24.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; crs in {ee101}, department in {ee}, type in {gradebook}; {readScore addScore }; )
+0
+-----------
+25.
+rule(null;crsTaught supseteqln {{cs601}}, department in {cs}, position in {student}; crs in {cs601}, department in {cs}, type in {gradebook}; {addScore }; )
+0
+-----------
+26.
+rule(null;crsTaught supseteqln {{cs601}}, department in {cs}, position in {faculty}; crs in {cs601}, department in {cs}, type in {gradebook}; {readScore assignGrade addScore changeScore }; )
+0
+-----------
+27.
+rule(null;crsTaken supseteqln {{cs601}}, department in {cs}, position in {student}, uid in {csStu4}; department in {cs}, student in {csStu4}, type in {transcript}; {read }; )
+0
+-----------
+28.
+rule(null;crsTaken supseteqln {{ee602}}, crsTaught supseteqln {{ee601}}, department in {ee}, position in {student}; student in {eeStu3}, type in {application}; {checkStatus }; )
+0
+-----------
+29.
+rule(null;crsTaken supseteqln {{ee602}}, crsTaught supseteqln {{ee601}}, department in {ee}, position in {student}; crs in {ee601}, department in {ee}, type in {gradebook}; {addScore }; )
+0
+-----------
+30.
+rule(null;crsTaught supseteqln {{ee101}}, department in {ee}, position in {faculty}; crs in {ee101}, department in {ee}, type in {roster}; {read }; )
+0
+-----------
+31.
+rule(null;department in {ee}, isChair in {true}; department in {ee}, student in {eeStu1}, type in {transcript}; {read }; )
+0
+-----------
+32.
+rule(null;crsTaken supseteqln {{cs101}}, department in {cs}, position in {student}; student in {csStu1}, type in {application}; {checkStatus }; )
+0
+-----------
+33.
+rule(null;department in {ee}, isChair in {true}; department in {ee}, student in {eeStu3}, type in {transcript}; {read }; )
+0
+-----------
+34.
+rule(null;crsTaken supseteqln {{ee601 ee602}}, department in {ee}, position in {student}; department in {ee}, student in {eeStu5}, type in {transcript}; {read }; )
+0
+-----------
+35.
+rule(null;crsTaken supseteqln {{cs101}}, department in {cs}, position in {student}; crs in {cs101}, department in {cs}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+36.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; department in {ee}, student in {eeStu2}, type in {transcript}; {read }; )
+0
+-----------
+37.
+rule(null;crsTaken supseteqln {{cs602}}, crsTaught supseteqln {{cs601}}, department in {cs}, position in {student}; crs in {cs601}, department in {cs}, type in {gradebook}; {readScore }; )
+0
+-----------
+38.
+rule(null;crsTaken supseteqln {{ee601 ee602}}, department in {ee}, position in {student}; student in {eeStu5}, type in {application}; {checkStatus }; )
+0
+-----------
+39.
+rule(null;crsTaken supseteqln {{ee101}}, department in {ee}, position in {student}; crs in {ee101}, department in {ee}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+40.
+rule(null;department in {cs}, isChair in {true}; department in {cs}, student in {csStu2}, type in {transcript}; {read }; )
+0
+-----------
+41.
+rule(null;crsTaken supseteqln {{ee601}}, crsTaught supseteqln {{ee101 ee602}}, department in {ee}, position in {student}; crs in {ee601}, department in {ee}, type in {gradebook}; {readMyScores }; )
+0
+-----------
+42.
+rule(null;crsTaken supseteqln {{ee101}}, department in {ee}, position in {student}; student in {eeStu1}, type in {application}; {checkStatus }; )
+0
+-----------
+43.
+rule(null;department in {cs}, isChair in {true}; department in {cs}, student in {csStu5}, type in {transcript}; {read }; )
+0
+-----------
+44.
+rule(null;department in {cs}, isChair in {true}; department in {cs}, student in {csStu1}, type in {transcript}; {read }; )
+0
+-----------
+45.
+rule(null;crsTaught supseteqln {{cs101}}, department in {cs}, position in {faculty}; crs in {cs101}, department in {cs}, type in {roster}; {read }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<eeStu2,eeStu2application,checkStatus>
+<eeStu4,eeStu4trans,read>
+<eeStu4,ee601gradebook,readMyScores>
+<csChair,csStu3trans,read>
+<csStu2,csStu2application,checkStatus>
+<csStu5,cs602gradebook,readMyScores>
+<eeStu5,ee601gradebook,readMyScores>
+<eeStu1,eeStu1trans,read>
+<eeChair,eeStu2trans,read>
+<eeStu3,ee601gradebook,readScore>
+<csStu5,csStu5application,checkStatus>
+<csStu2,cs602gradebook,readScore>
+<csStu2,cs101gradebook,readScore>
+<csChair,csStu4trans,read>
+<eeChair,eeStu4trans,read>
+<csStu3,cs602gradebook,readMyScores>
+<csStu5,cs601gradebook,readMyScores>
+
+
+OverAssignments Summary Report
+-------------------------
+Q_RELATIVE_TO_COVERED: 0
+Q_RELATIVE_TO_MEANING: 0
+Q_RELATIVE_TO_UP0: 10
+Q_RELATIVE_TO_PERMISSIONS: 0
+Q_RELATIVE_TO_SIZE_AND_PERMISSIONS: 0
+Q_PROGOL: 18
+Q_RELATIVE_TO_COVERED_FREQ: 0
+Q_RELATIVE_TO_MEANING_FREQ: 0
+Q_RELATIVE_TO_UP0_FREQ: 0
+Q_RELATIVE_TO_PERMISSIONS_FREQ: 0
+
+UnderAssignments Summary Report
+-------------------------
+Q_RELATIVE_TO_COVERED: 16
+Q_RELATIVE_TO_MEANING: 11
+Q_RELATIVE_TO_UP0: 0
+Q_RELATIVE_TO_PERMISSIONS: 3
+Q_RELATIVE_TO_SIZE_AND_PERMISSIONS: 14
+Q_PROGOL: 2
+Q_RELATIVE_TO_COVERED_FREQ: 33
+Q_RELATIVE_TO_MEANING_FREQ: 17
+Q_RELATIVE_TO_UP0_FREQ: 14
+Q_RELATIVE_TO_PERMISSIONS_FREQ: 17

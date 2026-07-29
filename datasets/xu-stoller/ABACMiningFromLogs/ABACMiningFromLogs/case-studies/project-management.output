@@ -1,0 +1,692 @@
+UP tuples that are not in logUP: 75
+[(aud2,read,proj21sched), (des11,request,proj11task1prop), (code22,read,proj22task2), (des12,request,proj12task1a), (code21,setStatus,proj21task2propa), (des21,read,proj21task1prop), (des21,request,proj21task1), (des11,setStatus,proj11task1propa), (acc2,write,proj21budget), (code11,request,proj11task2prop), (code21,setStatus,proj21task2a), (ldr2,write,proj21sched), (code22,read,proj22sched), (des12,request,proj12task1), (acc2,read,proj21sched), (plan2,setSchedule,proj22task1a), (des11,read,proj11task1prop), (acc2,setCost,proj21task1propa), (acc2,setCost,proj22task2prop), (des22,request,proj22task1a), (plan2,setSchedule,proj21task1), (acc1,write,proj11budget), (code12,read,proj12task2a), (plan1,read,proj11sched), (plan1,setSchedule,proj12task2prop), (code11,read,proj11task2propa), (aud2,read,proj22budget), (code21,read,proj21sched), (des21,setStatus,proj21task1a), (des22,read,proj22sched), (ldr2,write,proj22sched), (code11,request,proj11task2), (code12,read,proj12task2), (code22,request,proj22task2a), (plan2,setSchedule,proj21task2a), (acc2,read,proj22sched), (ldr11,write,proj11budget), (des21,request,proj21task1propa), (plan2,setSchedule,proj21task1a), (acc1,setCost,proj12task1), (ldr2,write,proj21budget), (code11,request,proj11task2propa), (des11,read,proj11sched), (acc1,setCost,proj12task2), (plan2,setSchedule,proj22task1), (plan2,setSchedule,proj22task2prop), (ldr2,write,proj22budget), (acc1,setCost,proj11task2prop), (acc1,setCost,proj11task1a), (acc2,write,proj22budget), (plan2,setSchedule,proj22task2), (des12,setStatus,proj12task1propa), (des21,read,proj21task1propa), (acc1,setCost,proj11task1propa), (plan1,setSchedule,proj11task2), (acc1,setCost,proj12task1prop), (aud1,read,proj11budget), (des11,request,proj11task1), (acc2,setCost,proj21task1a), (plan1,setSchedule,proj11task2a), (des21,request,proj21task1prop), (ldr12,read,proj12sched), (plan1,setSchedule,proj11task1propa), (aud1,read,proj11sched), (code12,request,proj12task2), (des11,request,proj11task1a), (acc2,setCost,proj22task2a), (plan1,setSchedule,proj11task1a), (code21,request,proj21task2a), (ldr12,write,proj12sched), (acc1,read,proj11sched), (code22,request,proj22task2), (plan1,setSchedule,proj12task1prop), (des12,read,proj12sched), (code21,request,proj21task2propa)]
+RuleQualityMetricType: Q_RELATIVE_TO_COVERED
+Fraction: 0.6
+==============================================
+OUTPUT RULES
+
+1.
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+WSC=5.0
+2.
+rule(; rid in {proj22task1 proj21task2 proj21task2prop}, type in {task}; {request read }; expertise > expertise, projects ] project)
+WSC=8.0
+3.
+rule(tasks supseteqln {{proj21task1a proj21task1propa}}; expertise supseteqln {{design}}, project in {proj21}, proprietary in {false}, type in {task}; {request read }; )
+WSC=8.0
+4.
+rule(; type in {task}; {request read setStatus }; tasks ] rid)
+WSC=5.0
+5.
+rule(; department in {dept2 dept1}, type in {budget schedule task}; {setCost setSchedule write read }; projects ] project)
+WSC=10.0
+
+total WSC=36
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department), similarity: 1.00
+
+2. rule(; type in {budget schedule}; {write read }; projectsLed ] project)
+SIMILAR OUTPUT RULES:
+
+3. rule(; type in {schedule}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(; department in {dept2 dept1}, type in {budget schedule task}; {setCost setSchedule write read }; projects ] project), similarity: 0.73
+
+4. rule(; type in {task}; {setStatus }; tasks ] rid)
+SIMILAR OUTPUT RULES:
+rule(; type in {task}; {request read setStatus }; tasks ] rid), similarity: 0.83
+
+5. rule(; type in {task}, proprietary in {false}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+rule(; rid in {proj22task1 proj21task2 proj21task2prop}, type in {task}; {request read }; expertise > expertise, projects ] project), similarity: 0.88
+
+6. rule(isEmployee in {True_}; type in {task}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+rule(tasks supseteqln {{proj21task1a proj21task1propa}}; expertise supseteqln {{design}}, project in {proj21}, proprietary in {false}, type in {task}; {request read }; ), similarity: 0.47
+
+7. rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+8. rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+9. rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+10. rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+11. rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 56
+[(des11,request,proj11task1prop), (plan2,setSchedule,proj21task2propa), (plan2,setSchedule,proj22task2a), (des12,request,proj12task1a), (code21,setStatus,proj21task2propa), (des21,read,proj21task1prop), (acc1,read,proj12sched), (code11,request,proj11task2prop), (ldr2,write,proj21sched), (code22,read,proj22sched), (des12,request,proj12task1), (plan1,setSchedule,proj11task2propa), (ldr11,read,proj11budget), (acc2,read,proj21sched), (des22,request,proj22task1a), (plan2,setSchedule,proj21task2), (acc1,read,proj11budget), (acc1,write,proj11budget), (plan2,setSchedule,proj21task2prop), (plan1,read,proj11sched), (code22,setStatus,proj22task2a), (plan1,read,proj12sched), (des21,setStatus,proj21task1a), (des11,read,proj11task1), (des22,read,proj22sched), (ldr2,write,proj22sched), (code22,request,proj22task2a), (plan2,setSchedule,proj21task2a), (code12,read,proj12sched), (ldr11,write,proj11budget), (des22,request,proj22task1), (mgr1,approve,proj12budget), (code11,request,proj11task2propa), (des21,request,proj21task1a), (code21,read,proj21task2propa), (ldr2,write,proj22budget), (code11,request,proj11task2a), (acc2,setCost,proj22task1propa), (plan1,setSchedule,proj11task1), (code22,setStatus,proj22task2propa), (acc1,setCost,proj12task2prop), (acc2,setCost,proj21task1a), (aud1,read,proj12sched), (des21,request,proj21task1prop), (ldr12,read,proj12sched), (aud2,read,proj22sched), (code21,request,proj21task2prop), (code12,request,proj12task2), (des12,setStatus,proj12task1a), (ldr12,write,proj12sched), (acc1,read,proj11sched), (mgr2,approve,proj21budget), (plan1,setSchedule,proj12task1prop), (acc1,write,proj12budget), (des12,read,proj12sched), (code21,request,proj21task2propa)]
+RuleQualityMetricType: Q_RELATIVE_TO_COVERED
+Fraction: 0.7
+==============================================
+OUTPUT RULES
+
+1.
+rule(; proprietary in {false}, type in {task}; {request read }; expertise > expertise, projects ] project)
+WSC=6.0
+2.
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+WSC=5.0
+3.
+rule(; type in {task}; {request read setStatus }; tasks ] rid)
+WSC=5.0
+4.
+rule(; department in {dept2 dept1}, type in {budget schedule task}; {setSchedule setCost write read }; projects ] project)
+WSC=10.0
+
+total WSC=26
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department), similarity: 1.00
+
+2. rule(; type in {budget schedule}; {write read }; projectsLed ] project)
+SIMILAR OUTPUT RULES:
+
+3. rule(; type in {schedule}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(; department in {dept2 dept1}, type in {budget schedule task}; {setSchedule setCost write read }; projects ] project), similarity: 0.73
+
+4. rule(; type in {task}; {setStatus }; tasks ] rid)
+SIMILAR OUTPUT RULES:
+rule(; type in {task}; {request read setStatus }; tasks ] rid), similarity: 0.83
+
+5. rule(; type in {task}, proprietary in {false}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+rule(; proprietary in {false}, type in {task}; {request read }; expertise > expertise, projects ] project), similarity: 1.00
+
+6. rule(isEmployee in {True_}; type in {task}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+
+7. rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+8. rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+9. rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+10. rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+11. rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 37
+[(des11,request,proj11task1prop), (acc1,read,proj12sched), (ldr2,write,proj21sched), (des12,request,proj12task1), (des11,read,proj11task1prop), (des12,read,proj12task1a), (acc1,write,proj11budget), (plan1,read,proj11sched), (code22,setStatus,proj22task2a), (mgr2,approve,proj22budget), (plan1,read,proj12sched), (des22,read,proj22sched), (ldr2,write,proj22sched), (code11,request,proj11task2), (plan1,setSchedule,proj12task2a), (code12,read,proj12sched), (ldr11,write,proj11budget), (ldr2,write,proj21budget), (code11,request,proj11task2propa), (acc1,setCost,proj12task2), (code11,request,proj11task2a), (acc1,setCost,proj11task2prop), (plan2,read,proj21sched), (code12,request,proj12task2a), (acc2,setCost,proj21task1prop), (plan1,setSchedule,proj11task2), (ldr11,write,proj11sched), (des21,request,proj21task1prop), (acc1,setCost,proj12task2propa), (code21,request,proj21task2prop), (des11,request,proj11task1a), (acc2,setCost,proj22task2a), (ldr12,write,proj12sched), (acc1,read,proj11sched), (ldr11,read,proj12sched), (mgr2,approve,proj21budget), (code21,request,proj21task2propa)]
+RuleQualityMetricType: Q_RELATIVE_TO_COVERED
+Fraction: 0.7999999999999999
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {budget}; {approve read }; department=department)
+WSC=4.0
+2.
+rule(; type in {task}; {request read setStatus }; expertise > expertise, projects ] project)
+WSC=6.0
+3.
+rule(; department in {dept2 dept1}, type in {budget schedule task}; {setCost setSchedule write read }; projects ] project)
+WSC=10.0
+
+total WSC=20
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+SIMILAR OUTPUT RULES:
+rule(; type in {budget}; {approve read }; department=department), similarity: 0.81
+
+2. rule(; type in {budget schedule}; {write read }; projectsLed ] project)
+SIMILAR OUTPUT RULES:
+
+3. rule(; type in {schedule}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(; department in {dept2 dept1}, type in {budget schedule task}; {setCost setSchedule write read }; projects ] project), similarity: 0.73
+
+4. rule(; type in {task}; {setStatus }; tasks ] rid)
+SIMILAR OUTPUT RULES:
+
+5. rule(; type in {task}, proprietary in {false}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+rule(; type in {task}; {request read setStatus }; expertise > expertise, projects ] project), similarity: 0.85
+
+6. rule(isEmployee in {True_}; type in {task}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+
+7. rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+8. rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+9. rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+10. rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+11. rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 18
+[(des21,request,proj21task1), (code11,request,proj11task2prop), (ldr2,write,proj21sched), (plan1,read,proj11sched), (code21,read,proj21sched), (code11,request,proj11task2), (plan1,setSchedule,proj12task2a), (acc2,read,proj22sched), (code12,read,proj12sched), (code11,request,proj11task2propa), (acc1,setCost,proj11task1propa), (ldr11,write,proj11sched), (aud1,read,proj12sched), (plan1,setSchedule,proj11task2a), (plan1,setSchedule,proj11task1prop), (des12,setStatus,proj12task1a), (code22,request,proj22task2), (code21,request,proj21task2propa)]
+RuleQualityMetricType: Q_RELATIVE_TO_COVERED
+Fraction: 0.8999999999999999
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {task}; {request read setStatus }; tasks ] rid)
+WSC=5.0
+2.
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+WSC=5.0
+3.
+rule(; rid in {proj22task1 proj12task2 proj21task2 proj12task1 proj21task1prop proj21task2prop proj11task1prop proj11task1}, type in {task}; {request read }; expertise > expertise, projects ] project)
+WSC=13.0
+4.
+rule(; department in {dept2 dept1}, type in {budget schedule task}; {setCost setSchedule write read }; projects ] project)
+WSC=10.0
+
+total WSC=33
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department), similarity: 1.00
+
+2. rule(; type in {budget schedule}; {write read }; projectsLed ] project)
+SIMILAR OUTPUT RULES:
+
+3. rule(; type in {schedule}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(; department in {dept2 dept1}, type in {budget schedule task}; {setCost setSchedule write read }; projects ] project), similarity: 0.73
+
+4. rule(; type in {task}; {setStatus }; tasks ] rid)
+SIMILAR OUTPUT RULES:
+rule(; type in {task}; {request read setStatus }; tasks ] rid), similarity: 0.83
+
+5. rule(; type in {task}, proprietary in {false}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+rule(; rid in {proj22task1 proj12task2 proj21task2 proj12task1 proj21task1prop proj21task2prop proj11task1prop proj11task1}, type in {task}; {request read }; expertise > expertise, projects ] project), similarity: 0.89
+
+6. rule(isEmployee in {True_}; type in {task}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+
+7. rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+8. rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+9. rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+10. rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+11. rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 0
+[]
+RuleQualityMetricType: Q_RELATIVE_TO_COVERED
+Fraction: 0.9999999999999999
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {schedule}; {read }; projects ] project)
+WSC=3.0
+2.
+rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+WSC=4.0
+3.
+rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+WSC=4.0
+4.
+rule(isEmployee in {True_}; type in {task}; {request read }; expertise > expertise, projects ] project)
+WSC=6.0
+5.
+rule(; type in {task}; {setStatus }; tasks ] rid)
+WSC=3.0
+6.
+rule(; proprietary in {false}, type in {task}; {request read }; expertise > expertise, projects ] project)
+WSC=6.0
+7.
+rule(; type in {budget schedule}; {write read }; projectsLed ] project)
+WSC=5.0
+8.
+rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+WSC=5.0
+9.
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+WSC=5.0
+10.
+rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+WSC=4.0
+11.
+rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project)
+WSC=4.0
+
+total WSC=49
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department), similarity: 1.00
+
+2. rule(; type in {budget schedule}; {write read }; projectsLed ] project)
+SIMILAR OUTPUT RULES:
+rule(; type in {budget schedule}; {write read }; projectsLed ] project), similarity: 1.00
+
+3. rule(; type in {schedule}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(; type in {schedule}; {read }; projects ] project), similarity: 1.00
+
+4. rule(; type in {task}; {setStatus }; tasks ] rid)
+SIMILAR OUTPUT RULES:
+rule(; type in {task}; {setStatus }; tasks ] rid), similarity: 1.00
+
+5. rule(; type in {task}, proprietary in {false}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+rule(; proprietary in {false}, type in {task}; {request read }; expertise > expertise, projects ] project), similarity: 1.00
+
+6. rule(isEmployee in {True_}; type in {task}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+rule(isEmployee in {True_}; type in {task}; {request read }; expertise > expertise, projects ] project), similarity: 1.00
+
+7. rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project), similarity: 1.00
+
+8. rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project), similarity: 1.00
+
+9. rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project), similarity: 1.00
+
+10. rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project), similarity: 1.00
+
+11. rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project), similarity: 1.00
+
+UP tuples that are not in logUP: 75
+[(aud2,read,proj21sched), (des11,request,proj11task1prop), (code21,setStatus,proj21task2propa), (des21,read,proj21task1prop), (des11,setStatus,proj11task1propa), (acc2,write,proj21budget), (acc1,read,proj12sched), (code11,request,proj11task2prop), (code22,read,proj22sched), (ldr2,read,proj22budget), (des12,request,proj12task1), (acc2,setCost,proj21task2prop), (acc2,setCost,proj22task1), (acc2,setCost,proj21task1), (acc2,read,proj21sched), (plan2,setSchedule,proj21task1prop), (ldr11,read,proj11sched), (plan2,setSchedule,proj22task1a), (acc2,setCost,proj21task1propa), (des22,request,proj22task1a), (plan2,setSchedule,proj21task1), (acc1,write,proj11budget), (plan2,setSchedule,proj21task2prop), (des11,request,proj11task1propa), (mgr1,approve,proj11budget), (code11,read,proj11task2propa), (mgr2,approve,proj22budget), (code21,read,proj21sched), (des21,setStatus,proj21task1a), (mgr2,read,proj22budget), (des22,read,proj22sched), (ldr2,write,proj22sched), (code12,read,proj12task2), (des22,read,proj22task1), (acc2,read,proj22sched), (des11,read,proj11task1propa), (code12,read,proj12sched), (ldr11,write,proj11budget), (des22,request,proj22task1), (acc1,setCost,proj12task1), (ldr2,write,proj21budget), (acc1,setCost,proj12task2), (ldr2,write,proj22budget), (code11,request,proj11task2a), (plan2,setSchedule,proj22task2), (code12,request,proj12task2a), (acc1,setCost,proj11task1prop), (acc2,setCost,proj21task1prop), (code11,read,proj11sched), (plan1,setSchedule,proj12task1propa), (code22,setStatus,proj22task2propa), (aud1,read,proj11budget), (plan2,setSchedule,proj22task1prop), (acc2,setCost,proj21task1a), (ldr11,write,proj11sched), (aud1,read,proj12sched), (des21,read,proj21sched), (plan1,setSchedule,proj11task2a), (des21,request,proj21task1prop), (plan1,setSchedule,proj11task1propa), (aud2,read,proj22sched), (code21,request,proj21task2prop), (des22,read,proj22task1a), (des11,request,proj11task1a), (ldr12,write,proj12sched), (acc1,read,proj11sched), (acc1,setCost,proj12task1a), (code22,request,proj22task2), (mgr2,approve,proj21budget), (ldr12,write,proj12budget), (acc1,setCost,proj11task2), (ldr2,read,proj21budget), (ldr12,read,proj12budget), (des12,read,proj12sched), (code21,request,proj21task2propa)]
+RuleQualityMetricType: Q_RELATIVE_TO_MEANING
+Fraction: 0.6
+==============================================
+OUTPUT RULES
+
+1.
+rule(; project in {proj11}, type in {budget}; {read }; department=department, projects ] project)
+WSC=5.0
+2.
+rule(isEmployee in {False_ True_}; department in {dept2 dept1}, proprietary in {true false}, type in {task}; {request read setStatus }; tasks ] rid)
+WSC=11.0
+3.
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+WSC=5.0
+4.
+rule(; type in {schedule}; {write read }; projectsLed ] project)
+WSC=4.0
+5.
+rule(; type in {schedule}; {read }; projects ] project)
+WSC=3.0
+6.
+rule(; type in {task}; {request read }; expertise > expertise, projects ] project)
+WSC=5.0
+7.
+rule(adminRoles supseteqln {{auditor} {planner} {accountant}}; department in {dept2 dept1}, type in {budget schedule task}; {setSchedule setCost write read }; projects ] project)
+WSC=13.0
+
+total WSC=46
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department), similarity: 1.00
+
+2. rule(; type in {budget schedule}; {write read }; projectsLed ] project)
+SIMILAR OUTPUT RULES:
+rule(; type in {schedule}; {write read }; projectsLed ] project), similarity: 0.88
+
+3. rule(; type in {schedule}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(; project in {proj11}, type in {budget}; {read }; department=department, projects ] project), similarity: 0.66
+rule(; type in {schedule}; {read }; projects ] project), similarity: 1.00
+rule(adminRoles supseteqln {{auditor} {planner} {accountant}}; department in {dept2 dept1}, type in {budget schedule task}; {setSchedule setCost write read }; projects ] project), similarity: 0.67
+
+4. rule(; type in {task}; {setStatus }; tasks ] rid)
+SIMILAR OUTPUT RULES:
+rule(isEmployee in {False_ True_}; department in {dept2 dept1}, proprietary in {true false}, type in {task}; {request read setStatus }; tasks ] rid), similarity: 0.83
+
+5. rule(; type in {task}, proprietary in {false}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+rule(; type in {task}; {request read }; expertise > expertise, projects ] project), similarity: 0.94
+
+6. rule(isEmployee in {True_}; type in {task}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+
+7. rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+8. rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+9. rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+10. rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+11. rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 56
+[(aud2,read,proj21sched), (plan2,setSchedule,proj21task2propa), (code21,setStatus,proj21task2propa), (des21,read,proj21task1prop), (acc2,write,proj21budget), (acc1,read,proj12sched), (ldr2,write,proj21sched), (acc2,setCost,proj22task1), (plan1,setSchedule,proj12task2), (acc2,read,proj21sched), (des22,request,proj22task1a), (plan2,setSchedule,proj21task1), (acc1,write,proj11budget), (des11,request,proj11task1propa), (plan1,read,proj11sched), (code22,setStatus,proj22task2a), (plan1,read,proj12sched), (acc2,setCost,proj21task2a), (ldr2,write,proj22sched), (code12,read,proj12task2), (code22,request,proj22task2a), (des22,read,proj22task1), (acc2,read,proj22sched), (code12,read,proj12sched), (ldr11,write,proj11budget), (des22,request,proj22task1), (code11,setStatus,proj11task2propa), (des21,request,proj21task1propa), (mgr1,approve,proj12budget), (acc1,setCost,proj12task1), (ldr2,write,proj21budget), (code11,request,proj11task2propa), (acc1,setCost,proj11task2prop), (acc1,setCost,proj11task1a), (plan1,setSchedule,proj12task2propa), (code11,read,proj11sched), (acc1,setCost,proj12task2prop), (des11,request,proj11task1), (ldr11,write,proj11sched), (code21,read,proj21task2prop), (acc2,setCost,proj22task2propa), (des21,read,proj21sched), (des21,request,proj21task1prop), (plan1,setSchedule,proj11task1propa), (aud2,read,proj22sched), (code21,request,proj21task2prop), (code21,request,proj21task2a), (des12,setStatus,proj12task1a), (ldr12,write,proj12sched), (acc1,read,proj11sched), (ldr11,read,proj12sched), (code22,request,proj22task2), (plan2,setSchedule,proj22task2propa), (plan1,setSchedule,proj12task1prop), (des12,read,proj12sched), (code21,request,proj21task2propa)]
+RuleQualityMetricType: Q_RELATIVE_TO_MEANING
+Fraction: 0.7
+==============================================
+OUTPUT RULES
+
+1.
+rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+WSC=4.0
+2.
+rule(; type in {task}; {request read setStatus }; tasks ] rid)
+WSC=5.0
+3.
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+WSC=5.0
+4.
+rule(; type in {budget}; {write read }; projectsLed ] project)
+WSC=4.0
+5.
+rule(; type in {budget schedule}; {read }; projects ] project)
+WSC=4.0
+6.
+rule(adminRoles supseteqln {{planner}}; type in {schedule task}; {setSchedule write }; projects ] project)
+WSC=6.0
+7.
+rule(; type in {task}; {request read }; expertise > expertise, projects ] project)
+WSC=5.0
+8.
+rule(adminRoles supseteqln {{planner} {accountant}}, projects supseteqln {{proj11 proj12} {proj22 proj21}}; department in {dept2 dept1}, type in {budget schedule}; {write read }; )
+WSC=12.0
+
+total WSC=45
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department), similarity: 1.00
+
+2. rule(; type in {budget schedule}; {write read }; projectsLed ] project)
+SIMILAR OUTPUT RULES:
+rule(; type in {budget}; {write read }; projectsLed ] project), similarity: 0.88
+rule(adminRoles supseteqln {{planner} {accountant}}, projects supseteqln {{proj11 proj12} {proj22 proj21}}; department in {dept2 dept1}, type in {budget schedule}; {write read }; ), similarity: 0.60
+
+3. rule(; type in {schedule}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(; type in {budget schedule}; {read }; projects ] project), similarity: 0.88
+
+4. rule(; type in {task}; {setStatus }; tasks ] rid)
+SIMILAR OUTPUT RULES:
+rule(; type in {task}; {request read setStatus }; tasks ] rid), similarity: 0.83
+
+5. rule(; type in {task}, proprietary in {false}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+rule(; type in {task}; {request read }; expertise > expertise, projects ] project), similarity: 0.94
+
+6. rule(isEmployee in {True_}; type in {task}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+
+7. rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+8. rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+9. rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project), similarity: 1.00
+
+10. rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{planner}}; type in {schedule task}; {setSchedule write }; projects ] project), similarity: 0.75
+
+11. rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 37
+[(aud2,read,proj21sched), (des11,request,proj11task1prop), (code11,read,proj11task2prop), (acc2,write,proj21budget), (acc1,read,proj12sched), (code11,request,proj11task2prop), (ldr2,write,proj21sched), (code22,read,proj22sched), (des12,request,proj12task1), (des11,read,proj11task1prop), (des22,setStatus,proj22task1propa), (des11,request,proj11task1propa), (acc2,setCost,proj21task2a), (ldr2,write,proj22sched), (code11,request,proj11task2), (plan1,setSchedule,proj12task2a), (code12,read,proj12sched), (mgr1,approve,proj12budget), (ldr2,write,proj21budget), (des21,request,proj21task1a), (plan2,read,proj21sched), (code12,request,proj12task2a), (code11,read,proj11sched), (des21,read,proj21task1propa), (mgr1,read,proj11budget), (ldr11,write,proj11sched), (acc2,setCost,proj22task2propa), (acc1,setCost,proj12task2propa), (code21,request,proj21task2prop), (code21,request,proj21task2), (code12,request,proj12task2), (des11,request,proj11task1a), (code21,request,proj21task2a), (ldr12,write,proj12sched), (acc1,read,proj11sched), (mgr2,approve,proj21budget), (code21,request,proj21task2propa)]
+RuleQualityMetricType: Q_RELATIVE_TO_MEANING
+Fraction: 0.7999999999999999
+==============================================
+OUTPUT RULES
+
+1.
+rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+WSC=4.0
+2.
+rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+WSC=4.0
+3.
+rule(isEmployee in {False_ True_}; department in {dept2 dept1}, proprietary in {true false}, type in {task}; {request read setStatus }; tasks ] rid)
+WSC=11.0
+4.
+rule(; rid in {proj22task1 proj21task1 proj21task1prop proj11task1 proj22task2}, type in {task}; {request read }; expertise > expertise, projects ] project)
+WSC=10.0
+5.
+rule(; rid in {proj11task2 proj21task2 proj12task2 proj12task1 proj21task2prop}, type in {task}; {read }; expertise > expertise, projects ] project)
+WSC=9.0
+6.
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+WSC=5.0
+7.
+rule(; type in {budget schedule}; {write read }; projects ] project)
+WSC=5.0
+
+total WSC=48
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department), similarity: 1.00
+
+2. rule(; type in {budget schedule}; {write read }; projectsLed ] project)
+SIMILAR OUTPUT RULES:
+rule(; type in {budget schedule}; {write read }; projects ] project), similarity: 0.75
+
+3. rule(; type in {schedule}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+4. rule(; type in {task}; {setStatus }; tasks ] rid)
+SIMILAR OUTPUT RULES:
+rule(isEmployee in {False_ True_}; department in {dept2 dept1}, proprietary in {true false}, type in {task}; {request read setStatus }; tasks ] rid), similarity: 0.83
+
+5. rule(; type in {task}, proprietary in {false}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+rule(; rid in {proj22task1 proj21task1 proj21task1prop proj11task1 proj22task2}, type in {task}; {request read }; expertise > expertise, projects ] project), similarity: 0.89
+rule(; rid in {proj11task2 proj21task2 proj12task2 proj12task1 proj21task2prop}, type in {task}; {read }; expertise > expertise, projects ] project), similarity: 0.76
+
+6. rule(isEmployee in {True_}; type in {task}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+
+7. rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+8. rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+9. rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project), similarity: 1.00
+
+10. rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+11. rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project), similarity: 1.00
+
+UP tuples that are not in logUP: 18
+[(code11,request,proj11task2prop), (des12,request,proj12task1), (des22,request,proj22task1a), (plan1,read,proj11sched), (code22,request,proj22task2a), (ldr11,write,proj11budget), (code11,setStatus,proj11task2propa), (des21,request,proj21task1propa), (mgr1,approve,proj12budget), (code11,request,proj11task2propa), (plan2,setSchedule,proj22task1), (code11,request,proj11task2a), (plan2,read,proj21sched), (acc2,setCost,proj22task1propa), (des21,request,proj21task1prop), (code12,request,proj12task2), (des12,read,proj12sched), (code21,request,proj21task2propa)]
+RuleQualityMetricType: Q_RELATIVE_TO_MEANING
+Fraction: 0.8999999999999999
+==============================================
+OUTPUT RULES
+
+1.
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+WSC=5.0
+2.
+rule(; type in {task}; {request read setStatus }; expertise > expertise, projects ] project)
+WSC=6.0
+3.
+rule(; department in {dept2 dept1}, type in {budget schedule task}; {setCost setSchedule write read }; projects ] project)
+WSC=10.0
+
+total WSC=21
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department), similarity: 1.00
+
+2. rule(; type in {budget schedule}; {write read }; projectsLed ] project)
+SIMILAR OUTPUT RULES:
+
+3. rule(; type in {schedule}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(; department in {dept2 dept1}, type in {budget schedule task}; {setCost setSchedule write read }; projects ] project), similarity: 0.73
+
+4. rule(; type in {task}; {setStatus }; tasks ] rid)
+SIMILAR OUTPUT RULES:
+
+5. rule(; type in {task}, proprietary in {false}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+rule(; type in {task}; {request read setStatus }; expertise > expertise, projects ] project), similarity: 0.85
+
+6. rule(isEmployee in {True_}; type in {task}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+
+7. rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+8. rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+9. rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+10. rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+11. rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+SIMILAR OUTPUT RULES:
+
+UP tuples that are not in logUP: 0
+[]
+RuleQualityMetricType: Q_RELATIVE_TO_MEANING
+Fraction: 0.9999999999999999
+==============================================
+OUTPUT RULES
+
+1.
+rule(; type in {schedule}; {read }; projects ] project)
+WSC=3.0
+2.
+rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+WSC=4.0
+3.
+rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+WSC=4.0
+4.
+rule(isEmployee in {True_}; type in {task}; {request read }; expertise > expertise, projects ] project)
+WSC=6.0
+5.
+rule(; type in {task}; {setStatus }; tasks ] rid)
+WSC=3.0
+6.
+rule(; proprietary in {false}, type in {task}; {request read }; expertise > expertise, projects ] project)
+WSC=6.0
+7.
+rule(; type in {budget schedule}; {write read }; projectsLed ] project)
+WSC=5.0
+8.
+rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+WSC=5.0
+9.
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+WSC=5.0
+10.
+rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+WSC=4.0
+11.
+rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project)
+WSC=4.0
+
+total WSC=49
+==============================================
+INPUT-OUTPUT CORRESPONDENCE
+1. rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{manager}}; type in {budget}; {approve read }; department=department), similarity: 1.00
+
+2. rule(; type in {budget schedule}; {write read }; projectsLed ] project)
+SIMILAR OUTPUT RULES:
+rule(; type in {budget schedule}; {write read }; projectsLed ] project), similarity: 1.00
+
+3. rule(; type in {schedule}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(; type in {schedule}; {read }; projects ] project), similarity: 1.00
+
+4. rule(; type in {task}; {setStatus }; tasks ] rid)
+SIMILAR OUTPUT RULES:
+rule(; type in {task}; {setStatus }; tasks ] rid), similarity: 1.00
+
+5. rule(; type in {task}, proprietary in {false}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+rule(; proprietary in {false}, type in {task}; {request read }; expertise > expertise, projects ] project), similarity: 1.00
+
+6. rule(isEmployee in {True_}; type in {task}; {request read }; projects ] project, expertise > expertise)
+SIMILAR OUTPUT RULES:
+rule(isEmployee in {True_}; type in {task}; {request read }; expertise > expertise, projects ] project), similarity: 1.00
+
+7. rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{auditor}}; type in {budget}; {read }; projects ] project), similarity: 1.00
+
+8. rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{accountant}}; type in {budget}; {write read }; projects ] project), similarity: 1.00
+
+9. rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{accountant}}; type in {task}; {setCost }; projects ] project), similarity: 1.00
+
+10. rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{planner}}; type in {schedule}; {write }; projects ] project), similarity: 1.00
+
+11. rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project)
+SIMILAR OUTPUT RULES:
+rule(adminRoles supseteqln {{planner}}; type in {task}; {setSchedule }; projects ] project), similarity: 1.00
+

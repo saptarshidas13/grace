@@ -1,0 +1,2920 @@
+OverAssignments
+---------------------
+Log Completeness: 0.7
+Rule Quality Metric: Q_RELATIVE_TO_COVERED
+1.
+rule(null;uattr7 in {13}; ; {op2 op5 }; uattr3 ] rattr3)
+5
+<66,0,op2>
+<69,0,op2>
+<68,0,op2>
+<67,0,op2>
+<70,0,op2>
+-----------
+2.
+rule(null;; rattr5 supseteqln {{4}}; {op1 op4 }; uattr7=rattr3)
+0
+-----------
+3.
+rule(null;; ; {op5 }; uattr5=rattr1)
+0
+-----------
+4.
+rule(null;uattr2 in {7}; ; {op4 }; uattr1 ] rattr7)
+0
+-----------
+5.
+rule(null;; ; {op5 }; uattr1 ] rattr2)
+0
+-----------
+6.
+rule(null;uattr4 in {17}; ; {op3 }; uattr0=rattr3)
+0
+-----------
+7.
+rule(null;uattr7 in {13}; ; {op3 }; uattr6=rattr4)
+0
+-----------
+8.
+rule(null;; ; {op2 }; uattr4=rattr4, uid=rattr2)
+0
+-----------
+9.
+rule(null;; ; {op3 op5 op6 op8 }; uattr0=rattr6, uattr3 ] rattr2)
+0
+-----------
+10.
+rule(null;; ; {op6 }; uattr5=rattr7)
+0
+-----------
+11.
+rule(null;; ; {op2 }; uattr7=rattr1)
+0
+-----------
+12.
+rule(null;; ; {op2 }; uattr4=rattr2)
+0
+-----------
+13.
+rule(null;; ; {op2 op3 }; uattr1 ] rattr3, uattr4=rattr4, uid=rattr2)
+0
+-----------
+14.
+rule(null;uid in {79 77 59 58 57 17 18 16 11 83 80 87 84 67 49 48 66 69 94 45 93 47 91 46 10 7 6 52 70 9 71 8 72 76 89 50}; ; {op8 }; uattr3 > rattr5, uattr4=rattr6)
+0
+-----------
+15.
+rule(null;uid in {45 44 23 33 24 25 39 26 27 11 28 29 30 31 51 52 53 50}; ; {op3 }; uattr6=rattr4)
+0
+-----------
+16.
+rule(null;uid in {17 18 24 15 16 11 12 29 3 2 1 0 30 32 4 9}; ; {op1 }; uattr2=rattr3)
+0
+-----------
+17.
+rule(null;; rattr4 in {67 48 66 69 68 44 47 46 43 42 51 52 53 72 73}; {op3 }; uid=rattr2)
+0
+-----------
+18.
+rule(null;uid in {30 22 24 25 26 39 27 28 37 29 38}; rattr3 in {7}; {op5 }; )
+0
+-----------
+19.
+rule(null;; rattr2 in {77 56 64 82 65 80 62 63 81 60 76}; {op4 }; uid=rattr4)
+0
+-----------
+20.
+rule(null;uid in {48 43 42 41 51 52 53 50}; ; {op7 }; uattr6=rattr4)
+0
+-----------
+21.
+rule(null;uid in {2 10}; ; {op3 op6 }; uattr6=rattr4)
+0
+-----------
+22.
+rule(null;uid in {31 26 27 28}; ; {op1 }; uattr4=rattr2)
+0
+-----------
+23.
+rule(null;uid in {2 10 7}; ; {op5 }; uattr0=rattr3)
+0
+-----------
+24.
+rule(null;; ; {op6 op8 }; uattr6=rattr4, uid=rattr6)
+0
+-----------
+25.
+rule(null;uid in {58 57 44 56 55 23 43 42 64 51 65 52 62 53 63 54 60 61 50}; ; {op5 }; uattr4=rattr2)
+0
+-----------
+26.
+rule(null;; rattr4 in {74}; {op4 }; uid=rattr2)
+0
+-----------
+27.
+rule(null;; ; {op1 }; uattr7=rattr6, uid=rattr1)
+0
+-----------
+28.
+rule(null;; ; {op1 }; uattr7=rid, uid=rattr2)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<53,43,op8>
+<58,21,op3>
+<4,47,op8>
+<59,19,op3>
+<15,46,op8>
+<54,43,op8>
+<68,45,op8>
+<3,46,op8>
+<40,43,op8>
+<55,43,op8>
+<71,35,op4>
+<65,43,op8>
+<13,46,op8>
+<40,0,op3>
+<42,18,op4>
+<56,43,op8>
+<70,33,op4>
+<5,46,op8>
+<40,3,op5>
+<14,46,op8>
+<43,17,op4>
+<41,0,op3>
+<67,22,op4>
+<73,37,op4>
+<0,46,op8>
+<90,44,op8>
+<63,43,op8>
+<74,38,op3>
+<43,43,op8>
+<49,21,op4>
+<72,36,op4>
+<64,43,op8>
+<53,34,op4>
+<12,46,op8>
+<44,43,op8>
+<54,35,op3>
+<82,42,op8>
+<51,43,op8>
+<61,43,op8>
+<75,39,op4>
+<2,47,op8>
+<92,44,op8>
+<41,43,op8>
+<77,20,op3>
+<66,24,op4>
+<81,42,op8>
+<62,43,op8>
+<1,46,op8>
+<42,43,op8>
+<75,39,op3>
+<6,2,op1>
+<35,3,op5>
+<2,0,op8>
+<44,0,op7>
+<49,3,op5>
+<45,3,op5>
+<46,0,op3>
+<74,42,op8>
+<47,0,op3>
+<88,44,op8>
+<38,2,op1>
+<37,0,op3>
+<4,3,op5>
+<4,0,op3>
+<5,2,op1>
+<36,3,op5>
+<65,27,op3>
+<45,0,op7>
+<49,0,op7>
+<46,3,op5>
+<48,0,op3>
+<20,2,op1>
+<60,43,op8>
+<73,42,op8>
+<76,40,op3>
+<10,2,op1>
+<39,2,op1>
+<38,0,op3>
+<33,3,op5>
+<7,0,op3>
+<8,2,op1>
+<34,0,op3>
+<35,2,op1>
+<4,0,op8>
+<46,0,op7>
+<47,3,op5>
+<61,33,op3>
+<21,2,op1>
+<20,0,op3>
+<49,0,op3>
+<6,0,op6>
+<6,3,op5>
+<86,44,op8>
+<36,2,op1>
+<7,2,op1>
+<34,3,op5>
+<35,0,op3>
+<6,0,op3>
+<47,0,op7>
+<48,3,op5>
+<4,0,op6>
+<22,2,op1>
+<21,0,op3>
+<37,2,op1>
+<85,44,op8>
+<36,0,op3>
+<75,42,op8>
+<20,3,op5>
+<42,0,op3>
+<31,3,op5>
+<11,0,op6>
+<6,0,op8>
+<10,0,op8>
+<19,46,op8>
+<33,2,op1>
+<32,0,op3>
+<41,3,op5>
+<40,0,op7>
+<14,2,op1>
+<13,2,op1>
+<21,3,op5>
+<78,42,op8>
+<11,3,op5>
+<23,2,op1>
+<22,0,op3>
+<41,19,op4>
+<25,2,op1>
+<32,3,op5>
+<43,0,op3>
+<11,0,op8>
+
+OverAssignments
+---------------------
+Log Completeness: 0.7
+Rule Quality Metric: Q_RELATIVE_TO_MEANING
+1.
+rule(null;uattr7 in {13}; ; {op2 op5 }; uattr3 ] rattr3)
+5
+<66,0,op2>
+<69,0,op2>
+<68,0,op2>
+<67,0,op2>
+<70,0,op2>
+-----------
+2.
+rule(null;; ; {op5 }; uattr3 ] rattr3)
+0
+-----------
+3.
+rule(null;; ; {op2 }; uattr4=rattr2)
+0
+-----------
+4.
+rule(null;; rattr5 supseteqln {{4}}; {op1 op4 }; uattr7=rattr3)
+0
+-----------
+5.
+rule(null;; ; {op5 }; uattr5=rattr1)
+0
+-----------
+6.
+rule(null;uattr2 in {7}; ; {op4 }; uattr1 ] rattr7)
+0
+-----------
+7.
+rule(null;; ; {op5 }; uattr1 ] rattr2)
+0
+-----------
+8.
+rule(null;uattr4 in {17}; ; {op3 }; uattr0=rattr3)
+0
+-----------
+9.
+rule(null;; ; {op6 }; uattr5=rattr7)
+0
+-----------
+10.
+rule(null;; ; {op2 }; uattr7=rattr1)
+0
+-----------
+11.
+rule(null;; ; {op3 }; uattr6=rattr4)
+0
+-----------
+12.
+rule(null;; ; {op2 }; uattr4=rattr4, uid=rattr2)
+0
+-----------
+13.
+rule(null;; ; {op3 op5 op6 op8 }; uattr0=rattr6, uattr3 ] rattr2)
+0
+-----------
+14.
+rule(null;; ; {op1 }; uattr2=rattr3, uattr7=rid)
+0
+-----------
+15.
+rule(null;; ; {op2 op3 }; uattr1 ] rattr3, uattr4=rattr4, uid=rattr2)
+0
+-----------
+16.
+rule(null;uid in {79 77 59 58 57 17 18 16 11 83 80 87 84 67 49 48 66 69 94 45 93 47 91 46 10 7 6 52 70 9 71 8 72 76 89 50}; ; {op8 }; uattr3 > rattr5, uattr4=rattr6)
+0
+-----------
+17.
+rule(null;; rattr4 in {67 48 66 69 68 44 47 46 43 42 51 52 53 72 73}; {op3 }; uid=rattr2)
+0
+-----------
+18.
+rule(null;; rattr2 in {77 56 64 82 65 80 62 63 81 60 76}; {op4 }; uid=rattr4)
+0
+-----------
+19.
+rule(null;uid in {48 43 42 41 51 52 53 50}; ; {op7 }; uattr6=rattr4)
+0
+-----------
+20.
+rule(null;uid in {30 32 24 29}; ; {op1 }; uattr2=rattr3)
+0
+-----------
+21.
+rule(null;uid in {31 26 27 28}; ; {op1 }; uattr4=rattr2)
+0
+-----------
+22.
+rule(null;uid in {2 10}; ; {op3 op6 }; uattr6=rattr4)
+0
+-----------
+23.
+rule(null;; rattr4 in {74}; {op4 }; uid=rattr2)
+0
+-----------
+24.
+rule(null;; ; {op1 }; uattr7=rattr6, uid=rattr1)
+0
+-----------
+25.
+rule(null;; ; {op6 op8 }; uattr0=rattr1)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<53,43,op8>
+<58,21,op3>
+<4,47,op8>
+<59,19,op3>
+<15,46,op8>
+<54,43,op8>
+<68,45,op8>
+<3,46,op8>
+<40,43,op8>
+<55,43,op8>
+<71,35,op4>
+<65,43,op8>
+<13,46,op8>
+<42,18,op4>
+<56,43,op8>
+<70,33,op4>
+<5,46,op8>
+<14,46,op8>
+<43,17,op4>
+<67,22,op4>
+<73,37,op4>
+<0,46,op8>
+<90,44,op8>
+<63,43,op8>
+<74,38,op3>
+<43,43,op8>
+<49,21,op4>
+<72,36,op4>
+<64,43,op8>
+<53,34,op4>
+<12,46,op8>
+<44,43,op8>
+<54,35,op3>
+<82,42,op8>
+<51,43,op8>
+<61,43,op8>
+<75,39,op4>
+<2,47,op8>
+<92,44,op8>
+<41,43,op8>
+<77,20,op3>
+<66,24,op4>
+<81,42,op8>
+<62,43,op8>
+<1,46,op8>
+<42,43,op8>
+<75,39,op3>
+<44,0,op7>
+<74,42,op8>
+<88,44,op8>
+<38,2,op1>
+<65,27,op3>
+<45,0,op7>
+<49,0,op7>
+<20,2,op1>
+<60,43,op8>
+<73,42,op8>
+<76,40,op3>
+<39,2,op1>
+<35,2,op1>
+<46,0,op7>
+<61,33,op3>
+<21,2,op1>
+<86,44,op8>
+<36,2,op1>
+<47,0,op7>
+<22,2,op1>
+<37,2,op1>
+<85,44,op8>
+<75,42,op8>
+<19,46,op8>
+<33,2,op1>
+<40,0,op7>
+<78,42,op8>
+<23,2,op1>
+<41,19,op4>
+<25,2,op1>
+
+OverAssignments
+---------------------
+Log Completeness: 0.7
+Rule Quality Metric: Q_RELATIVE_TO_UP0
+1.
+rule(null;; ; {op1 }; uattr7=rid)
+63
+<37,6,op1>
+<52,10,op1>
+<66,13,op1>
+<71,13,op1>
+<46,10,op1>
+<73,13,op1>
+<38,6,op1>
+<53,10,op1>
+<67,13,op1>
+<70,13,op1>
+<30,6,op1>
+<47,10,op1>
+<72,13,op1>
+<20,6,op1>
+<35,6,op1>
+<54,13,op1>
+<64,13,op1>
+<21,6,op1>
+<75,13,op1>
+<44,10,op1>
+<36,6,op1>
+<55,13,op1>
+<65,13,op1>
+<22,6,op1>
+<74,13,op1>
+<45,10,op1>
+<62,13,op1>
+<80,13,op1>
+<33,6,op1>
+<77,13,op1>
+<23,6,op1>
+<56,13,op1>
+<42,10,op1>
+<63,13,op1>
+<81,13,op1>
+<34,6,op1>
+<39,6,op1>
+<76,13,op1>
+<57,13,op1>
+<24,6,op1>
+<43,10,op1>
+<58,13,op1>
+<31,6,op1>
+<29,6,op1>
+<60,13,op1>
+<50,10,op1>
+<82,13,op1>
+<48,10,op1>
+<68,13,op1>
+<79,13,op1>
+<28,6,op1>
+<25,6,op1>
+<40,10,op1>
+<59,13,op1>
+<61,13,op1>
+<32,6,op1>
+<51,10,op1>
+<69,13,op1>
+<49,10,op1>
+<78,13,op1>
+<26,6,op1>
+<41,10,op1>
+<27,6,op1>
+-----------
+2.
+rule(null;; ; {op4 }; uattr1 ] rattr7)
+46
+<46,41,op4>
+<55,41,op4>
+<10,41,op4>
+<14,41,op4>
+<65,41,op4>
+<18,41,op4>
+<51,41,op4>
+<6,41,op4>
+<41,41,op4>
+<61,41,op4>
+<2,41,op4>
+<56,41,op4>
+<47,41,op4>
+<9,41,op4>
+<15,41,op4>
+<19,41,op4>
+<52,41,op4>
+<5,41,op4>
+<42,41,op4>
+<62,41,op4>
+<1,41,op4>
+<57,41,op4>
+<12,41,op4>
+<63,41,op4>
+<16,41,op4>
+<53,41,op4>
+<8,41,op4>
+<4,41,op4>
+<58,41,op4>
+<43,41,op4>
+<49,41,op4>
+<11,41,op4>
+<13,41,op4>
+<64,41,op4>
+<45,41,op4>
+<54,41,op4>
+<17,41,op4>
+<50,41,op4>
+<7,41,op4>
+<40,41,op4>
+<0,41,op4>
+<48,41,op4>
+<44,41,op4>
+<3,41,op4>
+<59,41,op4>
+<60,41,op4>
+-----------
+3.
+rule(null;; ; {op2 op6 }; uattr4=rattr2)
+43
+<68,2,op6>
+<54,3,op6>
+<45,3,op6>
+<49,3,op6>
+<60,3,op6>
+<67,2,op6>
+<53,3,op6>
+<36,3,op6>
+<46,3,op6>
+<66,2,op6>
+<56,3,op6>
+<33,3,op6>
+<47,3,op6>
+<55,3,op6>
+<40,3,op6>
+<65,3,op6>
+<48,3,op6>
+<58,3,op6>
+<70,2,op6>
+<38,2,op6>
+<21,2,op6>
+<28,2,op6>
+<31,2,op6>
+<64,3,op6>
+<50,3,op6>
+<41,3,op6>
+<37,2,op6>
+<57,3,op6>
+<22,2,op6>
+<27,2,op6>
+<63,3,op6>
+<32,3,op6>
+<42,3,op6>
+<26,2,op6>
+<23,3,op6>
+<62,3,op6>
+<52,3,op6>
+<43,3,op6>
+<59,3,op6>
+<69,2,op6>
+<61,3,op6>
+<44,3,op6>
+<51,3,op6>
+-----------
+4.
+rule(null;; ; {op2 op5 }; uattr3 ] rattr3)
+41
+<16,0,op2>
+<37,3,op2>
+<6,3,op2>
+<20,3,op2>
+<30,3,op2>
+<38,3,op2>
+<10,3,op2>
+<15,0,op2>
+<4,3,op2>
+<5,0,op2>
+<69,0,op2>
+<21,3,op2>
+<18,0,op2>
+<8,0,op2>
+<35,3,op2>
+<68,0,op2>
+<67,0,op2>
+<22,3,op2>
+<17,0,op2>
+<7,3,op2>
+<70,0,op2>
+<3,0,op2>
+<66,0,op2>
+<13,0,op2>
+<2,3,op2>
+<19,0,op2>
+<24,3,op2>
+<29,3,op2>
+<34,3,op2>
+<39,3,op2>
+<14,0,op2>
+<9,0,op2>
+<11,3,op2>
+<25,3,op2>
+<28,3,op2>
+<0,0,op2>
+<31,3,op2>
+<12,0,op2>
+<26,3,op2>
+<27,3,op2>
+<1,0,op2>
+-----------
+5.
+rule(null;; ; {op2 op3 }; uid=rattr2)
+40
+<31,15,op3>
+<59,19,op2>
+<74,38,op2>
+<22,8,op3>
+<27,10,op3>
+<64,26,op2>
+<63,31,op2>
+<19,2,op2>
+<73,37,op2>
+<55,24,op2>
+<54,35,op2>
+<60,32,op2>
+<19,2,op3>
+<28,11,op3>
+<65,27,op2>
+<79,17,op2>
+<78,18,op2>
+<0,41,op2>
+<72,36,op2>
+<18,3,op2>
+<56,23,op2>
+<57,22,op2>
+<62,29,op2>
+<20,1,op3>
+<0,41,op3>
+<76,40,op2>
+<37,12,op3>
+<18,3,op3>
+<80,28,op2>
+<61,33,op2>
+<71,34,op2>
+<81,30,op2>
+<12,0,op2>
+<82,25,op2>
+<75,39,op2>
+<58,21,op2>
+<21,14,op3>
+<77,20,op2>
+<38,13,op3>
+<26,9,op3>
+-----------
+6.
+rule(null;uattr1 supseteqln {{4}}; ; {op8 }; uattr4=rattr6)
+32
+<73,2,op8>
+<4,46,op8>
+<15,47,op8>
+<72,2,op8>
+<3,47,op8>
+<16,47,op8>
+<75,2,op8>
+<6,46,op8>
+<13,47,op8>
+<5,47,op8>
+<74,2,op8>
+<14,47,op8>
+<0,47,op8>
+<19,47,op8>
+<11,46,op8>
+<8,47,op8>
+<77,2,op8>
+<82,2,op8>
+<12,47,op8>
+<81,2,op8>
+<7,46,op8>
+<76,2,op8>
+<2,46,op8>
+<71,2,op8>
+<17,47,op8>
+<80,2,op8>
+<79,2,op8>
+<1,47,op8>
+<18,47,op8>
+<78,2,op8>
+<9,47,op8>
+<10,46,op8>
+-----------
+7.
+rule(null;; ; {op1 }; uattr2=rattr3)
+29
+<81,3,op1>
+<66,3,op1>
+<76,3,op1>
+<86,3,op1>
+<72,3,op1>
+<92,3,op1>
+<82,3,op1>
+<79,3,op1>
+<75,3,op1>
+<69,3,op1>
+<71,3,op1>
+<85,3,op1>
+<91,3,op1>
+<89,3,op1>
+<90,3,op1>
+<78,3,op1>
+<84,3,op1>
+<68,3,op1>
+<88,3,op1>
+<94,3,op1>
+<74,3,op1>
+<80,3,op1>
+<70,3,op1>
+<77,3,op1>
+<67,3,op1>
+<87,3,op1>
+<83,3,op1>
+<93,3,op1>
+<73,3,op1>
+-----------
+8.
+rule(null;; ; {op3 op5 op6 op8 }; uattr0=rattr6)
+6
+<11,0,op5>
+<4,0,op5>
+<7,0,op5>
+<2,0,op5>
+<6,0,op5>
+<10,0,op5>
+-----------
+9.
+rule(null;; ; {op3 }; uattr6=rattr4)
+0
+-----------
+10.
+rule(null;; ; {op5 }; uattr1 ] rattr2)
+0
+-----------
+11.
+rule(null;; ; {op6 }; uattr5=rattr7)
+0
+-----------
+12.
+rule(null;; ; {op2 }; uattr7=rattr1)
+0
+-----------
+13.
+rule(null;; ; {op5 }; uattr5=rattr1)
+0
+-----------
+14.
+rule(null;; rattr5 supseteqln {{4}}; {op1 op4 }; uattr7=rattr3)
+0
+-----------
+15.
+rule(null;uattr4 in {17}; ; {op3 }; uattr0=rattr3)
+0
+-----------
+16.
+rule(null;; ; {op7 }; uattr5=rattr3)
+0
+-----------
+17.
+rule(null;uattr0 in {14}; ; {op4 }; uid=rattr4)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+
+OverAssignments
+---------------------
+Log Completeness: 0.7
+Rule Quality Metric: Q_RELATIVE_TO_PERMISSIONS
+1.
+rule(null;; ; {op2 op6 }; uattr5=rattr7)
+12
+<21,1,op2>
+<23,1,op2>
+<37,1,op2>
+<28,1,op2>
+<31,1,op2>
+<33,1,op2>
+<22,1,op2>
+<36,1,op2>
+<38,1,op2>
+<26,1,op2>
+<27,1,op2>
+<32,1,op2>
+-----------
+2.
+rule(null;; ; {op2 op3 }; uattr4=rattr4, uid=rattr2)
+8
+<31,15,op3>
+<22,8,op3>
+<37,12,op3>
+<27,10,op3>
+<21,14,op3>
+<28,11,op3>
+<38,13,op3>
+<26,9,op3>
+-----------
+3.
+rule(null;; ; {op3 op5 op6 op8 }; uattr0=rattr6)
+6
+<11,0,op5>
+<4,0,op5>
+<7,0,op5>
+<2,0,op5>
+<6,0,op5>
+<10,0,op5>
+-----------
+4.
+rule(null;uattr7 in {13}; ; {op2 op5 }; uattr3 ] rattr3)
+5
+<66,0,op2>
+<69,0,op2>
+<68,0,op2>
+<67,0,op2>
+<70,0,op2>
+-----------
+5.
+rule(null;; ; {op5 }; uattr3 ] rattr3)
+0
+-----------
+6.
+rule(null;; ; {op2 }; uattr4=rattr2)
+0
+-----------
+7.
+rule(null;; ; {op3 }; uattr6=rattr4)
+0
+-----------
+8.
+rule(null;; ; {op5 }; uattr1 ] rattr2)
+0
+-----------
+9.
+rule(null;; rattr5 supseteqln {{4}}; {op1 op4 }; uattr7=rattr3)
+0
+-----------
+10.
+rule(null;uattr2 in {7}; ; {op4 }; uattr1 ] rattr7)
+0
+-----------
+11.
+rule(null;; ; {op2 }; uattr7=rattr1)
+0
+-----------
+12.
+rule(null;; ; {op5 }; uattr5=rattr1)
+0
+-----------
+13.
+rule(null;; ; {op3 }; uattr1 ] rattr3, uid=rattr2)
+0
+-----------
+14.
+rule(null;uattr4 in {17}; ; {op3 }; uattr0=rattr3)
+0
+-----------
+15.
+rule(null;; ; {op1 }; uattr2=rattr3, uattr7=rid)
+0
+-----------
+16.
+rule(null;uattr0 in {14}; ; {op4 }; uid=rattr4)
+0
+-----------
+17.
+rule(null;; ; {op1 }; uattr3 < rattr5, uattr7=rattr6)
+0
+-----------
+18.
+rule(null;uid in {79 77 59 58 57 17 18 16 11 83 80 87 84 67 49 48 66 69 94 45 93 47 91 46 10 7 6 52 70 9 71 8 72 76 89 50}; ; {op8 }; uattr3 > rattr5, uattr4=rattr6)
+0
+-----------
+19.
+rule(null;uid in {48 43 42 41 51 52 53 50}; ; {op7 }; uattr6=rattr4)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<53,43,op8>
+<4,47,op8>
+<15,46,op8>
+<54,43,op8>
+<68,45,op8>
+<3,46,op8>
+<40,43,op8>
+<55,43,op8>
+<65,43,op8>
+<13,46,op8>
+<56,43,op8>
+<5,46,op8>
+<14,46,op8>
+<0,46,op8>
+<90,44,op8>
+<63,43,op8>
+<43,43,op8>
+<64,43,op8>
+<12,46,op8>
+<44,43,op8>
+<82,42,op8>
+<51,43,op8>
+<61,43,op8>
+<2,47,op8>
+<92,44,op8>
+<41,43,op8>
+<81,42,op8>
+<62,43,op8>
+<1,46,op8>
+<42,43,op8>
+<44,0,op7>
+<74,42,op8>
+<88,44,op8>
+<45,0,op7>
+<49,0,op7>
+<60,43,op8>
+<73,42,op8>
+<46,0,op7>
+<86,44,op8>
+<47,0,op7>
+<85,44,op8>
+<75,42,op8>
+<19,46,op8>
+<40,0,op7>
+<78,42,op8>
+
+OverAssignments
+---------------------
+Log Completeness: 0.7
+Rule Quality Metric: Q_RELATIVE_TO_SIZE_AND_PERMISSIONS
+1.
+rule(null;; rattr4 in {5}; {op5 op8 }; uattr3 ] rattr2)
+17
+<67,0,op8>
+<73,0,op8>
+<77,0,op8>
+<66,0,op8>
+<72,0,op8>
+<82,0,op8>
+<76,0,op8>
+<71,0,op8>
+<81,0,op8>
+<69,0,op8>
+<75,0,op8>
+<79,0,op8>
+<70,0,op8>
+<68,0,op8>
+<80,0,op8>
+<74,0,op8>
+<78,0,op8>
+-----------
+2.
+rule(null;; rattr4 in {19}; {op2 }; uid=rattr2)
+1
+<19,2,op2>
+-----------
+3.
+rule(null;; rattr4 in {74}; {op4 }; uid=rattr2)
+0
+-----------
+4.
+rule(null;; rattr6 in {6}; {op3 }; uattr0=rattr3)
+0
+-----------
+5.
+rule(null;; rattr3 in {9}; {op5 }; uattr5=rattr1)
+0
+-----------
+6.
+rule(null;uattr2 in {7}; rattr4 in {76}; {op4 }; )
+0
+-----------
+7.
+rule(null;; rattr5 supseteqln {{4}}; {op1 op4 }; uattr7=rattr3)
+0
+-----------
+8.
+rule(null;; rattr3 in {11}; {op6 }; uattr5=rattr7)
+0
+-----------
+9.
+rule(null;; rattr0 supseteqln {{0}}, rattr4 in {19}; {op2 op3 }; uid=rattr2)
+0
+-----------
+10.
+rule(null;; rattr3 in {9}; {op2 }; uattr4=rattr2)
+0
+-----------
+11.
+rule(null;; rattr3 in {7}; {op5 }; uattr3 < rattr5)
+0
+-----------
+12.
+rule(null;; rattr7 in {1}; {op2 }; uattr7=rattr1)
+0
+-----------
+13.
+rule(null;uid in {10 7 6 11}; rattr5 supseteqln {{7}}, rattr6 in {11}; {op8 }; )
+0
+-----------
+14.
+rule(null;uid in {17 18 9 16 8}; rattr5 supseteqln {{12}}, rattr6 in {11}; {op8 }; )
+0
+-----------
+15.
+rule(null;uid in {48 43 42 41 51 52 53 50}; ; {op7 }; uattr6=rattr4)
+0
+-----------
+16.
+rule(null;; rattr3 in {12}; {op6 op8 }; uattr0=rattr1)
+0
+-----------
+17.
+rule(null;uattr4 in {6}; rattr3 in {12}; {op2 op5 }; )
+0
+-----------
+18.
+rule(null;; rattr5 supseteqln {{9}}; {op5 }; uattr1 ] rattr3)
+0
+-----------
+19.
+rule(null;; rattr3 in {12}; {op3 }; uattr6=rattr4)
+0
+-----------
+20.
+rule(null;; rattr2 in {77 56 82 64 65 80 62 63 81 60 76}; {op4 }; uid=rattr4)
+0
+-----------
+21.
+rule(null;uattr4 in {19 17}; rattr6 in {19 17}; {op8 }; uattr3 > rattr5)
+0
+-----------
+22.
+rule(null;; rattr2 in {19}; {op1 }; uattr2=rattr3)
+0
+-----------
+23.
+rule(null;; rattr4 in {67 48 66 69 68 44 47 46 43 42 51 52 53 72 73}; {op3 }; uid=rattr2)
+0
+-----------
+24.
+rule(null;uid in {49 79 48 77 59 45 58 57 47 46 52 80 71 72 50 76}; rattr6 in {6 18}; {op8 }; uattr3 > rattr5)
+0
+-----------
+25.
+rule(null;; rattr3 in {11}; {op2 op6 }; uattr4=rattr2)
+0
+-----------
+26.
+rule(null;; rattr4 in {8}; {op2 op5 }; uattr4=rattr2)
+0
+-----------
+27.
+rule(null;; rattr3 in {12}; {op3 op5 op6 op8 }; uattr0=rattr6, uattr3 ] rattr2)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<53,43,op8>
+<58,21,op3>
+<4,47,op8>
+<59,19,op3>
+<15,46,op8>
+<54,43,op8>
+<3,46,op8>
+<40,43,op8>
+<55,43,op8>
+<71,35,op4>
+<65,43,op8>
+<13,46,op8>
+<42,18,op4>
+<56,43,op8>
+<70,33,op4>
+<5,46,op8>
+<14,46,op8>
+<43,17,op4>
+<67,22,op4>
+<73,37,op4>
+<0,46,op8>
+<63,43,op8>
+<74,38,op3>
+<43,43,op8>
+<49,21,op4>
+<72,36,op4>
+<64,43,op8>
+<53,34,op4>
+<12,46,op8>
+<44,43,op8>
+<54,35,op3>
+<82,42,op8>
+<51,43,op8>
+<61,43,op8>
+<75,39,op4>
+<2,47,op8>
+<41,43,op8>
+<77,20,op3>
+<66,24,op4>
+<81,42,op8>
+<62,43,op8>
+<1,46,op8>
+<42,43,op8>
+<75,39,op3>
+<44,0,op7>
+<74,42,op8>
+<65,27,op3>
+<45,0,op7>
+<49,0,op7>
+<60,43,op8>
+<73,42,op8>
+<76,40,op3>
+<46,0,op7>
+<61,33,op3>
+<47,0,op7>
+<75,42,op8>
+<19,46,op8>
+<40,0,op7>
+<78,42,op8>
+<41,19,op4>
+
+OverAssignments
+---------------------
+Log Completeness: 0.7
+Rule Quality Metric: Q_PROGOL
+1.
+rule(null;; ; {op2 op3 }; uid=rattr2)
+40
+<31,15,op3>
+<59,19,op2>
+<74,38,op2>
+<22,8,op3>
+<27,10,op3>
+<64,26,op2>
+<63,31,op2>
+<19,2,op2>
+<73,37,op2>
+<55,24,op2>
+<54,35,op2>
+<60,32,op2>
+<19,2,op3>
+<28,11,op3>
+<65,27,op2>
+<79,17,op2>
+<78,18,op2>
+<0,41,op2>
+<72,36,op2>
+<18,3,op2>
+<56,23,op2>
+<57,22,op2>
+<62,29,op2>
+<20,1,op3>
+<0,41,op3>
+<76,40,op2>
+<37,12,op3>
+<18,3,op3>
+<80,28,op2>
+<61,33,op2>
+<71,34,op2>
+<81,30,op2>
+<12,0,op2>
+<82,25,op2>
+<75,39,op2>
+<58,21,op2>
+<21,14,op3>
+<77,20,op2>
+<38,13,op3>
+<26,9,op3>
+-----------
+2.
+rule(null;; ; {op7 }; uattr6=rattr4)
+38
+<30,0,op7>
+<63,0,op7>
+<34,0,op7>
+<7,0,op7>
+<57,0,op7>
+<37,0,op7>
+<20,0,op7>
+<10,0,op7>
+<27,0,op7>
+<62,0,op7>
+<31,0,op7>
+<35,0,op7>
+<36,0,op7>
+<56,0,op7>
+<11,0,op7>
+<6,0,op7>
+<21,0,op7>
+<2,0,op7>
+<26,0,op7>
+<32,0,op7>
+<61,0,op7>
+<65,0,op7>
+<59,0,op7>
+<39,0,op7>
+<25,0,op7>
+<55,0,op7>
+<22,0,op7>
+<60,0,op7>
+<33,0,op7>
+<29,0,op7>
+<58,0,op7>
+<28,0,op7>
+<38,0,op7>
+<4,0,op7>
+<54,0,op7>
+<23,0,op7>
+<24,0,op7>
+<64,0,op7>
+-----------
+3.
+rule(null;uattr1 supseteqln {{4}}; ; {op8 }; uattr4=rattr6)
+32
+<73,2,op8>
+<4,46,op8>
+<15,47,op8>
+<72,2,op8>
+<3,47,op8>
+<16,47,op8>
+<75,2,op8>
+<6,46,op8>
+<13,47,op8>
+<5,47,op8>
+<74,2,op8>
+<14,47,op8>
+<0,47,op8>
+<19,47,op8>
+<11,46,op8>
+<8,47,op8>
+<77,2,op8>
+<82,2,op8>
+<12,47,op8>
+<81,2,op8>
+<7,46,op8>
+<76,2,op8>
+<2,46,op8>
+<71,2,op8>
+<17,47,op8>
+<80,2,op8>
+<79,2,op8>
+<1,47,op8>
+<18,47,op8>
+<78,2,op8>
+<9,47,op8>
+<10,46,op8>
+-----------
+4.
+rule(null;; ; {op5 }; uattr6=rattr4)
+32
+<41,0,op5>
+<60,0,op5>
+<64,0,op5>
+<45,0,op5>
+<50,0,op5>
+<58,0,op5>
+<11,0,op5>
+<54,0,op5>
+<4,0,op5>
+<42,0,op5>
+<7,0,op5>
+<46,0,op5>
+<2,0,op5>
+<63,0,op5>
+<57,0,op5>
+<53,0,op5>
+<43,0,op5>
+<52,0,op5>
+<62,0,op5>
+<6,0,op5>
+<47,0,op5>
+<56,0,op5>
+<61,0,op5>
+<44,0,op5>
+<51,0,op5>
+<48,0,op5>
+<40,0,op5>
+<65,0,op5>
+<59,0,op5>
+<10,0,op5>
+<49,0,op5>
+<55,0,op5>
+-----------
+5.
+rule(null;; ; {op5 }; uattr3 ] rattr3)
+0
+-----------
+6.
+rule(null;uattr2 in {9 14}; rattr3 in {12}; {op3 }; )
+0
+-----------
+7.
+rule(null;uattr7 in {4}; rattr5 supseteqln {{4}}; {op1 op4 }; )
+0
+-----------
+8.
+rule(null;uattr2 in {7}; rattr4 in {76}; {op4 }; )
+0
+-----------
+9.
+rule(null;uattr2 in {9}; rattr3 in {9}; {op1 }; )
+0
+-----------
+10.
+rule(null;uattr7 in {2}; rattr3 in {12}; {op6 op8 }; )
+0
+-----------
+11.
+rule(null;uattr4 in {18}; rattr3 in {7}; {op2 op5 }; )
+0
+-----------
+12.
+rule(null;uattr7 in {6}; rattr3 in {11}; {op6 }; )
+0
+-----------
+13.
+rule(null;uattr7 in {2}; rattr3 in {11}; {op2 }; )
+0
+-----------
+14.
+rule(null;uattr4 in {17}; rattr3 in {9}; {op3 }; )
+0
+-----------
+15.
+rule(null;uattr5 in {34}; rattr3 in {9}; {op5 }; )
+0
+-----------
+16.
+rule(null;uattr4 in {19}; rattr3 in {9}; {op2 }; )
+0
+-----------
+17.
+rule(null;uattr4 in {6}; rattr3 in {12}; {op2 op5 }; )
+0
+-----------
+18.
+rule(null;uattr4 in {20}; rattr3 in {11}; {op2 op6 }; )
+0
+-----------
+19.
+rule(null;uattr0 in {14}, uattr1 supseteqln {{4}}, uattr2 in {14}, uattr3 supseteqln {{7}}, uattr4 in {18}, uattr5 in {12}, uattr6 in {5}, uattr7 in {10}, uid in {44}; rattr0 supseteqln {{0}}, rattr2 in {80}, rattr3 in {4}, rattr4 in {44}, rattr6 in {8}; {op4 }; )
+0
+-----------
+20.
+rule(null;uattr0 in {14}, uattr1 supseteqln {{4}}, uattr2 in {7}, uattr3 supseteqln {{12}}, uattr4 in {19}, uattr7 in {13}, uid in {69}; rattr0 supseteqln {{0}}, rattr2 in {82}, rattr3 in {4}, rattr4 in {69}, rattr6 in {8}; {op4 }; )
+0
+-----------
+21.
+rule(null;uattr0 in {14}, uattr1 supseteqln {{4}}, uattr2 in {14}, uattr3 supseteqln {{7}}, uattr4 in {18}, uattr5 in {12}, uattr6 in {5}, uattr7 in {10}, uid in {52}; rattr0 supseteqln {{0}}, rattr2 in {60}, rattr3 in {4}, rattr4 in {52}, rattr6 in {8}; {op4 }; )
+0
+-----------
+22.
+rule(null;uattr0 in {14}, uattr1 supseteqln {{4}}, uattr2 in {14}, uattr3 supseteqln {{7}}, uattr4 in {18}, uattr5 in {12}, uattr6 in {5}, uattr7 in {10}, uid in {47}; rattr0 supseteqln {{0}}, rattr2 in {62}, rattr3 in {4}, rattr4 in {47}, rattr6 in {8}; {op4 }; )
+0
+-----------
+23.
+rule(null;uattr0 in {14}, uattr1 supseteqln {{4}}, uattr2 in {7}, uattr3 supseteqln {{12}}, uattr4 in {19}, uattr7 in {13}, uid in {68}; rattr0 supseteqln {{0}}, rattr2 in {64}, rattr3 in {4}, rattr4 in {68}, rattr6 in {8}; {op4 }; )
+0
+-----------
+24.
+rule(null;uattr0 in {14}, uattr1 supseteqln {{4}}, uattr2 in {14}, uattr3 supseteqln {{7}}, uattr4 in {18}, uattr5 in {12}, uattr6 in {5}, uattr7 in {10}, uid in {48}; rattr0 supseteqln {{0}}, rattr2 in {56}, rattr3 in {4}, rattr4 in {48}, rattr6 in {8}; {op4 }; )
+0
+-----------
+25.
+rule(null;uattr0 in {14}, uattr1 supseteqln {{4}}, uattr2 in {14}, uattr3 supseteqln {{7}}, uattr4 in {18}, uattr5 in {12}, uattr6 in {5}, uattr7 in {10}, uid in {45}; rattr0 supseteqln {{0}}, rattr2 in {65}, rattr3 in {4}, rattr4 in {45}, rattr6 in {8}; {op4 }; )
+0
+-----------
+26.
+rule(null;uattr0 in {14}, uattr1 supseteqln {{4}}, uattr2 in {14}, uattr3 supseteqln {{7}}, uattr4 in {18}, uattr5 in {12}, uattr6 in {5}, uattr7 in {10}, uid in {46}; rattr0 supseteqln {{0}}, rattr2 in {81}, rattr3 in {4}, rattr4 in {46}, rattr6 in {8}; {op4 }; )
+0
+-----------
+27.
+rule(null;uattr0 in {14}, uattr1 supseteqln {{4}}, uattr2 in {7}, uattr3 supseteqln {{12}}, uattr4 in {6}, uattr7 in {13}, uid in {74}; rattr0 supseteqln {{0}}, rattr2 in {74}, rattr3 in {4}, rattr4 in {74}, rattr6 in {8}; {op4 }; )
+0
+-----------
+28.
+rule(null;uattr0 in {14}, uattr1 supseteqln {{4}}, uattr2 in {14}, uattr3 supseteqln {{7}}, uattr4 in {18}, uattr5 in {12}, uattr6 in {5}, uattr7 in {10}, uid in {50}; rattr0 supseteqln {{0}}, rattr2 in {76}, rattr3 in {4}, rattr4 in {50}, rattr6 in {8}; {op4 }; )
+0
+-----------
+29.
+rule(null;uattr0 in {14}, uattr1 supseteqln {{4}}, uattr2 in {14}, uattr3 supseteqln {{7}}, uattr4 in {18}, uattr5 in {12}, uattr6 in {5}, uattr7 in {10}, uid in {51}; rattr0 supseteqln {{0}}, rattr2 in {63}, rattr3 in {4}, rattr4 in {51}, rattr6 in {8}; {op4 }; )
+0
+-----------
+30.
+rule(null;uattr0 in {14}, uattr1 supseteqln {{4}}, uattr2 in {14}, uattr3 supseteqln {{7}}, uattr4 in {18}, uattr5 in {12}, uattr6 in {5}, uattr7 in {10}, uid in {40}; rattr0 supseteqln {{0}}, rattr2 in {77}, rattr3 in {4}, rattr4 in {40}, rattr6 in {8}; {op4 }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<71,35,op4>
+<42,18,op4>
+<70,33,op4>
+<43,17,op4>
+<67,22,op4>
+<73,37,op4>
+<49,21,op4>
+<72,36,op4>
+<53,34,op4>
+<75,39,op4>
+<66,24,op4>
+<41,19,op4>
+
+OverAssignments
+---------------------
+Log Completeness: 0.7
+Rule Quality Metric: Q_RELATIVE_TO_COVERED_FREQ
+1.
+rule(null;; rattr5 supseteqln {{4}}; {op4 }; uattr7=rattr3)
+0
+-----------
+2.
+rule(null;uattr4 in {6}; ; {op2 }; uattr3 ] rattr2)
+0
+-----------
+3.
+rule(null;; ; {op5 }; uattr5=rattr1)
+0
+-----------
+4.
+rule(null;uattr4 in {17}; ; {op3 }; uattr0=rattr3)
+0
+-----------
+5.
+rule(null;; ; {op2 op3 }; uattr1 ] rattr3, uattr4=rattr4, uid=rattr2)
+0
+-----------
+6.
+rule(null;uattr7 in {13}; ; {op2 op5 }; uattr3 ] rattr3, uattr4=rattr2)
+0
+-----------
+7.
+rule(null;; rattr2 in {77 56 64 82 65 62 80 63 81 60 76}; {op4 }; uid=rattr4)
+0
+-----------
+8.
+rule(null;uid in {67 79 69 68 77 94 92 90 82 70 83 80 72 81 73 86 74 87 88 75 84 89 85}; ; {op4 }; uattr1 ] rattr7)
+0
+-----------
+9.
+rule(null;; rattr4 in {67 48 66 69 68 44 47 46 43 42 51 52 53 72 73}; {op3 }; uid=rattr2)
+0
+-----------
+10.
+rule(null;uid in {22}; rattr2 in {22}; {op2 }; )
+0
+-----------
+11.
+rule(null;; ; {op2 }; uattr2=rid, uid=rattr2)
+0
+-----------
+12.
+rule(null;uid in {20 30 24 25 34 39 29}; ; {op2 op6 }; uattr6=rattr6)
+0
+-----------
+13.
+rule(null;; ; {op4 }; uattr1 ] rattr7, uid=rattr4)
+0
+-----------
+14.
+rule(null;uid in {27}; rattr2 in {27}; {op2 }; )
+0
+-----------
+15.
+rule(null;uid in {79 59 77 58 57 17 18 16 11 83 80 87 84 49 67 48 66 69 45 94 93 47 46 91 10 7 6 52 70 9 71 8 72 50 89 76}; ; {op8 }; uattr3 > rattr5, uattr4=rattr6)
+0
+-----------
+16.
+rule(null;uid in {32 23 33 26 27 37 28 38}; ; {op6 }; uattr6=rattr6)
+0
+-----------
+17.
+rule(null;uid in {98 97 96 95 110 111 109 108 107 106 105 104 103 102 99 100}; rattr5 supseteqln {{4}}; {op1 }; )
+0
+-----------
+18.
+rule(null;uid in {35 22 23 24 25 39 26 27 37 28 29 38 21 30 32 31}; ; {op5 }; uattr6=rattr4)
+0
+-----------
+19.
+rule(null;uid in {59 58 57 56 55 33 43 64 65 62 63 60 61 67 66 69 68 45 44 47 46 22 26 27 28 32 31 51 52 53 54 50}; ; {op2 }; uattr4=rattr2)
+0
+-----------
+20.
+rule(null;; ; {op2 }; uattr1 ] rid, uid=rattr2)
+0
+-----------
+21.
+rule(null;uid in {3 0 6 19 4 17 18 15 9 16 14 11 12}; ; {op2 }; uattr7=rattr1)
+0
+-----------
+22.
+rule(null;uid in {28}; rattr2 in {28}; {op2 }; )
+0
+-----------
+23.
+rule(null;uid in {0 19 17 15 16 13 14}; ; {op3 op5 op6 op8 }; uattr3 ] rattr2)
+0
+-----------
+24.
+rule(null;; rattr4 in {74}; {op4 }; uid=rattr2)
+0
+-----------
+25.
+rule(null;uid in {21}; rattr2 in {21}; {op2 }; )
+0
+-----------
+26.
+rule(null;uid in {31}; rattr2 in {31}; {op2 }; )
+0
+-----------
+27.
+rule(null;; ; {op2 }; uattr7=rattr4, uid=rattr7)
+0
+-----------
+28.
+rule(null;; ; {op2 }; uattr7=rattr1, uid=rattr4)
+0
+-----------
+29.
+rule(null;; ; {op6 op8 }; uattr6=rattr4, uid=rattr6)
+0
+-----------
+30.
+rule(null;uid in {2 10}; ; {op3 op6 }; uattr6=rattr4)
+0
+-----------
+31.
+rule(null;uid in {8}; ; {op3 op8 }; uattr3 ] rattr2)
+0
+-----------
+32.
+rule(null;; ; {op5 op8 }; uattr3 ] rattr2, uid=rattr3)
+0
+-----------
+33.
+rule(null;uid in {9}; ; {op5 op6 op8 }; uattr3 ] rattr2)
+0
+-----------
+34.
+rule(null;uid in {18}; rattr3 in {12}; {op3 op5 op6 op8 }; )
+0
+-----------
+35.
+rule(null;uattr7 in {13}; ; {op3 }; uattr6=rattr4)
+0
+-----------
+36.
+rule(null;uid in {67 66 69 78 77 68 82 70 71 72 73 74 75 76}; ; {op5 }; uattr3 ] rattr2)
+0
+-----------
+37.
+rule(null;uid in {48 43 42 41 51 52 53 50}; ; {op7 }; uattr6=rattr4)
+0
+-----------
+38.
+rule(null;uid in {17 18 24 15 16 11 29 12 3 2 1 0 30 32 4 9}; ; {op1 }; uattr2=rattr3)
+0
+-----------
+39.
+rule(null;uid in {1 18}; ; {op5 op6 }; uattr3 ] rattr2)
+0
+-----------
+40.
+rule(null;uid in {3 1 18}; ; {op3 }; uattr3 ] rattr2)
+0
+-----------
+41.
+rule(null;uid in {31 26 27 28}; ; {op1 }; uattr4=rattr2)
+0
+-----------
+42.
+rule(null;uid in {45 44 23 24 33 25 39 26 27 28 11 29 30 31 51 52 53 50}; ; {op3 }; uattr6=rattr4)
+0
+-----------
+43.
+rule(null;uid in {79 81}; ; {op2 op5 }; uattr3 ] rattr2)
+0
+-----------
+44.
+rule(null;; ; {op1 }; uattr7=rid, uid=rattr2)
+0
+-----------
+45.
+rule(null;uid in {30 22 24 25 26 39 27 28 37 29 38}; rattr3 in {7}; {op5 }; )
+0
+-----------
+46.
+rule(null;uid in {2 10 7}; ; {op5 }; uattr0=rattr3)
+0
+-----------
+47.
+rule(null;uid in {58 57 44 56 55 23 43 42 64 51 65 52 62 53 63 54 60 61 50}; ; {op5 }; uattr4=rattr2)
+0
+-----------
+48.
+rule(null;; ; {op1 }; uattr7=rattr6, uid=rattr1)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<53,43,op8>
+<58,21,op3>
+<4,47,op8>
+<59,19,op3>
+<15,46,op8>
+<80,0,op5>
+<40,3,op2>
+<54,43,op8>
+<68,45,op8>
+<3,46,op8>
+<40,43,op8>
+<55,43,op8>
+<71,35,op4>
+<41,3,op2>
+<65,43,op8>
+<13,46,op8>
+<113,4,op1>
+<40,0,op3>
+<42,18,op4>
+<56,43,op8>
+<70,33,op4>
+<5,46,op8>
+<42,3,op2>
+<40,3,op5>
+<14,46,op8>
+<112,4,op1>
+<43,17,op4>
+<41,0,op3>
+<70,2,op2>
+<67,22,op4>
+<73,37,op4>
+<101,4,op1>
+<0,46,op8>
+<90,44,op8>
+<63,43,op8>
+<74,38,op3>
+<43,43,op8>
+<49,21,op4>
+<66,41,op4>
+<71,41,op4>
+<72,36,op4>
+<64,43,op8>
+<53,34,op4>
+<12,46,op8>
+<91,41,op4>
+<44,43,op8>
+<54,35,op3>
+<82,42,op8>
+<51,43,op8>
+<61,43,op8>
+<38,13,op2>
+<75,39,op4>
+<2,47,op8>
+<92,44,op8>
+<41,43,op8>
+<77,20,op3>
+<66,24,op4>
+<81,42,op8>
+<62,43,op8>
+<1,46,op8>
+<42,43,op8>
+<93,41,op4>
+<75,39,op3>
+<5,0,op3>
+<6,2,op1>
+<35,3,op5>
+<2,0,op8>
+<44,0,op7>
+<49,3,op5>
+<45,3,op5>
+<46,0,op3>
+<37,2,op2>
+<3,0,op6>
+<74,42,op8>
+<47,0,op3>
+<88,44,op8>
+<35,1,op6>
+<38,2,op1>
+<37,0,op3>
+<4,3,op5>
+<4,0,op3>
+<36,0,op5>
+<5,2,op1>
+<36,3,op5>
+<65,27,op3>
+<10,1,op2>
+<1,0,op8>
+<45,0,op7>
+<49,0,op7>
+<46,3,op5>
+<38,2,op2>
+<48,0,op3>
+<36,1,op6>
+<20,2,op1>
+<60,43,op8>
+<5,1,op2>
+<73,42,op8>
+<76,40,op3>
+<10,2,op1>
+<39,2,op1>
+<48,3,op2>
+<3,0,op5>
+<38,0,op3>
+<33,0,op5>
+<33,3,op5>
+<7,0,op3>
+<8,2,op1>
+<34,0,op3>
+<35,2,op1>
+<21,2,op2>
+<49,3,op2>
+<5,0,op6>
+<4,0,op8>
+<46,0,op7>
+<47,3,op5>
+<61,33,op3>
+<8,1,op2>
+<21,2,op1>
+<20,0,op3>
+<35,1,op2>
+<49,0,op3>
+<6,0,op6>
+<6,3,op5>
+<86,44,op8>
+<36,2,op1>
+<7,2,op1>
+<78,41,op4>
+<34,3,op5>
+<5,0,op5>
+<34,0,op5>
+<35,0,op3>
+<6,0,op3>
+<47,0,op7>
+<48,3,op5>
+<4,0,op6>
+<3,0,op8>
+<22,2,op1>
+<21,0,op3>
+<7,1,op2>
+<20,0,op5>
+<36,3,op2>
+<37,2,op1>
+<85,44,op8>
+<36,0,op3>
+<75,42,op8>
+<20,3,op5>
+<42,0,op3>
+<13,1,op2>
+<31,3,op5>
+<11,0,op6>
+<6,0,op8>
+<8,0,op5>
+<10,0,op8>
+<19,46,op8>
+<33,2,op1>
+<32,0,op3>
+<21,1,op6>
+<9,0,op3>
+<41,3,op5>
+<40,0,op7>
+<23,3,op2>
+<14,2,op1>
+<12,0,op3>
+<31,1,op6>
+<13,2,op1>
+<21,3,op5>
+<78,42,op8>
+<11,3,op5>
+<8,0,op6>
+<23,2,op1>
+<22,0,op3>
+<41,19,op4>
+<25,2,op1>
+<32,3,op5>
+<5,0,op8>
+<43,0,op3>
+<11,0,op8>
+<12,0,op6>
+<22,1,op6>
+
+OverAssignments
+---------------------
+Log Completeness: 0.7
+Rule Quality Metric: Q_RELATIVE_TO_MEANING_FREQ
+1.
+rule(null;uattr7 in {13}; ; {op2 op5 }; uattr3 ] rattr3)
+5
+<66,0,op2>
+<69,0,op2>
+<68,0,op2>
+<67,0,op2>
+<70,0,op2>
+-----------
+2.
+rule(null;; ; {op5 }; uattr5=rattr1)
+0
+-----------
+3.
+rule(null;; rattr5 supseteqln {{4}}; {op1 op4 }; uattr7=rattr3)
+0
+-----------
+4.
+rule(null;uattr4 in {17}; ; {op3 }; uattr0=rattr3)
+0
+-----------
+5.
+rule(null;uattr2 in {7}; ; {op4 }; uattr1 ] rattr7)
+0
+-----------
+6.
+rule(null;; ; {op2 }; uattr4=rattr4, uid=rattr2)
+0
+-----------
+7.
+rule(null;; ; {op2 }; uattr4=rattr2)
+0
+-----------
+8.
+rule(null;; ; {op5 }; uattr1 ] rattr2)
+0
+-----------
+9.
+rule(null;; ; {op6 }; uattr5=rattr7)
+0
+-----------
+10.
+rule(null;; ; {op2 op3 }; uattr1 ] rattr3, uattr4=rattr4, uid=rattr2)
+0
+-----------
+11.
+rule(null;; rattr2 in {77 56 64 82 65 62 80 63 81 60 76}; {op4 }; uid=rattr4)
+0
+-----------
+12.
+rule(null;; ; {op2 }; uattr7=rattr1)
+0
+-----------
+13.
+rule(null;; rattr4 in {67 48 66 69 68 44 47 46 43 42 51 52 53 72 73}; {op3 }; uid=rattr2)
+0
+-----------
+14.
+rule(null;uid in {79 59 77 58 57 17 18 16 11 83 80 87 84 49 67 48 66 69 45 94 93 47 46 91 10 7 6 52 70 9 71 8 72 50 89 76}; ; {op8 }; uattr3 > rattr5, uattr4=rattr6)
+0
+-----------
+15.
+rule(null;; ; {op6 op8 }; uattr0=rattr1)
+0
+-----------
+16.
+rule(null;; rattr4 in {74}; {op4 }; uid=rattr2)
+0
+-----------
+17.
+rule(null;; ; {op3 }; uattr0=rattr6)
+0
+-----------
+18.
+rule(null;; ; {op5 }; uattr3 ] rattr3)
+0
+-----------
+19.
+rule(null;; ; {op3 }; uattr6=rattr4)
+0
+-----------
+20.
+rule(null;; ; {op1 }; uattr2=rattr3, uattr7=rid)
+0
+-----------
+21.
+rule(null;uid in {48 43 42 41 51 52 53 50}; ; {op7 }; uattr6=rattr4)
+0
+-----------
+22.
+rule(null;uid in {30 32 24 29}; ; {op1 }; uattr2=rattr3)
+0
+-----------
+23.
+rule(null;uid in {31 26 27 28}; ; {op1 }; uattr4=rattr2)
+0
+-----------
+24.
+rule(null;; ; {op1 }; uattr7=rattr6, uid=rattr1)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<53,43,op8>
+<58,21,op3>
+<4,47,op8>
+<59,19,op3>
+<15,46,op8>
+<54,43,op8>
+<68,45,op8>
+<3,46,op8>
+<40,43,op8>
+<55,43,op8>
+<71,35,op4>
+<65,43,op8>
+<13,46,op8>
+<42,18,op4>
+<56,43,op8>
+<70,33,op4>
+<5,46,op8>
+<14,46,op8>
+<43,17,op4>
+<67,22,op4>
+<73,37,op4>
+<0,46,op8>
+<90,44,op8>
+<63,43,op8>
+<74,38,op3>
+<43,43,op8>
+<49,21,op4>
+<72,36,op4>
+<64,43,op8>
+<53,34,op4>
+<12,46,op8>
+<44,43,op8>
+<54,35,op3>
+<82,42,op8>
+<51,43,op8>
+<61,43,op8>
+<75,39,op4>
+<2,47,op8>
+<92,44,op8>
+<41,43,op8>
+<77,20,op3>
+<66,24,op4>
+<81,42,op8>
+<62,43,op8>
+<1,46,op8>
+<42,43,op8>
+<75,39,op3>
+<44,0,op7>
+<74,42,op8>
+<88,44,op8>
+<38,2,op1>
+<65,27,op3>
+<45,0,op7>
+<49,0,op7>
+<20,2,op1>
+<60,43,op8>
+<73,42,op8>
+<76,40,op3>
+<39,2,op1>
+<35,2,op1>
+<46,0,op7>
+<61,33,op3>
+<21,2,op1>
+<86,44,op8>
+<36,2,op1>
+<47,0,op7>
+<22,2,op1>
+<37,2,op1>
+<85,44,op8>
+<75,42,op8>
+<19,46,op8>
+<33,2,op1>
+<40,0,op7>
+<78,42,op8>
+<23,2,op1>
+<41,19,op4>
+<25,2,op1>
+
+OverAssignments
+---------------------
+Log Completeness: 0.7
+Rule Quality Metric: Q_RELATIVE_TO_UP0_FREQ
+1.
+rule(null;; ; {op4 }; uattr1 ] rattr7)
+46
+<46,41,op4>
+<55,41,op4>
+<10,41,op4>
+<14,41,op4>
+<65,41,op4>
+<18,41,op4>
+<51,41,op4>
+<6,41,op4>
+<41,41,op4>
+<61,41,op4>
+<2,41,op4>
+<56,41,op4>
+<47,41,op4>
+<9,41,op4>
+<15,41,op4>
+<19,41,op4>
+<52,41,op4>
+<5,41,op4>
+<42,41,op4>
+<62,41,op4>
+<1,41,op4>
+<57,41,op4>
+<12,41,op4>
+<63,41,op4>
+<16,41,op4>
+<53,41,op4>
+<8,41,op4>
+<4,41,op4>
+<58,41,op4>
+<43,41,op4>
+<49,41,op4>
+<11,41,op4>
+<13,41,op4>
+<64,41,op4>
+<45,41,op4>
+<54,41,op4>
+<17,41,op4>
+<50,41,op4>
+<7,41,op4>
+<40,41,op4>
+<0,41,op4>
+<48,41,op4>
+<44,41,op4>
+<3,41,op4>
+<59,41,op4>
+<60,41,op4>
+-----------
+2.
+rule(null;; ; {op2 op6 }; uattr4=rattr2)
+43
+<68,2,op6>
+<54,3,op6>
+<45,3,op6>
+<49,3,op6>
+<60,3,op6>
+<67,2,op6>
+<53,3,op6>
+<36,3,op6>
+<46,3,op6>
+<66,2,op6>
+<56,3,op6>
+<33,3,op6>
+<47,3,op6>
+<55,3,op6>
+<40,3,op6>
+<65,3,op6>
+<48,3,op6>
+<58,3,op6>
+<70,2,op6>
+<38,2,op6>
+<21,2,op6>
+<28,2,op6>
+<31,2,op6>
+<64,3,op6>
+<50,3,op6>
+<41,3,op6>
+<37,2,op6>
+<57,3,op6>
+<22,2,op6>
+<27,2,op6>
+<63,3,op6>
+<32,3,op6>
+<42,3,op6>
+<26,2,op6>
+<23,3,op6>
+<62,3,op6>
+<52,3,op6>
+<43,3,op6>
+<59,3,op6>
+<69,2,op6>
+<61,3,op6>
+<44,3,op6>
+<51,3,op6>
+-----------
+3.
+rule(null;; ; {op2 op5 }; uattr3 ] rattr3)
+41
+<16,0,op2>
+<37,3,op2>
+<6,3,op2>
+<20,3,op2>
+<30,3,op2>
+<38,3,op2>
+<10,3,op2>
+<15,0,op2>
+<4,3,op2>
+<5,0,op2>
+<69,0,op2>
+<21,3,op2>
+<18,0,op2>
+<8,0,op2>
+<35,3,op2>
+<68,0,op2>
+<67,0,op2>
+<22,3,op2>
+<17,0,op2>
+<7,3,op2>
+<70,0,op2>
+<3,0,op2>
+<66,0,op2>
+<13,0,op2>
+<2,3,op2>
+<19,0,op2>
+<24,3,op2>
+<29,3,op2>
+<34,3,op2>
+<39,3,op2>
+<14,0,op2>
+<9,0,op2>
+<11,3,op2>
+<25,3,op2>
+<28,3,op2>
+<0,0,op2>
+<31,3,op2>
+<12,0,op2>
+<26,3,op2>
+<27,3,op2>
+<1,0,op2>
+-----------
+4.
+rule(null;; ; {op2 op3 }; uid=rattr2)
+40
+<31,15,op3>
+<59,19,op2>
+<74,38,op2>
+<22,8,op3>
+<27,10,op3>
+<64,26,op2>
+<63,31,op2>
+<19,2,op2>
+<73,37,op2>
+<55,24,op2>
+<54,35,op2>
+<60,32,op2>
+<19,2,op3>
+<28,11,op3>
+<65,27,op2>
+<79,17,op2>
+<78,18,op2>
+<0,41,op2>
+<72,36,op2>
+<18,3,op2>
+<56,23,op2>
+<57,22,op2>
+<62,29,op2>
+<20,1,op3>
+<0,41,op3>
+<76,40,op2>
+<37,12,op3>
+<18,3,op3>
+<80,28,op2>
+<61,33,op2>
+<71,34,op2>
+<81,30,op2>
+<12,0,op2>
+<82,25,op2>
+<75,39,op2>
+<58,21,op2>
+<21,14,op3>
+<77,20,op2>
+<38,13,op3>
+<26,9,op3>
+-----------
+5.
+rule(null;uattr1 supseteqln {{4}}; ; {op8 }; uattr4=rattr6)
+32
+<73,2,op8>
+<4,46,op8>
+<15,47,op8>
+<72,2,op8>
+<3,47,op8>
+<16,47,op8>
+<75,2,op8>
+<6,46,op8>
+<13,47,op8>
+<5,47,op8>
+<74,2,op8>
+<14,47,op8>
+<0,47,op8>
+<19,47,op8>
+<11,46,op8>
+<8,47,op8>
+<77,2,op8>
+<82,2,op8>
+<12,47,op8>
+<81,2,op8>
+<7,46,op8>
+<76,2,op8>
+<2,46,op8>
+<71,2,op8>
+<17,47,op8>
+<80,2,op8>
+<79,2,op8>
+<1,47,op8>
+<18,47,op8>
+<78,2,op8>
+<9,47,op8>
+<10,46,op8>
+-----------
+6.
+rule(null;; ; {op1 }; uattr2=rattr3)
+29
+<81,3,op1>
+<66,3,op1>
+<76,3,op1>
+<86,3,op1>
+<72,3,op1>
+<92,3,op1>
+<82,3,op1>
+<79,3,op1>
+<75,3,op1>
+<69,3,op1>
+<71,3,op1>
+<85,3,op1>
+<91,3,op1>
+<89,3,op1>
+<90,3,op1>
+<78,3,op1>
+<84,3,op1>
+<68,3,op1>
+<88,3,op1>
+<94,3,op1>
+<74,3,op1>
+<80,3,op1>
+<70,3,op1>
+<77,3,op1>
+<67,3,op1>
+<87,3,op1>
+<83,3,op1>
+<93,3,op1>
+<73,3,op1>
+-----------
+7.
+rule(null;; ; {op3 op5 op6 op8 }; uattr0=rattr6)
+6
+<11,0,op5>
+<4,0,op5>
+<7,0,op5>
+<2,0,op5>
+<6,0,op5>
+<10,0,op5>
+-----------
+8.
+rule(null;; rattr5 supseteqln {{4}}; {op1 op4 }; uattr7=rattr3)
+0
+-----------
+9.
+rule(null;; ; {op5 }; uattr5=rattr1)
+0
+-----------
+10.
+rule(null;uattr4 in {17}; ; {op3 }; uattr0=rattr3)
+0
+-----------
+11.
+rule(null;uattr0 in {14}; ; {op4 }; uid=rattr4)
+0
+-----------
+12.
+rule(null;; ; {op6 }; uattr5=rattr7)
+0
+-----------
+13.
+rule(null;; ; {op5 }; uattr1 ] rattr2)
+0
+-----------
+14.
+rule(null;; ; {op2 }; uattr7=rattr1)
+0
+-----------
+15.
+rule(null;; ; {op3 }; uattr6=rattr4)
+0
+-----------
+16.
+rule(null;; ; {op7 }; uattr5=rattr3)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+
+OverAssignments
+---------------------
+Log Completeness: 0.7
+Rule Quality Metric: Q_RELATIVE_TO_PERMISSIONS_FREQ
+1.
+rule(null;; ; {op2 op6 }; uattr5=rattr7)
+12
+<21,1,op2>
+<23,1,op2>
+<37,1,op2>
+<28,1,op2>
+<31,1,op2>
+<33,1,op2>
+<22,1,op2>
+<36,1,op2>
+<38,1,op2>
+<26,1,op2>
+<27,1,op2>
+<32,1,op2>
+-----------
+2.
+rule(null;; ; {op2 op3 }; uattr4=rattr4, uid=rattr2)
+8
+<31,15,op3>
+<22,8,op3>
+<37,12,op3>
+<27,10,op3>
+<21,14,op3>
+<28,11,op3>
+<38,13,op3>
+<26,9,op3>
+-----------
+3.
+rule(null;; ; {op3 op5 op6 op8 }; uattr0=rattr6)
+6
+<11,0,op5>
+<4,0,op5>
+<7,0,op5>
+<2,0,op5>
+<6,0,op5>
+<10,0,op5>
+-----------
+4.
+rule(null;; ; {op2 }; uattr4=rattr2)
+0
+-----------
+5.
+rule(null;uattr4 in {6}; ; {op2 }; uattr3 ] rattr2)
+0
+-----------
+6.
+rule(null;; ; {op5 }; uattr5=rattr1)
+0
+-----------
+7.
+rule(null;uattr2 in {7}; ; {op4 }; uattr1 ] rattr7)
+0
+-----------
+8.
+rule(null;; rattr5 supseteqln {{4}}; {op1 op4 }; uattr7=rattr3)
+0
+-----------
+9.
+rule(null;uattr4 in {17}; ; {op3 }; uattr0=rattr3)
+0
+-----------
+10.
+rule(null;; ; {op3 }; uattr1 ] rattr3, uid=rattr2)
+0
+-----------
+11.
+rule(null;uattr0 in {14}; ; {op4 }; uid=rattr4)
+0
+-----------
+12.
+rule(null;; ; {op5 }; uattr1 ] rattr2)
+0
+-----------
+13.
+rule(null;; ; {op2 }; uattr7=rattr1)
+0
+-----------
+14.
+rule(null;uid in {79 59 77 58 57 17 18 16 11 83 80 87 84 49 67 48 66 69 45 94 93 47 46 91 10 7 6 52 70 9 71 8 72 50 89 76}; ; {op8 }; uattr3 > rattr5, uattr4=rattr6)
+0
+-----------
+15.
+rule(null;; ; {op5 }; uattr3 ] rattr3)
+0
+-----------
+16.
+rule(null;; ; {op3 }; uattr6=rattr4)
+0
+-----------
+17.
+rule(null;; ; {op1 }; uattr2=rattr3, uattr7=rid)
+0
+-----------
+18.
+rule(null;; ; {op1 }; uattr3 < rattr5, uattr7=rattr6)
+0
+-----------
+19.
+rule(null;uid in {48 43 42 41 51 52 53 50}; ; {op7 }; uattr6=rattr4)
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<53,43,op8>
+<4,47,op8>
+<15,46,op8>
+<54,43,op8>
+<68,45,op8>
+<3,46,op8>
+<40,43,op8>
+<55,43,op8>
+<65,43,op8>
+<13,46,op8>
+<56,43,op8>
+<5,46,op8>
+<14,46,op8>
+<0,46,op8>
+<90,44,op8>
+<63,43,op8>
+<43,43,op8>
+<64,43,op8>
+<12,46,op8>
+<44,43,op8>
+<82,42,op8>
+<51,43,op8>
+<61,43,op8>
+<2,47,op8>
+<92,44,op8>
+<41,43,op8>
+<81,42,op8>
+<62,43,op8>
+<1,46,op8>
+<42,43,op8>
+<44,0,op7>
+<74,42,op8>
+<88,44,op8>
+<45,0,op7>
+<49,0,op7>
+<60,43,op8>
+<73,42,op8>
+<46,0,op7>
+<86,44,op8>
+<47,0,op7>
+<85,44,op8>
+<75,42,op8>
+<19,46,op8>
+<40,0,op7>
+<78,42,op8>
+
+OverAssignments
+---------------------
+Log Completeness: 0.7
+Rule Quality Metric: Q_RELATIVE_TO_SIZE_AND_PERMISSIONS_FREQ
+1.
+rule(null;uid in {22}; rattr2 in {22}; {op2 }; )
+0
+-----------
+2.
+rule(null;uid in {26}; rattr2 in {26}; {op2 }; )
+0
+-----------
+3.
+rule(null;uattr4 in {6}; rattr3 in {12}; {op2 }; )
+0
+-----------
+4.
+rule(null;uid in {27}; rattr2 in {27}; {op2 }; )
+0
+-----------
+5.
+rule(null;; rattr6 in {6}; {op3 }; uattr0=rattr3)
+0
+-----------
+6.
+rule(null;; rattr5 supseteqln {{4}}; {op4 }; uattr7=rattr3)
+0
+-----------
+7.
+rule(null;; rattr3 in {9}; {op5 }; uattr5=rattr1)
+0
+-----------
+8.
+rule(null;; rattr0 supseteqln {{0}}, rattr4 in {19}; {op2 op3 }; uid=rattr2)
+0
+-----------
+9.
+rule(null;uid in {37}; rattr2 in {37}; {op2 }; )
+0
+-----------
+10.
+rule(null;uid in {28}; rattr2 in {28}; {op2 }; )
+0
+-----------
+11.
+rule(null;; rattr4 in {74}; {op4 }; uid=rattr2)
+0
+-----------
+12.
+rule(null;uid in {21}; rattr2 in {21}; {op2 }; )
+0
+-----------
+13.
+rule(null;uid in {31}; rattr2 in {31}; {op2 }; )
+0
+-----------
+14.
+rule(null;uid in {10 7 6 11}; rattr5 supseteqln {{7}}, rattr6 in {11}; {op8 }; )
+0
+-----------
+15.
+rule(null;; rattr4 in {67 48 66 69 68 44 47 46 43 42 51 52 53 72 73}; {op3 }; uid=rattr2)
+0
+-----------
+16.
+rule(null;uid in {17 18 9 16 8}; rattr5 supseteqln {{12}}, rattr6 in {11}; {op8 }; )
+0
+-----------
+17.
+rule(null;uid in {67 79 69 68 77 94 92 90 82 70 83 80 72 81 73 86 74 87 88 75 84 89 85}; rattr4 in {76}; {op4 }; )
+0
+-----------
+18.
+rule(null;uid in {79 77 80 71 72 76}; rattr6 in {6}; {op8 }; uattr3 > rattr5)
+0
+-----------
+19.
+rule(null;uattr7 in {13}; rattr4 in {8}; {op2 op5 }; uattr4=rattr2)
+0
+-----------
+20.
+rule(null;; rattr2 in {0 77 56 64 82 65 62 80 63 81 60 76}; {op4 }; uid=rattr4)
+0
+-----------
+21.
+rule(null;uid in {67 66 69 68}; rattr3 in {9}; {op2 }; )
+0
+-----------
+22.
+rule(null;uid in {32 23 33 26 27 37 28 38}; rattr3 in {11}; {op6 }; )
+0
+-----------
+23.
+rule(null;uid in {98 97 96 95 110 111 109 108 107 106 105 104 103 102 99 100}; rattr5 supseteqln {{4}}; {op1 }; )
+0
+-----------
+24.
+rule(null;uid in {20 30 24 34 25 39 29}; rattr3 in {11}; {op2 op6 }; )
+0
+-----------
+25.
+rule(null;uid in {31 22 26 27 28}; rattr1 in {34}; {op2 }; )
+0
+-----------
+26.
+rule(null;uid in {67 49 48 66 69 59 58 45 94 57 93 47 46 91 52 83 70 87 84 50 89}; rattr6 in {19 17 18}; {op8 }; uattr3 > rattr5)
+0
+-----------
+27.
+rule(null;uid in {59 45 58 44 57 47 56 46 55 33 43 32 51 64 52 65 62 53 54 63 60 61 50}; rattr4 in {8}; {op2 }; )
+0
+-----------
+28.
+rule(null;uid in {3 0 6 19 4 17 18 15 9 16 14 11 12}; rattr4 in {2}; {op2 }; )
+0
+-----------
+29.
+rule(null;uid in {35 22 23 24 25 39 26 27 37 28 29 38 21 30 32 31}; rattr5 supseteqln {{9}}; {op5 }; )
+0
+-----------
+30.
+rule(null;; rattr6 in {5}; {op2 }; uid=rattr7)
+0
+-----------
+31.
+rule(null;; rattr7 in {1}; {op2 }; uid=rattr4)
+0
+-----------
+32.
+rule(null;uid in {48 43 42 41 51 52 53 50}; ; {op7 }; uattr6=rattr4)
+0
+-----------
+33.
+rule(null;; rattr3 in {12}; {op6 op8 }; uid=rattr6)
+0
+-----------
+34.
+rule(null;uid in {0 19 17 18 15 16 13 14}; rattr3 in {12}; {op3 op5 op6 op8 }; )
+0
+-----------
+35.
+rule(null;uid in {8}; rattr3 in {12}; {op3 op8 }; )
+0
+-----------
+36.
+rule(null;uid in {2 10}; rattr3 in {12}; {op3 op6 }; )
+0
+-----------
+37.
+rule(null;; rattr4 in {5}; {op5 op8 }; uid=rattr3)
+0
+-----------
+38.
+rule(null;uattr7 in {13}; rattr3 in {12}; {op3 }; uattr6=rattr4)
+0
+-----------
+39.
+rule(null;uid in {9}; rattr3 in {12}; {op5 op6 op8 }; )
+0
+-----------
+40.
+rule(null;uid in {3 1 0 17 18 15 9 16 12}; rattr6 in {6}; {op1 }; uattr2=rattr3)
+0
+-----------
+41.
+rule(null;uid in {3 1 11}; rattr3 in {12}; {op3 }; )
+0
+-----------
+42.
+rule(null;uid in {30 32 24 29}; rattr2 in {19}; {op1 }; )
+0
+-----------
+43.
+rule(null;uid in {31 26 27 28}; rattr1 in {34}; {op1 }; )
+0
+-----------
+44.
+rule(null;uid in {67 66 69 78 77 68 82 70 71 72 73 74 75 76}; rattr3 in {12}; {op5 }; )
+0
+-----------
+45.
+rule(null;uid in {2 4 11}; rattr6 in {6}; {op1 }; uattr3 < rattr5)
+0
+-----------
+46.
+rule(null;uid in {1}; rattr3 in {12}; {op5 op6 }; )
+0
+-----------
+47.
+rule(null;; rattr6 in {6}; {op1 }; uid=rattr2)
+0
+-----------
+48.
+rule(null;; rattr2 in {19}; {op1 }; uid=rattr1)
+0
+-----------
+49.
+rule(null;uid in {45 44 23 24 33 25 39 26 27 28 29 30 31 51 52 53 50}; rattr5 supseteqln {{9}}; {op3 }; )
+0
+-----------
+50.
+rule(null;uid in {30 22 24 25 26 39 27 28 37 29 38}; rattr3 in {7}; {op5 }; )
+0
+-----------
+51.
+rule(null;uid in {79 81}; rattr3 in {12}; {op2 op5 }; )
+0
+-----------
+52.
+rule(null;uid in {58 44 57 56 55 23 2 10 7 43 42 51 64 52 65 53 62 54 63 60 61 50}; rattr4 in {8}; {op5 }; )
+0
+-----------
+------------------------------------------------------------
+
+ Under Assignments
+---------------------
+<53,43,op8>
+<58,21,op3>
+<4,47,op8>
+<59,19,op3>
+<15,46,op8>
+<80,0,op5>
+<40,3,op2>
+<54,43,op8>
+<68,45,op8>
+<3,46,op8>
+<40,43,op8>
+<55,43,op8>
+<71,35,op4>
+<41,3,op2>
+<65,43,op8>
+<13,46,op8>
+<113,4,op1>
+<40,0,op3>
+<42,18,op4>
+<56,43,op8>
+<70,33,op4>
+<5,46,op8>
+<42,3,op2>
+<40,3,op5>
+<14,46,op8>
+<112,4,op1>
+<43,17,op4>
+<41,0,op3>
+<70,2,op2>
+<67,22,op4>
+<73,37,op4>
+<101,4,op1>
+<0,46,op8>
+<90,44,op8>
+<63,43,op8>
+<74,38,op3>
+<43,43,op8>
+<49,21,op4>
+<66,41,op4>
+<71,41,op4>
+<72,36,op4>
+<64,43,op8>
+<53,34,op4>
+<12,46,op8>
+<91,41,op4>
+<44,43,op8>
+<54,35,op3>
+<82,42,op8>
+<51,43,op8>
+<61,43,op8>
+<38,13,op2>
+<75,39,op4>
+<2,47,op8>
+<92,44,op8>
+<41,43,op8>
+<77,20,op3>
+<66,24,op4>
+<81,42,op8>
+<62,43,op8>
+<1,46,op8>
+<42,43,op8>
+<93,41,op4>
+<75,39,op3>
+<5,0,op3>
+<6,2,op1>
+<35,3,op5>
+<2,0,op8>
+<44,0,op7>
+<49,3,op5>
+<45,3,op5>
+<46,0,op3>
+<37,2,op2>
+<3,0,op6>
+<74,42,op8>
+<47,0,op3>
+<88,44,op8>
+<35,1,op6>
+<38,2,op1>
+<37,0,op3>
+<4,3,op5>
+<4,0,op3>
+<36,0,op5>
+<5,2,op1>
+<36,3,op5>
+<65,27,op3>
+<10,1,op2>
+<1,0,op8>
+<45,0,op7>
+<49,0,op7>
+<46,3,op5>
+<38,2,op2>
+<48,0,op3>
+<36,1,op6>
+<20,2,op1>
+<60,43,op8>
+<5,1,op2>
+<73,42,op8>
+<76,40,op3>
+<10,2,op1>
+<39,2,op1>
+<48,3,op2>
+<3,0,op5>
+<38,0,op3>
+<33,0,op5>
+<33,3,op5>
+<7,0,op3>
+<8,2,op1>
+<34,0,op3>
+<35,2,op1>
+<21,2,op2>
+<49,3,op2>
+<5,0,op6>
+<4,0,op8>
+<46,0,op7>
+<47,3,op5>
+<61,33,op3>
+<8,1,op2>
+<21,2,op1>
+<20,0,op3>
+<35,1,op2>
+<49,0,op3>
+<6,0,op6>
+<6,3,op5>
+<86,44,op8>
+<36,2,op1>
+<7,2,op1>
+<78,41,op4>
+<34,3,op5>
+<5,0,op5>
+<34,0,op5>
+<35,0,op3>
+<6,0,op3>
+<47,0,op7>
+<48,3,op5>
+<4,0,op6>
+<3,0,op8>
+<22,2,op1>
+<21,0,op3>
+<7,1,op2>
+<20,0,op5>
+<36,3,op2>
+<37,2,op1>
+<85,44,op8>
+<36,0,op3>
+<75,42,op8>
+<20,3,op5>
+<42,0,op3>
+<13,1,op2>
+<31,3,op5>
+<11,0,op6>
+<6,0,op8>
+<8,0,op5>
+<10,0,op8>
+<19,46,op8>
+<33,2,op1>
+<32,0,op3>
+<21,1,op6>
+<9,0,op3>
+<41,3,op5>
+<40,0,op7>
+<23,3,op2>
+<14,2,op1>
+<12,0,op3>
+<31,1,op6>
+<13,2,op1>
+<21,3,op5>
+<78,42,op8>
+<11,3,op5>
+<8,0,op6>
+<23,2,op1>
+<22,0,op3>
+<41,19,op4>
+<25,2,op1>
+<32,3,op5>
+<5,0,op8>
+<43,0,op3>
+<11,0,op8>
+<12,0,op6>
+<22,1,op6>
+
+
+OverAssignments Summary Report
+-------------------------
+Q_RELATIVE_TO_COVERED: 5
+Q_RELATIVE_TO_MEANING: 5
+Q_RELATIVE_TO_UP0: 299
+Q_RELATIVE_TO_PERMISSIONS: 31
+Q_RELATIVE_TO_SIZE_AND_PERMISSIONS: 18
+Q_PROGOL: 142
+Q_RELATIVE_TO_COVERED_FREQ: 0
+Q_RELATIVE_TO_MEANING_FREQ: 5
+Q_RELATIVE_TO_UP0_FREQ: 236
+Q_RELATIVE_TO_PERMISSIONS_FREQ: 26
+Q_RELATIVE_TO_SIZE_AND_PERMISSIONS_FREQ: 0
+
+UnderAssignments Summary Report
+-------------------------
+Q_RELATIVE_TO_COVERED: 130
+Q_RELATIVE_TO_MEANING: 77
+Q_RELATIVE_TO_UP0: 0
+Q_RELATIVE_TO_PERMISSIONS: 45
+Q_RELATIVE_TO_SIZE_AND_PERMISSIONS: 60
+Q_PROGOL: 12
+Q_RELATIVE_TO_COVERED_FREQ: 179
+Q_RELATIVE_TO_MEANING_FREQ: 77
+Q_RELATIVE_TO_UP0_FREQ: 0
+Q_RELATIVE_TO_PERMISSIONS_FREQ: 45
+Q_RELATIVE_TO_SIZE_AND_PERMISSIONS_FREQ: 179
